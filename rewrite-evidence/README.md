@@ -8,6 +8,7 @@ Everything here comes from branch `rewrite/phase0-baseline`; every workflow bran
 | `baseline/BASELINE.md` | Numbers for the Vue app before any rewrite |
 | `measure.sh` | Measures one frontend and appends a row to `metrics.csv` |
 | `metrics.csv` | One row per measurement (row 0 = Vue baseline) |
+| `METRICS_TEMPLATE.md` | Human-readable workflow summary table for report analysis |
 | `runs/<run-id>/` | Logs and raw reports of each measurement |
 | `../frontend-e2e/` | The E2E yardstick (selected routes + flows), see its README |
 

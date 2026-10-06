@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# Measure one frontend at the current checkout and append one row to rewrite-evidence/metrics.csv.
+# Measure one frontend at the current checkout and append results to rewrite-evidence/metrics.csv.
 #
-#   rewrite-evidence/measure.sh [--app DIR] [--label TEXT] [--route-scope all|core|extended] [--route-check strict|smoke] [--skip-e2e]
+#   rewrite-evidence/measure.sh [--app DIR] [--label TEXT]
+#     [--route-scope all|core|extended] [--route-check strict|smoke] [--skip-e2e]
 #
 # --app is a directory name inside this repo (frontend, frontend-react) or a path to an app in another
 # worktree (e.g. ../mealie-wf1/frontend-react). The latter lets a workflow's branch stay free of the
@@ -213,13 +214,14 @@ else
 fi
 
 # ------------------------------------------------------------------------------------------------ row
+TIMESTAMP_UTC="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 HEADER="timestamp_utc,label,app,branch,commit,dirty,route_scope,route_check,routes_passed,routes_total,flows_passed,flows_total,tsc_errors,lint_errors,lint_warnings,unit_passed,unit_failed,unit_skipped,build_ok,build_seconds,any_count,todo_count,expect_count,test_files,duration_seconds,run_id,notes"
 [[ -s "$CSV" ]] || echo "$HEADER" > "$CSV"
 
 csv_field() { local v="${1//\"/\"\"}"; [[ "$v" == *[,\"]* ]] && v="\"$v\""; printf '%s' "$v"; }
 NOTE_TEXT="$(IFS=';'; echo "${NOTES[*]:-}")"
 ROW=(
-  "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$(csv_field "$LABEL")" "$APP_NAME" "$BRANCH" "$COMMIT" "$DIRTY" "$ROUTE_SCOPE" "$ROUTE_CHECK"
+  "$TIMESTAMP_UTC" "$(csv_field "$LABEL")" "$APP_NAME" "$BRANCH" "$COMMIT" "$DIRTY" "$ROUTE_SCOPE" "$ROUTE_CHECK"
   "$ROUTES_PASSED" "$ROUTES_TOTAL" "$FLOWS_PASSED" "$FLOWS_TOTAL"
   "$TSC_ERRORS" "$LINT_ERRORS" "$LINT_WARNINGS"
   "$UNIT_PASSED" "$UNIT_FAILED" "$UNIT_SKIPPED"

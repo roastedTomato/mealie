@@ -202,6 +202,8 @@ rewrite-evidence/metrics.csv
 rewrite-evidence/runs/
 ```
 
+`metrics.csv` is the script's flat raw output. Use `METRICS_TEMPLATE.md` for the human-readable workflow summary, including agent tool, model, total tokens, agent runtime, combined human review/fix time, manual interventions, and test results.
+
 Example command for measuring the Vue baseline with core smoke route checks:
 
 ```bash
