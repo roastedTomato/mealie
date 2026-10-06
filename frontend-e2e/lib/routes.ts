@@ -1,5 +1,5 @@
 /**
- * Tier 1 of the yardstick: one entry per page file in frontend/app/pages/ (66 total).
+ * Tier 1 of the yardstick: one entry per selected page in the migration test scope.
  *
  * A route passes when, after loading its URL in a real browser:
  *   - it ends up at the expected URL (no bounce to /login, no unexpected redirect),
@@ -14,7 +14,7 @@
 import { ADMIN, MEMBER, NAMES, type Fixtures } from "./fixtures";
 
 export interface RouteCheck {
-  /** Page file relative to frontend/app/pages/ — the unit counted as "route N/66". */
+  /** Page file relative to frontend/app/pages/ — the unit counted in route pass totals. */
   file: string;
   path: (f: Fixtures) => string;
   /** Run without a session (public pages). Default: logged in as the seeded admin. */

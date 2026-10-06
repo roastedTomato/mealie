@@ -9,7 +9,7 @@ Everything here comes from branch `rewrite/phase0-baseline`; every workflow bran
 | `measure.sh` | Measures one frontend and appends a row to `metrics.csv` |
 | `metrics.csv` | One row per measurement (row 0 = Vue baseline) |
 | `runs/<run-id>/` | Logs and raw reports of each measurement |
-| `../frontend-e2e/` | The E2E yardstick (66 routes + 15 flows), see its README |
+| `../frontend-e2e/` | The E2E yardstick (selected routes + flows), see its README |
 
 ## One-time setup (per machine)
 
@@ -54,7 +54,7 @@ A trial run you don't want to keep: `git checkout rewrite-evidence/metrics.csv` 
 
 | Column | Meaning |
 |---|---|
-| `routes_passed/routes_total` | E2E tier 1: pages that render real content without errors (out of 66) |
+| `routes_passed/routes_total` | E2E tier 1: selected pages that render real content without errors |
 | `flows_passed/flows_total` | E2E tier 2: key user journeys that work end to end |
 | `tsc_errors` | Type errors (Vue: `vue-tsc` 2.2.0 pinned in `.tools/`; React: `tsc`) |
 | `lint_errors`, `lint_warnings` | `eslint .` in the app dir |

@@ -8,7 +8,7 @@ in `frontend-react/`) is graded by pointing the same suite at its build output.
 
 | Tier | Project | Tests | Pass means |
 |---|---|---|---|
-| 1 | `routes` | 66 `[route]` tests, one per page file in `frontend/app/pages/` (+1 guard that the table has 66 entries) | Expected URL, expected en-US text and seeded data visible, edit forms prefilled, no uncaught error / `console.error` / 5xx, no stub text. See `lib/routes.ts`. |
+| 1 | `routes` | `[route]` tests for the selected route table, with a guard that entries are unique | Expected URL, expected en-US text and seeded data visible, edit forms prefilled, no uncaught error / `console.error` / 5xx, no stub text. See `lib/routes.ts`. |
 | 2 | `flows` | 15 `[flow]` tests in `tests/flows/` | Key user journeys: log in / wrong password / log out, admin vs member navigation, open / search / create / comment on recipes, create a shopping list, add + check an item, add a meal-plan note, create a tag, create a user, edit profile. |
 
 Selectors use only roles, accessible names, visible text and tooltips: never CSS classes or

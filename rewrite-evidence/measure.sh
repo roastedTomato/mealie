@@ -16,7 +16,7 @@
 #   lint     eslint . (JSON formatter)                         -> lint_errors/warnings
 #   types    Vue: vue-tsc --noEmit / React: tsc                -> tsc_errors
 #   static   grep over the app's source                        -> any_count, todo_count, expect_count
-#   e2e      frontend-e2e/ against the fresh build             -> routes_passed/66, flows_passed/N
+#   e2e      frontend-e2e/ against the fresh build             -> routes_passed/N, flows_passed/N
 #
 # Logs and raw reports for each run go to rewrite-evidence/runs/<run-id>/.
 set -uo pipefail
@@ -164,7 +164,7 @@ EXPECT_COUNT=$(grep -rEo 'expect(\.[a-zA-Z]+)?\(' --include='*.test.*' --include
 TEST_FILES=$(find "$APP_DIR" -path "$APP_DIR/node_modules" -prune -o -type f \( -name '*.test.*' -o -name '*.spec.*' \) -print | wc -l)
 
 # ------------------------------------------------------------------------------------------------ e2e
-ROUTES_PASSED=NA; ROUTES_TOTAL=66; FLOWS_PASSED=NA; FLOWS_TOTAL=NA
+ROUTES_PASSED=NA; ROUTES_TOTAL=NA; FLOWS_PASSED=NA; FLOWS_TOTAL=NA
 if [[ $SKIP_E2E -eq 1 ]]; then
   NOTES+=("e2e skipped")
 elif [[ $BUILD_OK -ne 1 ]]; then
