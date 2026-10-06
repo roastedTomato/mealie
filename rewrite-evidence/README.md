@@ -33,6 +33,9 @@ and run one after another on purpose. Port 9091 must be free. A run takes about 
 # The Vue reference
 ./rewrite-evidence/measure.sh --app frontend --label my-label
 
+# Only the migration-scope routes
+./rewrite-evidence/measure.sh --app frontend --label core-routes --route-scope core
+
 # A rewrite in this checkout
 ./rewrite-evidence/measure.sh --app frontend-react --label WF2-P3-foundation-done
 
@@ -55,6 +58,7 @@ A trial run you don't want to keep: `git checkout rewrite-evidence/metrics.csv` 
 | Column | Meaning |
 |---|---|
 | `routes_passed/routes_total` | E2E tier 1: selected pages that render real content without errors |
+| `route_scope` | Which route set was measured: `all`, `core`, or `extended` |
 | `flows_passed/flows_total` | E2E tier 2: key user journeys that work end to end |
 | `tsc_errors` | Type errors (Vue: `vue-tsc` 2.2.0 pinned in `.tools/`; React: `tsc`) |
 | `lint_errors`, `lint_warnings` | `eslint .` in the app dir |

@@ -25,6 +25,8 @@ export interface RouteCheck {
   values?: (f: Fixtures) => string[];
 }
 
+export type RouteScope = "all" | "core" | "extended";
+
 /** First day shown by the meal planner: the seeded date, formatted like the planner's day headers. */
 function plannerDay(f: Fixtures): string {
   return new Date(`${f.mealplanDate}T00:00:00Z`).toLocaleDateString("en-US", {
@@ -413,3 +415,54 @@ export const ROUTES: RouteCheck[] = [
     texts: () => ["User Favorites", NAMES.recipe],
   },
 ];
+
+const CORE_ROUTE_FILES = new Set([
+  // Public/auth surfaces needed before any user flow can start.
+  "login.vue",
+  "forgot-password.vue",
+  "reset-password.vue",
+  "register/index.vue",
+
+  // Recipe-management scope for the Vue-to-React migration.
+  "index.vue",
+  "g/[groupSlug]/index.vue",
+  "g/[groupSlug]/r/[slug]/index.vue",
+  "g/[groupSlug]/shared/r/[id].vue",
+  "g/[groupSlug]/cookbooks/index.vue",
+  "g/[groupSlug]/cookbooks/[slug].vue",
+  "g/[groupSlug]/r/create.vue",
+  "g/[groupSlug]/r/create/index.vue",
+  "g/[groupSlug]/r/create/ai.vue",
+  "g/[groupSlug]/r/create/bulk.vue",
+  "g/[groupSlug]/r/create/debug.vue",
+  "g/[groupSlug]/r/create/html.vue",
+  "g/[groupSlug]/r/create/image.vue",
+  "g/[groupSlug]/r/create/new.vue",
+  "g/[groupSlug]/r/create/url.vue",
+  "g/[groupSlug]/r/create/zip.vue",
+  "g/[groupSlug]/recipes/categories/index.vue",
+  "g/[groupSlug]/recipes/tags/index.vue",
+  "g/[groupSlug]/recipes/tools/index.vue",
+  "g/[groupSlug]/recipes/finder/index.vue",
+  "g/[groupSlug]/recipes/timeline.vue",
+
+  // Closely related user journeys used by the core flow tests.
+  "household/mealplan/planner.vue",
+  "household/mealplan/planner/view.vue",
+  "household/mealplan/planner/edit.vue",
+  "shopping-lists/index.vue",
+  "shopping-lists/[id].vue",
+  "user/profile/index.vue",
+  "user/profile/edit.vue",
+  "user/profile/api-tokens.vue",
+  "user/[id]/favorites.vue",
+]);
+
+export const CORE_ROUTES = ROUTES.filter(route => CORE_ROUTE_FILES.has(route.file));
+export const EXTENDED_ROUTES = ROUTES.filter(route => !CORE_ROUTE_FILES.has(route.file));
+
+export const ROUTE_SETS: Record<RouteScope, RouteCheck[]> = {
+  all: ROUTES,
+  core: CORE_ROUTES,
+  extended: EXTENDED_ROUTES,
+};

@@ -5,14 +5,24 @@
 import { expect, test } from "@playwright/test";
 import { loadFixtures } from "../lib/fixtures";
 import { expectFieldValue, monitorPage, normalizedPath } from "../lib/page-health";
-import { ROUTES } from "../lib/routes";
+import { CORE_ROUTES, EXTENDED_ROUTES, type RouteScope, ROUTES, ROUTE_SETS } from "../lib/routes";
+
+const routeScope = (process.env.E2E_ROUTE_SCOPE ?? "all") as RouteScope;
+const selectedRoutes = ROUTE_SETS[routeScope];
+
+if (!selectedRoutes) {
+  throw new Error(`Unknown E2E_ROUTE_SCOPE "${routeScope}". Use all, core, or extended.`);
+}
 
 test("route table has unique entries", () => {
   expect(ROUTES.length).toBeGreaterThan(0);
   expect(new Set(ROUTES.map(r => r.file)).size).toBe(ROUTES.length);
+  expect(CORE_ROUTES.length).toBeGreaterThan(0);
+  expect(EXTENDED_ROUTES.length).toBeGreaterThan(0);
+  expect(CORE_ROUTES.length + EXTENDED_ROUTES.length).toBe(ROUTES.length);
 });
 
-for (const route of ROUTES) {
+for (const route of selectedRoutes) {
   test.describe(route.anonymous ? "anonymous" : "admin", () => {
     if (route.anonymous) {
       test.use({ storageState: { cookies: [], origins: [] } });
