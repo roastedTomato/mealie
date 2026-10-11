@@ -1,0 +1,22 @@
+[WebServer] WARNING  2026-10-10T06:24:00 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-10T06:24:01 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-10T06:24:02 - Incorrect username or password from 127.0.0.1
+
+Running 9 tests using 2 workers
+
+(node:35876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35875) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [flows] › tests/flows/recipes.spec.ts:6:7 › recipes › [flow] open a recipe from the recipe list (412ms)
+  ✓  2 [flows] › tests/flows/auth.spec.ts:8:7 › auth › [flow] log in with valid credentials and land on the recipe list (627ms)
+  ✓  3 [flows] › tests/flows/recipes.spec.ts:15:7 › recipes › [flow] search narrows the recipe list (217ms)
+  ✓  5 [flows] › tests/flows/recipes.spec.ts:24:7 › recipes › [flow] create a recipe by name (361ms)
+[WebServer] ERROR    2026-10-10T06:24:05 - Incorrect username or password from 127.0.0.1
+  ✓  4 [flows] › tests/flows/auth.spec.ts:16:7 › auth › [flow] a wrong password is rejected (477ms)
+  ✓  6 [flows] › tests/flows/recipes.spec.ts:36:7 › recipes › [flow] comment on a recipe and see it after reload (372ms)
+  ✓  7 [flows] › tests/flows/auth.spec.ts:27:7 › auth › [flow] log out ends the session (664ms)
+  ✓  8 [flows] › tests/flows/auth.spec.ts:39:7 › auth › [flow] a regular member is not offered admin pages (628ms)
+  ✓  9 [flows] › tests/flows/auth.spec.ts:50:7 › auth › [flow] an admin is offered admin pages (919ms)
+
+  9 passed (8.6s)

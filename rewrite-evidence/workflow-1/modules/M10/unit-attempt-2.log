@@ -1,0 +1,51 @@
+$ vitest run --maxWorkers=4
+
+ RUN  v3.2.7 /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react
+
+ ✓ src/lib/api/http.test.ts (6 tests) 12ms
+ ✓ src/lib/mealplan/dates.test.ts (3 tests) 28ms
+ ✓ src/i18n.test.ts (2 tests) 11ms
+ ✓ src/auth/token.test.ts (14 tests) 7ms
+ ✓ src/lib/api/base/routes.test.ts (4 tests) 2ms
+ ✓ src/lib/api/import-stream.test.ts (3 tests) 5ms
+ ❯ src/App.test.tsx (3 tests | 2 failed) 24ms
+   × SPA foundation > renders shared English inside providers and redirects anonymous home to sign in 19ms
+     → useContr is not defined
+   × SPA foundation > handles unknown deep links and navigates home through the session guard 4ms
+     → useContr is not defined
+   ✓ SPA foundation > falls back to English for an unavailable language 1ms
+ ✓ src/lib/sanitize/text.test.ts (5 tests) 2ms
+ ✓ src/lib/recipe/recipe-finder.test.ts (3 tests) 1ms
+ ✓ src/lib/validators/redirect.test.ts (5 tests) 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/App.test.tsx > SPA foundation > renders shared English inside providers and redirects anonymous home to sign in
+ FAIL  src/App.test.tsx > SPA foundation > handles unknown deep links and navigates home through the session guard
+ReferenceError: useContr is not defined
+ ❯ useAuth src/auth/AuthProvider.tsx:151:17
+    149| }
+    150| export function useAuth() {
+    151|   const value = useContr(Context);
+       |                 ^
+    152|   if (!value) throw new Error("AuthProvider is required");
+    153|   return value;
+ ❯ AppLayout src/components/Layout/AppLayout.tsx:19:28
+ ❯ Object.react_stack_bottom_frame node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:28571:20
+ ❯ renderWithHooks node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:8030:22
+ ❯ updateFunctionComponent node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:10569:19
+ ❯ beginWork node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:12205:18
+ ❯ runWithFiberInDEV node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:1048:13
+ ❯ performUnitOfWork node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:19176:22
+ ❯ workLoopSync node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:19004:41
+ ❯ renderRootSync node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:18985:11
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+
+ Test Files  1 failed | 9 passed (10)
+      Tests  2 failed | 46 passed (48)
+   Start at  19:40:51
+   Duration  1.31s (transform 181ms, setup 983ms, collect 665ms, tests 93ms, environment 2.08s, prepare 333ms)
+
+[ELIFECYCLE] Test failed. See above for more details.

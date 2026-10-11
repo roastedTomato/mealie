@@ -1,0 +1,5 @@
+$ tsc --noEmit && vite build
+src/pages/ShoppingPages.tsx(25,19): error TS18048: 'list.data.listItems' is possibly 'undefined'.
+src/pages/ShoppingPages.tsx(33,6): error TS18048: 'list.data.listItems' is possibly 'undefined'.
+src/pages/ShoppingPages.tsx(35,98): error TS18048: 'list.data.listItems' is possibly 'undefined'.
+[ELIFECYCLE] Command failed with exit code 2.

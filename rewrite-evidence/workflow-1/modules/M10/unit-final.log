@@ -1,0 +1,45 @@
+$ vitest run --maxWorkers=4
+
+ RUN  v3.2.7 /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react
+
+ ✓ src/lib/mealplan/dates.test.ts (3 tests) 11ms
+ ✓ src/lib/api/http.test.ts (6 tests) 11ms
+ ✓ src/i18n.test.ts (2 tests) 19ms
+ ✓ src/auth/token.test.ts (14 tests) 7ms
+ ✓ src/lib/api/import-stream.test.ts (3 tests) 5ms
+ ✓ src/lib/api/base/routes.test.ts (4 tests) 2ms
+ ✓ src/lib/sanitize/text.test.ts (5 tests) 2ms
+ ✓ src/lib/recipe/recipe-finder.test.ts (3 tests) 1ms
+ ✓ src/lib/validators/redirect.test.ts (5 tests) 1ms
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/App.test.tsx [ src/App.test.tsx ]
+Error: Transform failed with 1 error:
+/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react/src/components/Layout/AppLayout.tsx:110:15: ERROR: Unterminated regular expression
+  Plugin: vite:esbuild
+  File: /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react/src/components/Layout/AppLayout.tsx:110:15
+  
+  Unterminated regular expression
+  108|          </Box>
+  109|  
+  110|        </AppBar>
+     |                 ^
+  111|        <Container component="main">
+  112|          <Box sx={{ py: 3 }}>
+  
+ ❯ failureErrorWithLog node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:1467:15
+ ❯ node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:736:50
+ ❯ responseCallbacks.<computed> node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:603:9
+ ❯ handleIncomingPacket node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:658:12
+ ❯ Socket.readFromStdout node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:581:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 9 passed (10)
+      Tests  45 passed (45)
+   Start at  19:42:52
+   Duration  1.10s (transform 100ms, setup 720ms, collect 127ms, tests 59ms, environment 1.65s, prepare 305ms)
+
+[ELIFECYCLE] Test failed. See above for more details.

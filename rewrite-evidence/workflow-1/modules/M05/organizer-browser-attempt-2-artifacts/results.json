@@ -1,0 +1,792 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/node_modules/@playwright/test/cli.js",
+      "test",
+      "--grep",
+      "auth|organizing|\\[flow\\] (open a recipe|search narrows|create a recipe|comment on a recipe)|\\[route\\] g/\\[groupSlug\\]/(cookbooks|recipes/)|\\[route\\] group/data/tags"
+    ],
+    "configFile": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/playwright.config.ts",
+    "rootDir": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "routes",
+        "name": "routes",
+        "testDir": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/routes\\.spec\\.ts/"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "flows",
+        "name": "flows",
+        "testDir": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/flows\\/.*\\.spec\\.ts/"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": {
+      "command": "./scripts/start-backend.sh",
+      "url": "http://localhost:9091/api/app/about",
+      "reuseExistingServer": false,
+      "timeout": 180000,
+      "stdout": "ignore",
+      "stderr": "pipe",
+      "env": {
+        "E2E_PORT": "9091"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "routes.spec.ts",
+      "file": "routes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "admin",
+          "file": "routes.spec.ts",
+          "line": 32,
+          "column": 8,
+          "specs": [
+            {
+              "title": "[route] g/[groupSlug]/cookbooks/index.vue",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "routes",
+                  "projectName": "routes",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 872,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:27.461Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "598fdabf36083b33787e-f63016db6877bc274205",
+              "file": "routes.spec.ts",
+              "line": 37,
+              "column": 9
+            },
+            {
+              "title": "[route] g/[groupSlug]/cookbooks/[slug].vue",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "routes",
+                  "projectName": "routes",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 662,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:28.557Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "598fdabf36083b33787e-3e666d46589f8e845c99",
+              "file": "routes.spec.ts",
+              "line": 37,
+              "column": 9
+            },
+            {
+              "title": "[route] g/[groupSlug]/recipes/categories/index.vue",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "routes",
+                  "projectName": "routes",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 671,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:29.223Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "598fdabf36083b33787e-6c8c3bf186b1e0dcf17d",
+              "file": "routes.spec.ts",
+              "line": 37,
+              "column": 9
+            },
+            {
+              "title": "[route] g/[groupSlug]/recipes/tags/index.vue",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "routes",
+                  "projectName": "routes",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 646,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:29.897Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "598fdabf36083b33787e-c077a44eada489b6e724",
+              "file": "routes.spec.ts",
+              "line": 37,
+              "column": 9
+            },
+            {
+              "title": "[route] g/[groupSlug]/recipes/tools/index.vue",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "routes",
+                  "projectName": "routes",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 647,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:30.547Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "598fdabf36083b33787e-e8009a6d809152dc345c",
+              "file": "routes.spec.ts",
+              "line": 37,
+              "column": 9
+            },
+            {
+              "title": "[route] g/[groupSlug]/recipes/finder/index.vue",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "routes",
+                  "projectName": "routes",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 654,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:31.197Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "598fdabf36083b33787e-cbe7814a41208316c106",
+              "file": "routes.spec.ts",
+              "line": 37,
+              "column": 9
+            },
+            {
+              "title": "[route] g/[groupSlug]/recipes/timeline.vue",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "routes",
+                  "projectName": "routes",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 670,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:31.855Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "598fdabf36083b33787e-091bb11fb42fe8167add",
+              "file": "routes.spec.ts",
+              "line": 37,
+              "column": 9
+            },
+            {
+              "title": "[route] group/data/tags.vue",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "routes",
+                  "projectName": "routes",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 655,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:32.528Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "598fdabf36083b33787e-e91d62a09e3b2cb757c9",
+              "file": "routes.spec.ts",
+              "line": 37,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "flows/auth.spec.ts",
+      "file": "flows/auth.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "auth",
+          "file": "flows/auth.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[flow] log in with valid credentials and land on the recipe list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 765,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:27.457Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4104d3f02111767719d7-fd56942a55bd84be8829",
+              "file": "flows/auth.spec.ts",
+              "line": 8,
+              "column": 7
+            },
+            {
+              "title": "[flow] a wrong password is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 417,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:28.450Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4104d3f02111767719d7-c6fb17aaaeaeb6979429",
+              "file": "flows/auth.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "[flow] log out ends the session",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 596,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:28.874Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4104d3f02111767719d7-2c448d7071dc96aa029b",
+              "file": "flows/auth.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "[flow] a regular member is not offered admin pages",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 581,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:29.474Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4104d3f02111767719d7-3059d475d661d2dc095f",
+              "file": "flows/auth.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "[flow] an admin is offered admin pages",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 867,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:30.058Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4104d3f02111767719d7-51ddb1e20820a037aed7",
+              "file": "flows/auth.spec.ts",
+              "line": 50,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "flows/organize.spec.ts",
+      "file": "flows/organize.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "organizing",
+          "file": "flows/organize.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[flow] create a tag in data management",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 724,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:30.930Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "eb58f7d2c5ebb02e55f1-89cbfed335af17650bea",
+              "file": "flows/organize.spec.ts",
+              "line": 5,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "flows/recipes.spec.ts",
+      "file": "flows/recipes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "recipes",
+          "file": "flows/recipes.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[flow] open a recipe from the recipe list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 283,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:31.659Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "adbcddc045ffdc002fe7-e190de4c90cd8c3bacd4",
+              "file": "flows/recipes.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "[flow] search narrows the recipe list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 218,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:31.945Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "adbcddc045ffdc002fe7-1af8f189e631f269eec5",
+              "file": "flows/recipes.spec.ts",
+              "line": 15,
+              "column": 7
+            },
+            {
+              "title": "[flow] create a recipe by name",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 330,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:32.167Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "adbcddc045ffdc002fe7-b28f9a44de96de38b864",
+              "file": "flows/recipes.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "[flow] comment on a recipe and see it after reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 318,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:27:32.500Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "adbcddc045ffdc002fe7-94521aca8e8c97c31455",
+              "file": "flows/recipes.spec.ts",
+              "line": 36,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-10T06:27:22.427Z",
+    "duration": 10817.523000000001,
+    "expected": 18,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

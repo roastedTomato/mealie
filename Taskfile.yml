@@ -37,7 +37,7 @@ tasks:
 
   setup:ui:
     desc: setup frontend dependencies
-    dir: frontend
+    dir: frontend-react
     run: once
     cmds:
       - pnpm install
@@ -145,9 +145,9 @@ tasks:
       - ui:generate
     cmds:
       - rm -rf mealie/frontend
-      - cp -a frontend/dist mealie/frontend
+      - cp -a frontend-react/dist mealie/frontend
     sources:
-      - frontend/dist/**
+      - frontend-react/dist/**
     generates:
       - mealie/frontend/**
 
@@ -237,26 +237,30 @@ tasks:
       - task: py:format
 
   ui:build:
-    desc: builds the frontend in frontend/dist
-    dir: frontend
+    desc: builds the frontend in frontend-react/dist
+    dir: frontend-react
     cmds:
       - pnpm build
     sources:
       - "**"
+      - "../frontend/app/lang/messages/**"
+      - "../frontend/app/lib/api/types/**"
       - exclude: .nuxt/**
       - exclude: .output/**
       - exclude: dist/**
       - exclude: node_modules/.cache/**
 
   ui:generate:
-    desc: generates a static version of the frontend in frontend/dist
-    dir: frontend
+    desc: generates a static version of the frontend in frontend-react/dist
+    dir: frontend-react
     deps:
       - setup:ui
     cmds:
-      - pnpm generate
+      - pnpm build
     sources:
       - "**"
+      - "../frontend/app/lang/messages/**"
+      - "../frontend/app/lib/api/types/**"
       - exclude: .nuxt/**
       - exclude: .output/**
       - exclude: dist/**
@@ -264,11 +268,13 @@ tasks:
 
   ui:lint:
     desc: runs the frontend linter
-    dir: frontend
+    dir: frontend-react
     cmds:
       - pnpm lint --max-warnings=0
     sources:
       - "**"
+      - "../frontend/app/lang/messages/**"
+      - "../frontend/app/lib/api/types/**"
       - exclude: .nuxt/**
       - exclude: .output/**
       - exclude: dist/**
@@ -276,11 +282,13 @@ tasks:
 
   ui:test:
     desc: runs the frontend tests
-    dir: frontend
+    dir: frontend-react
     cmds:
       - pnpm test
     sources:
       - "**"
+      - "../frontend/app/lang/messages/**"
+      - "../frontend/app/lib/api/types/**"
       - exclude: .nuxt/**
       - exclude: .output/**
       - exclude: dist/**
@@ -291,12 +299,19 @@ tasks:
     deps:
       - ui:lint
       - ui:test
+      - ui:types
+
+  ui:types:
+    desc: checks strict TypeScript
+    dir: frontend-react
+    cmds:
+      - pnpm typecheck
 
   ui:
     desc: runs the frontend server
-    dir: frontend
+    dir: frontend-react
     cmds:
-      - pnpm run dev --no-fork
+      - pnpm run dev
 
   docker:build-from-package:
     desc: Builds the Docker image from the existing Python package in dist/

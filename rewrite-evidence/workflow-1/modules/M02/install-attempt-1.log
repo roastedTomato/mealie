@@ -1,0 +1,31 @@
+[ERR_PNPM_META_FETCH_FAIL] GET https://registry.npmjs.org/pnpm: fetch failed
+
+   ╭──────────────────────────────────────────────────────────────────────╮
+   │                                                                      │
+   │                 Update available! 11.25.0 → 12.8.1.                  │
+   │                 Changelog: https://pnpm.io/v/12.8.1                  │
+   │   To update, run: curl -fsSL https://get.pnpm.io/install.sh | sh -   │
+   │                                                                      │
+   ╰──────────────────────────────────────────────────────────────────────╯
+
+[WARN] GET https://registry.npmjs.org/@vitejs%2Fplugin-react error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@testing-library%2Fjest-dom error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@testing-library%2Freact error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@testing-library%2Fuser-event error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@types%2Freact error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@types%2Freact-dom error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/typescript-eslint error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@emotion%2Freact error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@emotion%2Fstyled error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@mui%2Fmaterial error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/react-dom error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/react-i18next error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/i18next error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/react-router error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/react error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/vite error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/@eslint%2Fjs error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/eslint error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/vitest error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/typescript error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+[WARN] GET https://registry.npmjs.org/jsdom error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.

@@ -1,0 +1,8 @@
+$ eslint .
+
+/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react/src/components/Layout/AppLayout.tsx
+  110:6  error  Parsing error: '}' expected
+
+✖ 1 problem (1 error, 0 warnings)
+
+[ELIFECYCLE] Command failed with exit code 1.

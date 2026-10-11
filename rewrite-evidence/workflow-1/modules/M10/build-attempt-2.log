@@ -1,0 +1,4 @@
+$ tsc --noEmit && vite build
+src/auth/AuthProvider.tsx(151,17): error TS2304: Cannot find name 'useContr'.
+src/pages/ProfilePages.tsx(226,27): error TS7006: Parameter 'item' implicitly has an 'any' type.
+[ELIFECYCLE] Command failed with exit code 2.

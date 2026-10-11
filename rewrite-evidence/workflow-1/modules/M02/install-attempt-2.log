@@ -1,0 +1,53 @@
+Progress: resolved 1, reused 0, downloaded 0, added 0
+[WARN] deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+   ╭──────────────────────────────────────────────────────────────────────╮
+   │                                                                      │
+   │                 Update available! 11.25.0 → 12.10.1.                 │
+   │                 Changelog: https://pnpm.io/v/12.10.1                 │
+   │   To update, run: curl -fsSL https://get.pnpm.io/install.sh | sh -   │
+   │                                                                      │
+   ╰──────────────────────────────────────────────────────────────────────╯
+
+[WARN] deprecated @testing-library/jest-dom@6.10.0: Incorrect minor release with breaking changes (Node >=22 and required @testing-library/dom peer). Use 6.9.1 for the 6.x line, or upgrade to 7.0.0.
+Progress: resolved 95, reused 38, downloaded 48, added 0
+Progress: resolved 203, reused 87, downloaded 106, added 0
+Progress: resolved 324, reused 121, downloaded 151, added 0
+Progress: resolved 357, reused 137, downloaded 169, added 0
+[WARN] 1 deprecated subdependencies found: whatwg-encoding@3.1.1
+Packages: +322
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Packages are cloned from the content-addressable store to the virtual store.
+  Content-addressable store is at: /Users/eva/Library/pnpm/store/v11
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 372, reused 139, downloaded 183, added 82
+Progress: resolved 372, reused 139, downloaded 183, added 322, done
+
+dependencies:
++ @emotion/react 11.14.0
++ @emotion/styled 11.14.1
++ @mui/material 7.3.11
++ i18next 24.2.3 (26.4.2 is available)
++ react 19.3.0
++ react-dom 19.3.0
++ react-i18next 15.7.4 (17.0.16 is available)
++ react-router 7.18.4 (8.4.0 is available)
+
+devDependencies:
++ @eslint/js 9.39.5 (10.0.1 is available)
++ @testing-library/jest-dom 6.10.0 (7.0.1 is available) deprecated
++ @testing-library/react 16.3.3
++ @testing-library/user-event 14.6.7
++ @types/react 19.3.0
++ @types/react-dom 19.3.0
++ @vitejs/plugin-react 4.7.0 (6.1.2 is available)
++ eslint 9.39.5 (10.12.0 is available) deprecated
++ jsdom 26.1.0 (30.1.2 is available)
++ typescript 5.9.3 (7.0.2 is available)
++ typescript-eslint 8.71.1
++ vite 6.4.4 (8.3.4 is available)
++ vitest 3.2.7 (5.0.3 is available)
+
+[ERR_PNPM_IGNORED_BUILDS] Ignored build scripts: esbuild@0.25.12
+
+Run "pnpm approve-builds" to pick which dependencies should be allowed to run scripts.

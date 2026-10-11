@@ -1,0 +1,73 @@
+[WebServer] WARNING  2026-10-10T06:30:49 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-10T06:30:50 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-10T06:30:51 - Incorrect username or password from 127.0.0.1
+
+Running 15 tests using 2 workers
+
+(node:37505) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37506) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [flows] › tests/flows/auth.spec.ts:8:7 › auth › [flow] log in with valid credentials and land on the recipe list (656ms)
+  ✓   2 [routes] › tests/routes.spec.ts:37:9 › admin › [route] shopping-lists/index.vue (853ms)
+[WebServer] ERROR    2026-10-10T06:30:54 - Incorrect username or password from 127.0.0.1
+  ✓   3 [flows] › tests/flows/auth.spec.ts:16:7 › auth › [flow] a wrong password is rejected (433ms)
+  ✓   4 [routes] › tests/routes.spec.ts:37:9 › admin › [route] shopping-lists/[id].vue (685ms)
+  ✓   5 [flows] › tests/flows/auth.spec.ts:27:7 › auth › [flow] log out ends the session (509ms)
+(node:37523) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [flows] › tests/flows/auth.spec.ts:39:7 › auth › [flow] a regular member is not offered admin pages (625ms)
+  ✓   7 [flows] › tests/flows/mealplan.spec.ts:12:7 › meal plan › [flow] add a note to tomorrow's meal plan (505ms)
+  ✓   9 [flows] › tests/flows/organize.spec.ts:5:7 › organizing › [flow] create a tag in data management (597ms)
+  ✓   8 [flows] › tests/flows/auth.spec.ts:50:7 › auth › [flow] an admin is offered admin pages (799ms)
+  ✓  10 [flows] › tests/flows/recipes.spec.ts:6:7 › recipes › [flow] open a recipe from the recipe list (383ms)
+  ✓  12 [flows] › tests/flows/recipes.spec.ts:15:7 › recipes › [flow] search narrows the recipe list (215ms)
+  ✓  11 [flows] › tests/flows/shopping.spec.ts:6:7 › shopping lists › [flow] create a shopping list (746ms)
+  ✓  13 [flows] › tests/flows/recipes.spec.ts:24:7 › recipes › [flow] create a recipe by name (314ms)
+  ✓  15 [flows] › tests/flows/recipes.spec.ts:36:7 › recipes › [flow] comment on a recipe and see it after reload (313ms)
+  ✘  14 [flows] › tests/flows/shopping.spec.ts:19:7 › shopping lists › [flow] add an item and check it off (878ms)
+
+
+  1) [flows] › tests/flows/shopping.spec.ts:19:7 › shopping lists › [flow] add an item and check it off 
+
+    Error: locator.check: Clicking the checkbox did not change its state
+    Call log:
+      - waiting for getByText('E2E Hammer mv20ms2hgn', { exact: true }).visible().first().locator('xpath=ancestor::*[.//input[@type=\'checkbox\'] or .//*[@role=\'checkbox\']][1]').getByRole('checkbox').first()
+        - locator resolved to <input type="checkbox" data-indeterminate="false" aria-label="Check E2E Hammer mv20ms2hgn" class="PrivateSwitchBase-input css-j8yymo"/>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - performing click action
+        - click action done
+        - waiting for scheduled navigations to finish
+        - navigations have finished
+
+
+      37 |     const saved = page.waitForResponse(r => r.url().includes("/api/households/shopping/items")
+      38 |       && ["PUT", "PATCH"].includes(r.request().method()) && r.ok());
+    > 39 |     await row.getByRole("checkbox").first().check();
+         |                                             ^
+      40 |     await expect(visibleText(page, "One item checked")).toBeVisible();
+      41 |     await saved;
+      42 |
+        at /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests/flows/shopping.spec.ts:39:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/flows-shopping-shopping-li-cc7f8-dd-an-item-and-check-it-off-flows/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/flows-shopping-shopping-li-cc7f8-dd-an-item-and-check-it-off-flows/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/flows-shopping-shopping-li-cc7f8-dd-an-item-and-check-it-off-flows/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/flows-shopping-shopping-li-cc7f8-dd-an-item-and-check-it-off-flows/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [flows] › tests/flows/shopping.spec.ts:19:7 › shopping lists › [flow] add an item and check it off 
+  14 passed (9.9s)

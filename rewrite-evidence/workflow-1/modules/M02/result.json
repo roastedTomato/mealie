@@ -1,0 +1,61 @@
+{
+  "module": "M02",
+  "started_at_utc": "2026-10-09T21:03:26Z",
+  "ended_at_utc": "2026-10-09T21:05:53Z",
+  "tokens": null,
+  "token_status": "NA: per-step usage not exposed",
+  "prompt": "prompt.md",
+  "session_log": "../../session-logs/session-001.md",
+  "changed_files": [
+    "frontend-react/package.json", "frontend-react/pnpm-lock.yaml",
+    "frontend-react/pnpm-workspace.yaml", "frontend-react/.gitignore",
+    "frontend-react/tsconfig.json", "frontend-react/vite.config.ts",
+    "frontend-react/eslint.config.js", "frontend-react/index.html",
+    "frontend-react/src/main.tsx", "frontend-react/src/App.tsx",
+    "frontend-react/src/App.test.tsx", "frontend-react/src/i18n.ts",
+    "frontend-react/src/components/Layout/AppLayout.tsx",
+    "frontend-react/src/tests/setup.ts"
+  ],
+  "commands_workdir": "frontend-react",
+  "commands": [
+    {"command": "pnpm install", "output": "install-attempt-1.log", "result": "interrupted after sandbox DNS failure"},
+    {"command": "pnpm install", "output": "install-attempt-2.log", "result": "downloaded dependencies; esbuild build approval required"},
+    {"command": "pnpm install --offline", "output": "install-attempt-3.log", "result": "failed: noninteractive purge"},
+    {"command": "CI=true pnpm install --offline", "output": "install-attempt-4.log", "result": "failed: offline store missing tarball"},
+    {"command": "CI=true pnpm install --frozen-lockfile", "output": "install-attempt-5.log", "result": "pass, elevated network access"},
+    {"command": "pnpm test --maxWorkers=4", "output": "unit-attempt-1.log", "result": "failed: automatic dependency reinstall"},
+    {"command": "pnpm typecheck", "output": "types-attempt-1.log", "result": "failed: automatic dependency reinstall"},
+    {"command": "pnpm lint", "output": "lint-attempt-1.log", "result": "failed: automatic dependency reinstall"},
+    {"command": "pnpm test --maxWorkers=4", "output": "unit-attempt-2.log", "result": "failed: npmrc option ineffective"},
+    {"command": "pnpm test --maxWorkers=4", "output": "unit-attempt-3.log", "result": "pass: 15/15"},
+    {"command": "pnpm typecheck", "output": "types-attempt-2.log", "result": "pass"},
+    {"command": "pnpm lint", "output": "lint-attempt-2.log", "result": "pass"},
+    {"command": "pnpm build", "output": "build-attempt-1.log", "result": "failed: top-level await incompatible with default build target"},
+    {"command": "pnpm build", "output": "build-attempt-2.log", "result": "pass: strict check + dist/index.html"},
+    {"command": "pnpm test --maxWorkers=4", "output": "unit-final.log", "result": "pass: 15/15 after repair"},
+    {"command": "pnpm lint", "output": "lint-final.log", "result": "pass after repair"}
+  ],
+  "repair_count": 1,
+  "repair_count_definition": "Source defect repair cycles, excluding dependency/environment troubleshooting",
+  "repair": "Replace top-level await with an async bootstrap function and explicit startup failure handling",
+  "environment_repairs": [
+    "Use authorized elevated network access after sandbox DNS failure",
+    "Allow esbuild build script explicitly in pnpm-workspace.yaml",
+    "Set CI=true for noninteractive dependency installation",
+    "Use network-enabled installation after offline cache miss",
+    "Configure verifyDepsBeforeRun in workspace YAML; ineffective npmrc attempt removed"
+  ],
+  "acceptance": "pass",
+  "unit_passed": 15,
+  "unit_failed": 0,
+  "type_errors": 0,
+  "lint_errors": 0,
+  "build": "pass",
+  "limitations": [
+    "Foundation only: home is a shell, not the recipe application",
+    "No authenticated business pages or backend browser acceptance yet",
+    "English locale wired; full language selection and remaining locale loading still required",
+    "Vite reports a 505.62kB chunk warning; performance optimization remains",
+    "Individual command start/end times were not captured; logs preserve only available timing evidence"
+  ]
+}

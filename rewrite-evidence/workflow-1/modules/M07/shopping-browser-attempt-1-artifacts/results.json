@@ -1,0 +1,764 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/node_modules/@playwright/test/cli.js",
+      "test",
+      "--grep",
+      "auth|organizing|meal plan|shopping lists|\\[flow\\] (open a recipe|search narrows|create a recipe|comment on a recipe)|\\[route\\] shopping-lists/"
+    ],
+    "configFile": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/playwright.config.ts",
+    "rootDir": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "routes",
+        "name": "routes",
+        "testDir": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/routes\\.spec\\.ts/"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "flows",
+        "name": "flows",
+        "testDir": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/flows\\/.*\\.spec\\.ts/"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": {
+      "command": "./scripts/start-backend.sh",
+      "url": "http://localhost:9091/api/app/about",
+      "reuseExistingServer": false,
+      "timeout": 180000,
+      "stdout": "ignore",
+      "stderr": "pipe",
+      "env": {
+        "E2E_PORT": "9091"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "routes.spec.ts",
+      "file": "routes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "admin",
+          "file": "routes.spec.ts",
+          "line": 32,
+          "column": 8,
+          "specs": [
+            {
+              "title": "[route] shopping-lists/index.vue",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "routes",
+                  "projectName": "routes",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 853,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:53.673Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "598fdabf36083b33787e-120fa2e8fcca2a17e028",
+              "file": "routes.spec.ts",
+              "line": 37,
+              "column": 9
+            },
+            {
+              "title": "[route] shopping-lists/[id].vue",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "routes",
+                  "projectName": "routes",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 685,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:54.720Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "598fdabf36083b33787e-bbbad5533a0af83d2511",
+              "file": "routes.spec.ts",
+              "line": 37,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "flows/auth.spec.ts",
+      "file": "flows/auth.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "auth",
+          "file": "flows/auth.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[flow] log in with valid credentials and land on the recipe list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 656,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:53.666Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4104d3f02111767719d7-fd56942a55bd84be8829",
+              "file": "flows/auth.spec.ts",
+              "line": 8,
+              "column": 7
+            },
+            {
+              "title": "[flow] a wrong password is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 433,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:54.523Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4104d3f02111767719d7-c6fb17aaaeaeb6979429",
+              "file": "flows/auth.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "[flow] log out ends the session",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 509,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:54.962Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4104d3f02111767719d7-2c448d7071dc96aa029b",
+              "file": "flows/auth.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "[flow] a regular member is not offered admin pages",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 625,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:55.474Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4104d3f02111767719d7-3059d475d661d2dc095f",
+              "file": "flows/auth.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "[flow] an admin is offered admin pages",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 799,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:56.102Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4104d3f02111767719d7-51ddb1e20820a037aed7",
+              "file": "flows/auth.spec.ts",
+              "line": 50,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "flows/mealplan.spec.ts",
+      "file": "flows/mealplan.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "meal plan",
+          "file": "flows/mealplan.spec.ts",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[flow] add a note to tomorrow's meal plan",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 505,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:55.605Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8509fa8ee188014e8a4-775b0d0e8d93791a4995",
+              "file": "flows/mealplan.spec.ts",
+              "line": 12,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "flows/organize.spec.ts",
+      "file": "flows/organize.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "organizing",
+          "file": "flows/organize.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[flow] create a tag in data management",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 597,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:56.194Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "eb58f7d2c5ebb02e55f1-89cbfed335af17650bea",
+              "file": "flows/organize.spec.ts",
+              "line": 5,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "flows/recipes.spec.ts",
+      "file": "flows/recipes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "recipes",
+          "file": "flows/recipes.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[flow] open a recipe from the recipe list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 383,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:56.796Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "adbcddc045ffdc002fe7-e190de4c90cd8c3bacd4",
+              "file": "flows/recipes.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "[flow] search narrows the recipe list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 215,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:57.183Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "adbcddc045ffdc002fe7-1af8f189e631f269eec5",
+              "file": "flows/recipes.spec.ts",
+              "line": 15,
+              "column": 7
+            },
+            {
+              "title": "[flow] create a recipe by name",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 314,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:57.401Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "adbcddc045ffdc002fe7-b28f9a44de96de38b864",
+              "file": "flows/recipes.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "[flow] comment on a recipe and see it after reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 313,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:57.718Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "adbcddc045ffdc002fe7-94521aca8e8c97c31455",
+              "file": "flows/recipes.spec.ts",
+              "line": 36,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "flows/shopping.spec.ts",
+      "file": "flows/shopping.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "shopping lists",
+          "file": "flows/shopping.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[flow] create a shopping list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 746,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:56.907Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cc05f9079d993201a00b-ad46c466069292b4cdb6",
+              "file": "flows/shopping.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "[flow] add an item and check it off",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "flows",
+                  "projectName": "flows",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 878,
+                      "error": {
+                        "message": "Error: locator.check: Clicking the checkbox did not change its state\nCall log:\n\u001b[2m  - waiting for getByText('E2E Hammer mv20ms2hgn', { exact: true }).visible().first().locator('xpath=ancestor::*[.//input[@type=\\'checkbox\\'] or .//*[@role=\\'checkbox\\']][1]').getByRole('checkbox').first()\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\" data-indeterminate=\"false\" aria-label=\"Check E2E Hammer mv20ms2hgn\" class=\"PrivateSwitchBase-input css-j8yymo\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\u001b[2m    - navigations have finished\u001b[22m\n",
+                        "stack": "Error: locator.check: Clicking the checkbox did not change its state\nCall log:\n\u001b[2m  - waiting for getByText('E2E Hammer mv20ms2hgn', { exact: true }).visible().first().locator('xpath=ancestor::*[.//input[@type=\\'checkbox\\'] or .//*[@role=\\'checkbox\\']][1]').getByRole('checkbox').first()\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\" data-indeterminate=\"false\" aria-label=\"Check E2E Hammer mv20ms2hgn\" class=\"PrivateSwitchBase-input css-j8yymo\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\u001b[2m    - navigations have finished\u001b[22m\n\n    at /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests/flows/shopping.spec.ts:39:45",
+                        "location": {
+                          "file": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests/flows/shopping.spec.ts",
+                          "column": 45,
+                          "line": 39
+                        },
+                        "snippet": "  37 |     const saved = page.waitForResponse(r => r.url().includes(\"/api/households/shopping/items\")\n  38 |       && [\"PUT\", \"PATCH\"].includes(r.request().method()) && r.ok());\n> 39 |     await row.getByRole(\"checkbox\").first().check();\n     |                                             ^\n  40 |     await expect(visibleText(page, \"One item checked\")).toBeVisible();\n  41 |     await saved;\n  42 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests/flows/shopping.spec.ts",
+                            "column": 45,
+                            "line": 39
+                          },
+                          "message": "Error: locator.check: Clicking the checkbox did not change its state\nCall log:\n\u001b[2m  - waiting for getByText('E2E Hammer mv20ms2hgn', { exact: true }).visible().first().locator('xpath=ancestor::*[.//input[@type=\\'checkbox\\'] or .//*[@role=\\'checkbox\\']][1]').getByRole('checkbox').first()\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\" data-indeterminate=\"false\" aria-label=\"Check E2E Hammer mv20ms2hgn\" class=\"PrivateSwitchBase-input css-j8yymo\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\u001b[2m    - navigations have finished\u001b[22m\n\n\n  37 |     const saved = page.waitForResponse(r => r.url().includes(\"/api/households/shopping/items\")\n  38 |       && [\"PUT\", \"PATCH\"].includes(r.request().method()) && r.ok());\n> 39 |     await row.getByRole(\"checkbox\").first().check();\n     |                                             ^\n  40 |     await expect(visibleText(page, \"One item checked\")).toBeVisible();\n  41 |     await saved;\n  42 |\n    at /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests/flows/shopping.spec.ts:39:45"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T06:30:57.656Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/test-results/flows-shopping-shopping-li-cc7f8-dd-an-item-and-check-it-off-flows/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/test-results/flows-shopping-shopping-li-cc7f8-dd-an-item-and-check-it-off-flows/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/test-results/flows-shopping-shopping-li-cc7f8-dd-an-item-and-check-it-off-flows/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests/flows/shopping.spec.ts",
+                        "column": 45,
+                        "line": 39
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "cc05f9079d993201a00b-73340ea3768bda6b5e44",
+              "file": "flows/shopping.spec.ts",
+              "line": 19,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-10T06:30:48.721Z",
+    "duration": 9883.537,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

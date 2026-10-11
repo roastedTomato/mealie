@@ -1,0 +1,15 @@
+{
+  "step": "S00 repository and module inspection",
+  "prompt": "prompts/user-001.md",
+  "session_log": "session-logs/session-001.md",
+  "started_at_utc": null,
+  "ended_at_utc": null,
+  "time_status": "Exact inspection timestamps were not captured; inspection preceded M01",
+  "tokens": null,
+  "token_status": "NA: platform telemetry not exposed",
+  "changed_files": ["rewrite-evidence/workflow-1/PLAN.md"],
+  "commands_status": "Inspection commands described in session log; exact complete stdout/tool transcript unavailable",
+  "tests": [],
+  "acceptance": "Module boundaries and migration/test order documented before conversion; no baseline tests",
+  "result": "PLAN.md"
+}

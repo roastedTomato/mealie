@@ -1,0 +1,42 @@
+$ vitest run --maxWorkers=4
+
+ RUN  v3.2.7 /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react
+
+ ✓ src/auth/token.test.ts (14 tests) 7ms
+ ✓ src/lib/api/http.test.ts (6 tests) 12ms
+ ✓ src/lib/mealplan/dates.test.ts (3 tests) 47ms
+ ✓ src/lib/sanitize/text.test.ts (5 tests) 2ms
+ ✓ src/lib/api/import-stream.test.ts (3 tests) 5ms
+ ✓ src/lib/validators/redirect.test.ts (5 tests) 1ms
+ ✓ src/lib/recipe/recipe-finder.test.ts (3 tests) 1ms
+ ✓ src/lib/api/base/routes.test.ts (4 tests) 2ms
+ ✓ src/i18n.test.ts (2 tests) 11ms
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/App.test.tsx [ src/App.test.tsx ]
+Error: Failed to resolve import "./i18n" from "src/auth/AuthProvider.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react/src/auth/AuthProvider.tsx:1:21
+  1  |  import { jsxDEV } from "react/jsx-dev-runtime";
+  2  |  import { text } from "./i18n";
+     |                        ^
+  3  |  import {
+  4  |    createContext,
+ ❯ TransformPluginContext._formatLog node_modules/.pnpm/vite@6.4.4/node_modules/vite/dist/node/chunks/dep-3O3b9SCF.js:42846:41
+ ❯ TransformPluginContext.error node_modules/.pnpm/vite@6.4.4/node_modules/vite/dist/node/chunks/dep-3O3b9SCF.js:42843:16
+ ❯ normalizeUrl node_modules/.pnpm/vite@6.4.4/node_modules/vite/dist/node/chunks/dep-3O3b9SCF.js:40820:23
+ ❯ node_modules/.pnpm/vite@6.4.4/node_modules/vite/dist/node/chunks/dep-3O3b9SCF.js:40939:37
+ ❯ TransformPluginContext.transform node_modules/.pnpm/vite@6.4.4/node_modules/vite/dist/node/chunks/dep-3O3b9SCF.js:40866:7
+ ❯ EnvironmentPluginContainer.transform node_modules/.pnpm/vite@6.4.4/node_modules/vite/dist/node/chunks/dep-3O3b9SCF.js:42641:18
+ ❯ loadAndTransform node_modules/.pnpm/vite@6.4.4/node_modules/vite/dist/node/chunks/dep-3O3b9SCF.js:36053:27
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 9 passed (10)
+      Tests  45 passed (45)
+   Start at  19:40:07
+   Duration  1.35s (transform 124ms, setup 1.02s, collect 97ms, tests 88ms, environment 2.13s, prepare 338ms)
+
+[ELIFECYCLE] Test failed. See above for more details.

@@ -1,0 +1,47 @@
+src/App.test.tsx 24ms (unchanged)
+src/App.tsx 13ms (unchanged)
+src/auth/AuthProvider.tsx 12ms (unchanged)
+src/auth/token.test.ts 6ms (unchanged)
+src/auth/token.ts 6ms (unchanged)
+src/components/DomainEntityTable.tsx 11ms (unchanged)
+src/components/DomainRecordEditor.tsx 8ms (unchanged)
+[error] src/components/Layout/AppLayout.tsx: SyntaxError: '}' expected. (110:7)
+[error]   108 |         </Box>
+[error]   109 |
+[error] > 110 |       </AppBar>
+[error]       |       ^
+[error]   111 |       <Container component="main">
+[error]   112 |         <Box sx={{ py: 3 }}>
+[error]   113 |           <Outlet />
+src/hooks/useApi.ts 2ms (unchanged)
+src/i18n.test.ts 1ms
+src/i18n.ts 4ms
+src/lib/api/base/index.ts 0ms (unchanged)
+src/lib/api/base/route.ts 2ms (unchanged)
+src/lib/api/base/routes.test.ts 1ms (unchanged)
+src/lib/api/http.test.ts 3ms (unchanged)
+src/lib/api/http.ts 5ms (unchanged)
+src/lib/api/import-stream.test.ts 2ms (unchanged)
+src/lib/api/import-stream.ts 4ms (unchanged)
+src/lib/mealplan/dates.test.ts 1ms (unchanged)
+src/lib/mealplan/dates.ts 1ms (unchanged)
+src/lib/recipe/recipe-finder.test.ts 1ms (unchanged)
+src/lib/recipe/recipe-finder.ts 0ms (unchanged)
+src/lib/sanitize/text.test.ts 2ms (unchanged)
+src/lib/sanitize/text.ts 1ms (unchanged)
+src/lib/validators/redirect.test.ts 1ms (unchanged)
+src/lib/validators/redirect.ts 1ms (unchanged)
+src/main.tsx 1ms (unchanged)
+src/pages/AdminToolsPages.tsx 6ms (unchanged)
+src/pages/AuthPages.tsx 8ms (unchanged)
+src/pages/DataPages.tsx 10ms (unchanged)
+src/pages/ManagementPages.tsx 11ms (unchanged)
+src/pages/MealplanPages.tsx 7ms (unchanged)
+src/pages/OrganizerPages.tsx 7ms
+src/pages/ProfilePages.tsx 10ms
+src/pages/RecipeCreatePage.tsx 5ms (unchanged)
+src/pages/RecipeDetailPage.tsx 8ms
+src/pages/RecipeListPage.tsx 2ms (unchanged)
+src/pages/ShoppingPages.tsx 7ms (unchanged)
+src/pages/SiteSettingsPage.tsx 2ms (unchanged)
+src/tests/setup.ts 0ms (unchanged)

@@ -1,0 +1,30 @@
+[WebServer] WARNING  2026-10-10T06:29:01 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-10T06:29:03 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-10T06:29:03 - Incorrect username or password from 127.0.0.1
+
+Running 15 tests using 2 workers
+
+(node:37084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37085) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [flows] › tests/flows/auth.spec.ts:8:7 › auth › [flow] log in with valid credentials and land on the recipe list (601ms)
+  ✓   2 [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/settings.vue (739ms)
+[WebServer] ERROR    2026-10-10T06:29:06 - Incorrect username or password from 127.0.0.1
+  ✓   3 [flows] › tests/flows/auth.spec.ts:16:7 › auth › [flow] a wrong password is rejected (430ms)
+  ✓   4 [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/planner.vue (687ms)
+  ✓   5 [flows] › tests/flows/auth.spec.ts:27:7 › auth › [flow] log out ends the session (590ms)
+  ✓   6 [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/planner/view.vue (670ms)
+  ✓   7 [flows] › tests/flows/auth.spec.ts:39:7 › auth › [flow] a regular member is not offered admin pages (629ms)
+  ✓   8 [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/planner/edit.vue (684ms)
+(node:37103) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [flows] › tests/flows/auth.spec.ts:50:7 › auth › [flow] an admin is offered admin pages (879ms)
+  ✓  10 [flows] › tests/flows/mealplan.spec.ts:12:7 › meal plan › [flow] add a note to tomorrow's meal plan (646ms)
+  ✓  11 [flows] › tests/flows/organize.spec.ts:5:7 › organizing › [flow] create a tag in data management (746ms)
+  ✓  12 [flows] › tests/flows/recipes.spec.ts:6:7 › recipes › [flow] open a recipe from the recipe list (283ms)
+  ✓  13 [flows] › tests/flows/recipes.spec.ts:15:7 › recipes › [flow] search narrows the recipe list (240ms)
+  ✓  14 [flows] › tests/flows/recipes.spec.ts:24:7 › recipes › [flow] create a recipe by name (338ms)
+  ✓  15 [flows] › tests/flows/recipes.spec.ts:36:7 › recipes › [flow] comment on a recipe and see it after reload (326ms)
+
+  15 passed (10.2s)

@@ -6,18 +6,14 @@ FROM node:24@sha256:64af3819f9275802414d7cdc38c27e9d82bd564dec4d4da87d008255d36c
 
 RUN npm install --global pnpm@11
 
-WORKDIR /frontend
-
-COPY frontend .
-
-# The lang files import the seeded ingredient unit names, which live with the backend rather
-# than in frontend/. Copy them to the same path they occupy in the repo, so the relative import
-# in app/lang/locales/*.ts resolves identically here and in local dev.
-COPY mealie/repos/seed/resources/units/locales /mealie/repos/seed/resources/units/locales
-
-RUN pnpm clean-install
-
-RUN pnpm generate
+WORKDIR /workspace/frontend-react
+COPY frontend-react .
+# Shared immutable locale and generated schema sources.
+COPY frontend/app/lang/messages /workspace/frontend/app/lang/messages
+COPY frontend/app/composables/use-locales/available-locales.ts /workspace/frontend/app/composables/use-locales/available-locales.ts
+COPY frontend/app/lib/api/types /workspace/frontend/app/lib/api/types
+RUN pnpm install --frozen-lockfile
+RUN pnpm build
 
 ###############################################
 # Base Image - Python
@@ -65,7 +61,7 @@ COPY uv.lock pyproject.toml ./
 COPY mealie ./mealie
 
 # Copy frontend to package it into the wheel
-COPY --from=frontend-builder /frontend/dist ./mealie/frontend
+COPY --from=frontend-builder /workspace/frontend-react/dist ./mealie/frontend
 
 # Build the source and binary package
 RUN uv build --out-dir dist
