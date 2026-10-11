@@ -1,6 +1,6 @@
 # Mealie React SPA
 
-Workflow 1 migration: Vite, React 19, TypeScript strict, React Router, MUI, react-i18next.
+Workflow 3 migration: Vite, React 19, TypeScript strict, React Router, MUI, react-i18next.
 The reference Vue source stays in ../frontend for shared immutable generated schema types
 and translation resources, and for comparison. The React runtime does not mount Vue/Nuxt.
 

@@ -1,0 +1,129 @@
+{
+  "module": "M04",
+  "started_at_utc": "2026-10-10T06:21:08.060Z",
+  "ended_at_utc": "2026-10-10T06:24:42.672Z",
+  "tokens": null,
+  "token_status": "NA: telemetry not exposed",
+  "prompt": "prompt.md",
+  "session_log": "../../session-logs/session-002.md",
+  "changed_files": [
+    "frontend-react/src/App.tsx",
+    "frontend-react/src/lib/api/import-stream.test.ts",
+    "frontend-react/src/lib/api/import-stream.ts",
+    "frontend-react/src/pages/RecipeCreatePage.tsx",
+    "frontend-react/src/pages/RecipeDetailPage.tsx",
+    "frontend-react/src/pages/RecipeListPage.tsx"
+  ],
+  "unit_passed": 43,
+  "browser_strict_routes": "14/14",
+  "browser_flows": "4/4",
+  "source_repair_count": 0,
+  "acceptance": "pass",
+  "build": "pass",
+  "strict_types": "pass",
+  "lint": "pass",
+  "notes": "Auth regression 5/5. Initial mixed grep selected routes only; flows run separately. External scraper/AI integration is not exercised. Recipe styling and rich Markdown parity remain limited.",
+  "steps": [
+    {
+      "module": "M04",
+      "step": "build-attempt-1",
+      "prompt": "prompt.md",
+      "session_log": "../../session-logs/session-002.md",
+      "started_at_utc": "2026-10-10T06:23:10.508Z",
+      "ended_at_utc": "2026-10-10T06:23:13.226Z",
+      "duration_seconds": 2.718,
+      "tokens": null,
+      "token_status": "NA: not exposed",
+      "cwd": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react",
+      "command": [
+        "pnpm",
+        "build"
+      ],
+      "exit_code": 0,
+      "output": "/Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/workflow-3/modules/M04/build-attempt-1.log"
+    },
+    {
+      "module": "M04",
+      "step": "unit-attempt-1",
+      "prompt": "prompt.md",
+      "session_log": "../../session-logs/session-002.md",
+      "started_at_utc": "2026-10-10T06:23:23.107Z",
+      "ended_at_utc": "2026-10-10T06:23:24.849Z",
+      "duration_seconds": 1.742,
+      "tokens": null,
+      "token_status": "NA: not exposed",
+      "cwd": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react",
+      "command": [
+        "pnpm",
+        "test",
+        "--maxWorkers=4"
+      ],
+      "exit_code": 0,
+      "output": "/Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/workflow-3/modules/M04/unit-attempt-1.log"
+    },
+    {
+      "module": "M04",
+      "step": "lint-attempt-1",
+      "prompt": "prompt.md",
+      "session_log": "../../session-logs/session-002.md",
+      "started_at_utc": "2026-10-10T06:23:24.269Z",
+      "ended_at_utc": "2026-10-10T06:23:25.270Z",
+      "duration_seconds": 1.001,
+      "tokens": null,
+      "token_status": "NA: not exposed",
+      "cwd": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react",
+      "command": [
+        "pnpm",
+        "lint"
+      ],
+      "exit_code": 0,
+      "output": "/Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/workflow-3/modules/M04/lint-attempt-1.log"
+    },
+    {
+      "module": "M04",
+      "step": "recipe-browser-attempt-1",
+      "prompt": "prompt.md",
+      "session_log": "../../session-logs/session-002.md",
+      "started_at_utc": "2026-10-10T06:23:35.144Z",
+      "ended_at_utc": "2026-10-10T06:23:49.834Z",
+      "duration_seconds": 14.69,
+      "tokens": null,
+      "token_status": "NA: not exposed",
+      "cwd": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e",
+      "command": [
+        "env",
+        "E2E_STATIC_DIR=../frontend-react/dist",
+        "E2E_ROUTE_CHECK=strict",
+        "./node_modules/.bin/playwright",
+        "test",
+        "--grep",
+        "tests/flows/(auth|recipes)|\\[route\\] (index\\.vue|g/\\[groupSlug\\]/(index\\.vue|r/|shared/))"
+      ],
+      "exit_code": 0,
+      "output": "/Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/workflow-3/modules/M04/recipe-browser-attempt-1.log"
+    },
+    {
+      "module": "M04",
+      "step": "recipe-auth-flows-attempt-1",
+      "prompt": "prompt.md",
+      "session_log": "../../session-logs/session-002.md",
+      "started_at_utc": "2026-10-10T06:23:59.386Z",
+      "ended_at_utc": "2026-10-10T06:24:08.221Z",
+      "duration_seconds": 8.835,
+      "tokens": null,
+      "token_status": "NA: not exposed",
+      "cwd": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e",
+      "command": [
+        "env",
+        "E2E_STATIC_DIR=../frontend-react/dist",
+        "./node_modules/.bin/playwright",
+        "test",
+        "--project=flows",
+        "--grep",
+        "auth|recipes"
+      ],
+      "exit_code": 0,
+      "output": "/Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/workflow-3/modules/M04/recipe-auth-flows-attempt-1.log"
+    }
+  ]
+}

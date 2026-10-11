@@ -44,7 +44,7 @@ and run one after another on purpose. Port 9091 must be free. A run takes about 
 ./rewrite-evidence/measure.sh --app frontend-react --label WF2-P3-foundation-done
 
 # A rewrite in another worktree (that branch doesn't need to contain the yardstick)
-./rewrite-evidence/measure.sh --app ../mealie-wf1/frontend-react --label WF1-end
+./rewrite-evidence/measure.sh --app ../mealie-wf3/frontend-react --label WF3-end
 
 # Faster, without E2E
 ./rewrite-evidence/measure.sh --app frontend --label quick --skip-e2e
@@ -92,12 +92,12 @@ with this checkout. Instead, branch from the commit *before* the yardstick was a
 workflow its own clone that contains only that branch:
 
 ```bash
-git branch rewrite/wf1-baseline aaa5a8cf6          # baseline + deny rules, no frontend-e2e/ or measure.sh
-git clone --no-local --single-branch --branch rewrite/wf1-baseline . ../mealie-wf1
-git -C ../mealie-wf1 remote remove origin
+git branch rewrite/wf3-baseline aaa5a8cf6          # baseline + deny rules, no frontend-e2e/ or measure.sh
+git clone --no-local --single-branch --branch rewrite/wf3-baseline . ../mealie-wf3
+git -C ../mealie-wf3 remote remove origin
 # --no-local matters: a plain local clone hardlinks the whole object store, so the yardstick's
 # blobs would still be readable with `git cat-file` in the new clone.
-# ...run the workflow in ../mealie-wf1, then from this checkout:
-git fetch ../mealie-wf1 rewrite/wf1-baseline:rewrite/wf1-baseline
-./rewrite-evidence/measure.sh --app ../mealie-wf1/frontend-react --label WF1-end
+# ...run the workflow in ../mealie-wf3, then from this checkout:
+git fetch ../mealie-wf3 rewrite/wf3-baseline:rewrite/wf3-baseline
+./rewrite-evidence/measure.sh --app ../mealie-wf3/frontend-react --label WF3-end
 ```

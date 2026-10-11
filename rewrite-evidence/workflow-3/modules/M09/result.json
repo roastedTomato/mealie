@@ -1,0 +1,104 @@
+{
+  "module": "M09",
+  "started_at_utc": "2026-10-10T06:36:05.450Z",
+  "ended_at_utc": "2026-10-10T06:38:02.504Z",
+  "tokens": null,
+  "token_status": "NA: telemetry not exposed",
+  "prompt": "prompt.md",
+  "session_log": "../../session-logs/session-002.md",
+  "changed_files": [
+    "frontend-react/src/App.tsx",
+    "frontend-react/src/components/DomainRecordEditor.tsx",
+    "frontend-react/src/pages/AdminToolsPages.tsx",
+    "frontend-react/src/pages/DataPages.tsx",
+    "frontend-react/src/pages/ManagementPages.tsx"
+  ],
+  "unit_passed": 46,
+  "browser_strict_routes": "32/32",
+  "browser_flows": "1/1",
+  "source_repair_count": 0,
+  "acceptance": "pass",
+  "build": "pass",
+  "strict_types": "pass",
+  "lint": "pass",
+  "notes": "All 66 strict routes and15 flows plus route-table invariant pass (82 checks). Route checks prove populated render/prefill/health, not exhaustive mutation or visual parity. Admin setup and extended integrations will receive integration audit in M10.",
+  "steps": [
+    {
+      "module": "M09",
+      "step": "build-attempt-1",
+      "prompt": "prompt.md",
+      "session_log": "../../session-logs/session-002.md",
+      "started_at_utc": "2026-10-10T06:36:05.543Z",
+      "ended_at_utc": "2026-10-10T06:36:08.427Z",
+      "duration_seconds": 2.884,
+      "tokens": null,
+      "token_status": "NA: not exposed",
+      "cwd": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react",
+      "command": [
+        "pnpm",
+        "build"
+      ],
+      "exit_code": 0,
+      "output": "/Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/workflow-3/modules/M09/build-attempt-1.log"
+    },
+    {
+      "module": "M09",
+      "step": "unit-attempt-1",
+      "prompt": "prompt.md",
+      "session_log": "../../session-logs/session-002.md",
+      "started_at_utc": "2026-10-10T06:36:25.901Z",
+      "ended_at_utc": "2026-10-10T06:36:27.680Z",
+      "duration_seconds": 1.779,
+      "tokens": null,
+      "token_status": "NA: not exposed",
+      "cwd": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react",
+      "command": [
+        "pnpm",
+        "test",
+        "--maxWorkers=4"
+      ],
+      "exit_code": 0,
+      "output": "/Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/workflow-3/modules/M09/unit-attempt-1.log"
+    },
+    {
+      "module": "M09",
+      "step": "lint-attempt-1",
+      "prompt": "prompt.md",
+      "session_log": "../../session-logs/session-002.md",
+      "started_at_utc": "2026-10-10T06:36:27.715Z",
+      "ended_at_utc": "2026-10-10T06:36:28.664Z",
+      "duration_seconds": 0.949,
+      "tokens": null,
+      "token_status": "NA: not exposed",
+      "cwd": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react",
+      "command": [
+        "pnpm",
+        "lint"
+      ],
+      "exit_code": 0,
+      "output": "/Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/workflow-3/modules/M09/lint-attempt-1.log"
+    },
+    {
+      "module": "M09",
+      "step": "all-browser-attempt-1",
+      "prompt": "prompt.md",
+      "session_log": "../../session-logs/session-002.md",
+      "started_at_utc": "2026-10-10T06:36:30.066Z",
+      "ended_at_utc": "2026-10-10T06:37:20.062Z",
+      "duration_seconds": 49.996,
+      "tokens": null,
+      "token_status": "NA: not exposed",
+      "cwd": "/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e",
+      "command": [
+        "env",
+        "E2E_STATIC_DIR=../frontend-react/dist",
+        "E2E_ROUTE_SCOPE=all",
+        "E2E_ROUTE_CHECK=strict",
+        "./node_modules/.bin/playwright",
+        "test"
+      ],
+      "exit_code": 0,
+      "output": "/Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/workflow-3/modules/M09/all-browser-attempt-1.log"
+    }
+  ]
+}

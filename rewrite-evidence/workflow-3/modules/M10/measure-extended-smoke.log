@@ -1,0 +1,41 @@
+[measure 19:50:33] install: pnpm install --frozen-lockfile
+[measure 19:50:33] install: exit=0 (0s)
+[measure 19:50:33] build: pnpm build
+[measure 19:50:38] build: exit=0 (5s)
+[measure 19:50:38] unit: pnpm exec vitest run --maxWorkers=4 --reporter=json --outputFile=/Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/runs/20261010T065033Z-frontend-react-WF3-final-extended-smoke/vitest.json
+[measure 19:50:40] unit: exit=0 (2s)
+[measure 19:50:40] lint: pnpm exec eslint . --format json --output-file /Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/runs/20261010T065033Z-frontend-react-WF3-final-extended-smoke/eslint.json
+[measure 19:50:41] lint: exit=0 (1s)
+[measure 19:50:41] types: pnpm exec tsc --noEmit --pretty false
+[measure 19:50:45] types: exit=0 (4s)
+[measure 19:50:45] e2e: playwright against /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react/dist
+[measure 19:51:13] e2e: exit=0 (28s)
+
+  timestamp_utc = 2026-10-10T06:51:13Z
+  label = WF3-final-extended-smoke
+  app = frontend-react
+  branch = rewrite/wf3-incremental-migration
+  commit = 7f8c36b73
+  dirty = 1
+  route_scope = extended
+  route_check = smoke
+  routes_passed = 32
+  routes_total = 32
+  flows_passed = 15
+  flows_total = 15
+  tsc_errors = 0
+  lint_errors = 0
+  lint_warnings = 0
+  unit_passed = 48
+  unit_failed = 0
+  unit_skipped = 0
+  build_ok = 1
+  build_seconds = 5
+  any_count =        0
+  todo_count =        0
+  expect_count =       74
+  test_files =       10
+  duration_seconds = 40
+  run_id = 20261010T065033Z-frontend-react-WF3-final-extended-smoke
+  notes = 
+  -> appended to /Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/metrics.csv

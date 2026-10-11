@@ -5,7 +5,7 @@
 #     [--route-scope all|core|extended] [--route-check strict|smoke] [--skip-e2e]
 #
 # --app is a directory name inside this repo (frontend, frontend-react) or a path to an app in another
-# worktree (e.g. ../mealie-wf1/frontend-react). The latter lets a workflow's branch stay free of the
+# worktree (e.g. ../mealie-wf3/frontend-react). The latter lets a workflow's branch stay free of the
 # yardstick: the E2E suite and this script always come from the checkout the script lives in.
 #
 # Works for both the Vue reference (frontend/, Nuxt) and a React rewrite (any dir with a Vite-style
@@ -58,7 +58,7 @@ fi
 [[ -f "$APP_DIR/package.json" ]] || { echo "no package.json in ${APP_DIR:-$APP}" >&2; exit 2; }
 APP_REPO="$(git -C "$APP_DIR" rev-parse --show-toplevel)"
 # How the app is named in the CSV: path relative to its own checkout, prefixed by that checkout's
-# directory name when it isn't this one (mealie-wf1/frontend-react).
+# directory name when it isn't this one (mealie-wf3/frontend-react).
 APP_NAME="${APP_DIR#"$APP_REPO"/}"
 [[ "$APP_REPO" != "$REPO" ]] && APP_NAME="$(basename "$APP_REPO")/$APP_NAME"
 
