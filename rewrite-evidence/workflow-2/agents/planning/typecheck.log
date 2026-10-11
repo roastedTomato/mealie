@@ -1,0 +1,8 @@
+$ tsc --noEmit
+src/features/planning/routes.tsx(11,150): error TS1003: Identifier expected.
+src/features/planning/routes.tsx(11,161): error TS1005: ',' expected.
+src/features/planning/routes.tsx(11,169): error TS1005: ',' expected.
+src/features/planning/routes.tsx(11,170): error TS1109: Expression expected.
+src/features/planning/routes.tsx(11,171): error TS1128: Declaration or statement expected.
+src/features/planning/routes.tsx(11,314): error TS1128: Declaration or statement expected.
+[ELIFECYCLE] Command failed with exit code 2.

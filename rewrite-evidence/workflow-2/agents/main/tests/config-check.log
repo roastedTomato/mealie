@@ -1,0 +1,5 @@
+Taskfile.yml: YAML parses
+.github/workflows/test-frontend.yml: YAML parses
+.github/workflows/build-package.yml: YAML parses
+.github/workflows/release.yml: YAML parses
+React task, package, Docker input/output and shared contract paths validated; runtime image/hosted CI not exercised

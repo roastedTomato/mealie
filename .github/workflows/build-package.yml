@@ -39,12 +39,12 @@ jobs:
           cache-dependency-path: "**/pnpm-lock.yaml"
 
       - name: Install dependencies 👨🏻‍💻
-        run: pnpm install --prefer-offline
-        working-directory: "frontend"
+        run: pnpm install --frozen-lockfile
+        working-directory: "frontend-react"
 
       - name: Run Build 🚚
-        run: pnpm generate
-        working-directory: "frontend"
+        run: pnpm build
+        working-directory: "frontend-react"
 
       - name: Set up python
         uses: actions/setup-python@v6
@@ -57,7 +57,7 @@ jobs:
       - name: Copy the frontend into the package
         run: |
           rm -rf mealie/frontend
-          cp -a frontend/dist mealie/frontend
+          cp -a frontend-react/dist mealie/frontend
 
       - name: Override __init__.py
         run: |

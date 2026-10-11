@@ -1,0 +1,116 @@
+[WebServer] WARNING  2026-10-11T01:58:28 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-11T01:58:29 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-11T01:58:31 - Incorrect username or password from 127.0.0.1
+
+Running 22 tests using 2 workers
+
+(node:85123) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:85124) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/backups.vue (750ms)
+  ✓   3 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/debug/openai.vue (660ms)
+  ✓   4 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/debug/parser.vue (646ms)
+  ✓   5 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/maintenance/index.vue (655ms)
+  ✓   6 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/manage/groups/[id].vue (662ms)
+  ✓   7 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/manage/groups/index.vue (657ms)
+  ✓   8 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/manage/households/[id].vue (664ms)
+  ✓   9 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/manage/households/index.vue (670ms)
+  ✓  10 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/manage/users/[id].vue (668ms)
+  ✓  11 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/manage/users/create.vue (681ms)
+  ✓  12 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/manage/users/index.vue (660ms)
+  ✓  13 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/setup.vue (648ms)
+  ✓  14 [routes] › tests/routes.spec.ts:37:9 › admin › [route] admin/site-settings.vue (1.3s)
+  ✘  15 [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/settings.vue (10.2s)
+(node:85240) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  16 [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/planner.vue (690ms)
+  ✓  17 [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/planner/view.vue (679ms)
+  ✓  18 [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/planner/edit.vue (682ms)
+  ✓  19 [routes] › tests/routes.spec.ts:37:9 › admin › [route] shopping-lists/index.vue (672ms)
+  ✓  20 [routes] › tests/routes.spec.ts:37:9 › admin › [route] shopping-lists/[id].vue (670ms)
+(node:85253) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  21 [flows] › tests/flows/shopping.spec.ts:6:7 › shopping lists › [flow] create a shopping list (591ms)
+  ✓  22 [flows] › tests/flows/shopping.spec.ts:19:7 › shopping lists › [flow] add an item and check it off (952ms)
+  ✘   1 [flows] › tests/flows/mealplan.spec.ts:12:7 › meal plan › [flow] add a note to tomorrow's meal plan (45.1s)
+
+
+  1) [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/settings.vue ────────
+
+    Error: visible text "Meal Plan Rules"
+
+    expect(locator).toBeVisible() failed
+
+    Locator: getByText('Meal Plan Rules').visible().first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - visible text "Meal Plan Rules" getByText('Meal Plan Rules').visible().first() with timeout 10000ms
+      - waiting for getByText('Meal Plan Rules').visible().first()
+
+
+      43 |       if (routeCheck === "strict") {
+      44 |         for (const text of route.texts(f)) {
+    > 45 |           await expect(page.getByText(text, { exact: false }).filter({ visible: true }).first(), `visible text "${text}"`).toBeVisible();
+         |                                                                                                                            ^
+      46 |         }
+      47 |         for (const value of route.values?.(f) ?? []) {
+      48 |           await expectFieldValue(page, value);
+        at /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests/routes.spec.ts:45:124
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/routes-admin-route-household-mealplan-settings-vue-routes/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/routes-admin-route-household-mealplan-settings-vue-routes/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/routes-admin-route-household-mealplan-settings-vue-routes/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/routes-admin-route-household-mealplan-settings-vue-routes/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [flows] › tests/flows/mealplan.spec.ts:12:7 › meal plan › [flow] add a note to tomorrow's meal plan 
+
+    Test timeout of 45000ms exceeded.
+
+    Error: locator.waitFor: Test timeout of 45000ms exceeded.
+    Call log:
+      - waiting for getByText('Monday, Oct 12', { exact: true }).visible().first().locator('xpath=ancestor::*[.//button][1]').getByRole('button').visible().first() to be visible
+
+
+       at ../lib/ui.ts:31
+
+      29 |  */
+      30 | export async function clickButton(page: Page, scope: Locator, name: string) {
+    > 31 |   await scope.getByRole("button").filter({ visible: true }).first().waitFor();
+         |                                                                     ^
+      32 |   const named = scope.getByRole("button", { name, exact: true }).filter({ visible: true });
+      33 |   if (await named.count()) {
+      34 |     await named.first().click();
+        at clickButton (/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/lib/ui.ts:31:69)
+        at /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests/flows/mealplan.spec.ts:19:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/flows-mealplan-meal-plan-f-18cb0-ote-to-tomorrow-s-meal-plan-flows/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/flows-mealplan-meal-plan-f-18cb0-ote-to-tomorrow-s-meal-plan-flows/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/flows-mealplan-meal-plan-f-18cb0-ote-to-tomorrow-s-meal-plan-flows/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/flows-mealplan-meal-plan-f-18cb0-ote-to-tomorrow-s-meal-plan-flows/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/settings.vue ─────────
+    [flows] › tests/flows/mealplan.spec.ts:12:7 › meal plan › [flow] add a note to tomorrow's meal plan 
+  20 passed (50.2s)

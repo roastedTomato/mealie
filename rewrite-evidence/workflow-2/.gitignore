@@ -1,0 +1,3 @@
+!agents/**/*.log
+!final/**/*.log
+!integration/**/*.log

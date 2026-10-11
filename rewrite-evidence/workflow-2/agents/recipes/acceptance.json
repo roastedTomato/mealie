@@ -1,0 +1,25 @@
+{
+  "unit": {
+    "passed": 7,
+    "total": 7
+  },
+  "browser_flows": {
+    "passed": 5,
+    "total": 5
+  },
+  "strict_routes": {
+    "passed": 24,
+    "total": 24
+  },
+  "final_browser": {
+    "passed": 29,
+    "total": 29
+  },
+  "typecheck": true,
+  "build": true,
+  "lint": true,
+  "full_vue_parity": false,
+  "merge_conflicts": 0,
+  "cookbook_mutations": true,
+  "favorite_mutations": true
+}

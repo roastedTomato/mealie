@@ -1,0 +1,47 @@
+$ vitest run --maxWorkers=4
+
+ RUN  v3.2.7 /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react
+
+ ✓ src/lib/mealplan/dates.test.ts (3 tests) 11ms
+ ✓ src/lib/api/http.test.ts (6 tests) 12ms
+ ✓ src/i18n.test.ts (2 tests) 10ms
+ ✓ src/auth/token.test.ts (14 tests) 7ms
+ ✓ src/lib/api/import-stream.test.ts (3 tests) 5ms
+ ✓ src/lib/api/base/routes.test.ts (4 tests) 2ms
+stderr | src/App.test.tsx > SPA foundation > renders shared English inside providers and redirects anonymous home to sign in
+MUI: You have provided an out-of-range value `en-US` for the select component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `zh-TW`, `zh-CN`, `vi-VN`, `uk-UA`, `tr-TR`, `sv-SE`, `sr-SP`, `sl-SI`, `sk-SK`, `ru-RU`, `ro-RO`, `pt-PT`, `pt-BR`, `pl-PL`, `no-NO`, `nl-NL`, `lv-LV`, `lt-LT`, `ko-KR`, `ja-JP`, `it-IT`, `is-IS`, `hu-HU`, `hr-HR`, `he-IL`, `gl-ES`, `fr-FR`, `fr-CA`, `fr-BE`, `fi-FI`, `et-EE`, `es-ES`, `en-GB`, `el-GR`, `de-DE`, `da-DK`, `cs-CZ`, `ca-ES`, `bg-BG`, `ar-SA`, `af-ZA`.
+MUI: You have provided an out-of-range value `en-US` for the select component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `zh-TW`, `zh-CN`, `vi-VN`, `uk-UA`, `tr-TR`, `sv-SE`, `sr-SP`, `sl-SI`, `sk-SK`, `ru-RU`, `ro-RO`, `pt-PT`, `pt-BR`, `pl-PL`, `no-NO`, `nl-NL`, `lv-LV`, `lt-LT`, `ko-KR`, `ja-JP`, `it-IT`, `is-IS`, `hu-HU`, `hr-HR`, `he-IL`, `gl-ES`, `fr-FR`, `fr-CA`, `fr-BE`, `fi-FI`, `et-EE`, `es-ES`, `en-GB`, `el-GR`, `de-DE`, `da-DK`, `cs-CZ`, `ca-ES`, `bg-BG`, `ar-SA`, `af-ZA`.
+MUI: You have provided an out-of-range value `en-US` for the select component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `zh-TW`, `zh-CN`, `vi-VN`, `uk-UA`, `tr-TR`, `sv-SE`, `sr-SP`, `sl-SI`, `sk-SK`, `ru-RU`, `ro-RO`, `pt-PT`, `pt-BR`, `pl-PL`, `no-NO`, `nl-NL`, `lv-LV`, `lt-LT`, `ko-KR`, `ja-JP`, `it-IT`, `is-IS`, `hu-HU`, `hr-HR`, `he-IL`, `gl-ES`, `fr-FR`, `fr-CA`, `fr-BE`, `fi-FI`, `et-EE`, `es-ES`, `en-GB`, `el-GR`, `de-DE`, `da-DK`, `cs-CZ`, `ca-ES`, `bg-BG`, `ar-SA`, `af-ZA`.
+
+stderr | src/App.test.tsx > SPA foundation > handles unknown deep links and navigates home through the session guard
+MUI: You have provided an out-of-range value `en-US` for the select component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `zh-TW`, `zh-CN`, `vi-VN`, `uk-UA`, `tr-TR`, `sv-SE`, `sr-SP`, `sl-SI`, `sk-SK`, `ru-RU`, `ro-RO`, `pt-PT`, `pt-BR`, `pl-PL`, `no-NO`, `nl-NL`, `lv-LV`, `lt-LT`, `ko-KR`, `ja-JP`, `it-IT`, `is-IS`, `hu-HU`, `hr-HR`, `he-IL`, `gl-ES`, `fr-FR`, `fr-CA`, `fr-BE`, `fi-FI`, `et-EE`, `es-ES`, `en-GB`, `el-GR`, `de-DE`, `da-DK`, `cs-CZ`, `ca-ES`, `bg-BG`, `ar-SA`, `af-ZA`.
+MUI: You have provided an out-of-range value `en-US` for the select component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `zh-TW`, `zh-CN`, `vi-VN`, `uk-UA`, `tr-TR`, `sv-SE`, `sr-SP`, `sl-SI`, `sk-SK`, `ru-RU`, `ro-RO`, `pt-PT`, `pt-BR`, `pl-PL`, `no-NO`, `nl-NL`, `lv-LV`, `lt-LT`, `ko-KR`, `ja-JP`, `it-IT`, `is-IS`, `hu-HU`, `hr-HR`, `he-IL`, `gl-ES`, `fr-FR`, `fr-CA`, `fr-BE`, `fi-FI`, `et-EE`, `es-ES`, `en-GB`, `el-GR`, `de-DE`, `da-DK`, `cs-CZ`, `ca-ES`, `bg-BG`, `ar-SA`, `af-ZA`.
+
+stderr | src/App.test.tsx > SPA foundation > handles unknown deep links and navigates home through the session guard
+MUI: You have provided an out-of-range value `en-US` for the select component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `zh-TW`, `zh-CN`, `vi-VN`, `uk-UA`, `tr-TR`, `sv-SE`, `sr-SP`, `sl-SI`, `sk-SK`, `ru-RU`, `ro-RO`, `pt-PT`, `pt-BR`, `pl-PL`, `no-NO`, `nl-NL`, `lv-LV`, `lt-LT`, `ko-KR`, `ja-JP`, `it-IT`, `is-IS`, `hu-HU`, `hr-HR`, `he-IL`, `gl-ES`, `fr-FR`, `fr-CA`, `fr-BE`, `fi-FI`, `et-EE`, `es-ES`, `en-GB`, `el-GR`, `de-DE`, `da-DK`, `cs-CZ`, `ca-ES`, `bg-BG`, `ar-SA`, `af-ZA`.
+MUI: You have provided an out-of-range value `en-US` for the select component.
+Consider providing a value that matches one of the available options or ''.
+The available values are `zh-TW`, `zh-CN`, `vi-VN`, `uk-UA`, `tr-TR`, `sv-SE`, `sr-SP`, `sl-SI`, `sk-SK`, `ru-RU`, `ro-RO`, `pt-PT`, `pt-BR`, `pl-PL`, `no-NO`, `nl-NL`, `lv-LV`, `lt-LT`, `ko-KR`, `ja-JP`, `it-IT`, `is-IS`, `hu-HU`, `hr-HR`, `he-IL`, `gl-ES`, `fr-FR`, `fr-CA`, `fr-BE`, `fi-FI`, `et-EE`, `es-ES`, `en-GB`, `el-GR`, `de-DE`, `da-DK`, `cs-CZ`, `ca-ES`, `bg-BG`, `ar-SA`, `af-ZA`.
+
+ ✓ src/App.test.tsx (3 tests) 186ms
+ ✓ src/lib/recipe/recipe-finder.test.ts (3 tests) 1ms
+ ✓ src/lib/sanitize/text.test.ts (5 tests) 2ms
+ ✓ src/lib/validators/redirect.test.ts (5 tests) 1ms
+
+ Test Files  10 passed (10)
+      Tests  48 passed (48)
+   Start at  19:42:15
+   Duration  1.29s (transform 181ms, setup 955ms, collect 598ms, tests 236ms, environment 2.06s, prepare 324ms)
+

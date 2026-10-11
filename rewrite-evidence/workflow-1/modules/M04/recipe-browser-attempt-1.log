@@ -1,0 +1,24 @@
+[WebServer] WARNING  2026-10-10T06:23:36 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-10T06:23:37 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-10T06:23:38 - Incorrect username or password from 127.0.0.1
+
+Running 14 tests using 1 worker
+
+(node:35718) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [routes] › tests/routes.spec.ts:37:9 › anonymous › [route] g/[groupSlug]/shared/r/[id].vue (819ms)
+  ✓   2 [routes] › tests/routes.spec.ts:37:9 › admin › [route] index.vue (675ms)
+  ✓   3 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/index.vue (649ms)
+  ✓   4 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/[slug]/index.vue (670ms)
+  ✓   5 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create.vue (637ms)
+  ✓   6 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/index.vue (636ms)
+  ✓   7 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/ai.vue (628ms)
+  ✓   8 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/bulk.vue (651ms)
+  ✓   9 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/debug.vue (632ms)
+  ✓  10 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/html.vue (632ms)
+  ✓  11 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/image.vue (633ms)
+  ✓  12 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/new.vue (640ms)
+  ✓  13 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/url.vue (629ms)
+  ✓  14 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/zip.vue (630ms)
+
+  14 passed (14.4s)

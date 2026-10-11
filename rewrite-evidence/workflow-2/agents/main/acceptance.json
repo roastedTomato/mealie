@@ -1,0 +1,19 @@
+{
+  "build": true,
+  "strict_types": true,
+  "lint_errors": 0,
+  "lint_warnings": 0,
+  "units": {
+    "passed": 20,
+    "failed": 0,
+    "skipped": 0
+  },
+  "full_strict_integration": {
+    "passed": 82,
+    "total": 82
+  },
+  "final_four_measurements": "pass",
+  "source_commit": null,
+  "docker_runtime_test": "unavailable: daemon not running",
+  "hosted_ci": "not run"
+}

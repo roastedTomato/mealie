@@ -1,0 +1,29 @@
+{
+  "start": "2026-10-11T01:49:38Z",
+  "branch": "rewrite/wf2-parallel-migration",
+  "base": "7f8c36b73",
+  "token_usage": {
+    "input_tokens": 11080917,
+    "cached_input_tokens": 10931584,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 46545,
+    "reasoning_output_tokens": 9873,
+    "total_tokens": 11127462
+  },
+  "token_note": "Recovered per-agent local platform counters; earlier command tokens:null have no per-command attribution. Snapshot excludes later report/final response tokens.",
+  "status": "accepted-with-documented-scope",
+  "authoritative_start_utc": "2026-10-11T01:49:33.388Z",
+  "implementation_start_utc": "2026-10-11T01:49:33.388Z",
+  "end_utc": "2026-10-11T02:08:36.355Z",
+  "active_seconds": 1142.967,
+  "token_checkpoint": "2026-10-11T02:08:36.366Z",
+  "model": "gpt-6.1-sol",
+  "active_windows": [
+    {
+      "start": "2026-10-11T01:49:33.388Z",
+      "end": "2026-10-11T02:11:00.985780+00:00",
+      "seconds": 1287.59778,
+      "open_at_snapshot": true
+    }
+  ]
+}

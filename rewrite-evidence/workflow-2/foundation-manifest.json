@@ -1,0 +1,21 @@
+{
+  "frontend-react/pnpm-lock.yaml": "52535be86b91e2d917b5cb189f7b1cb9c85e7714d0b7da79cd9383b82dda452d",
+  "frontend-react/index.html": "a9d2afbaa4754fbadfc8553ac4dadcab5f9d901b28c828be418c9e6797abdf26",
+  "frontend-react/.gitignore": "058a23f43eec54e928cb5708538340b674fae783d49488b02ca69af05a1d41d6",
+  "frontend-react/package.json": "56862bd097f1bf4c363fe6c45893f5372fe1b9f2bb1e110c03c6fffb96a2193f",
+  "frontend-react/tsconfig.json": "8708b98fed208f7ca348e45915fe0f1c4c64902fb18b9524989eb0e805d4fa5f",
+  "frontend-react/eslint.config.js": "821f05fc445699bf62b4dc06a36f3570361e9b801b580a0dce69d22819e151dd",
+  "frontend-react/vite.config.ts": "241827f4af04e661113bd411436b2636a045f11124fcc9105a9187516fa4efb9",
+  "frontend-react/pnpm-workspace.yaml": "7c5cdf3cfbdf8e699a7e2217899e4f7432cc6aeb034a903dc67612079186c60b",
+  "frontend-react/src/App.tsx": "68386ecbf95bdf1f43c3e456eae9f23093252698e71e9da082635bd7dd60f097",
+  "frontend-react/src/main.tsx": "84f6f7ac98514ff4c746f529828cbe4cbe2d30d94bc58b671172e4e48815b09f",
+  "frontend-react/src/auth/AuthProvider.tsx": "47ad79d975c31b2db2a9b1740f984fee3b34a5bc52e82f57dbc4ac72ac4aad55",
+  "frontend-react/src/shared/i18n.ts": "0fccdc4526828876324d23c9bf957de90028880660fb440b67684b01b74fefcf",
+  "frontend-react/src/shared/test-setup.ts": "aa08b5d03fda655696011d5e043068874b40c02d71827fbf793af3542ab3ddb5",
+  "frontend-react/src/shared/api.ts": "51dc8f12dc1cf2c196f3fc609a52bf509b9b3df14613962245ef3d6a766e5d5b",
+  "frontend-react/src/shared/types.ts": "8eae7e22686dba261e92b34c50e5a2e6029914c1b25344a2af973478f6d25297",
+  "frontend-react/src/shared/Layout.tsx": "9119f517a9e6f637501cc18b542b60e50fe5209cba83115ab5717e844cd651ae",
+  "frontend-react/src/shared/i18n.test.ts": "eaeafb1a256529bfc33b895a8f5bb45a32dcd785e152ecfc7df5283c93a91ec3",
+  "frontend-react/src/shared/api.test.ts": "cdb0c99fa40ffdc8e51b19cf269f13c8d06e69ff4a7312d14fcd6260c0425fe4",
+  "frontend-react/src/shared/ui.tsx": "3a8a1d22d90dbf4f5650ee934937489be522f3673daeee221cd1b44860f4851a"
+}

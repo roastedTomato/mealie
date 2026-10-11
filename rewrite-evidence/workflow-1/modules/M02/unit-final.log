@@ -1,0 +1,14 @@
+$ vitest run --maxWorkers=4
+
+ RUN  v3.2.7 /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react
+
+ ✓ src/lib/recipe/recipe-finder.test.ts (3 tests) 1ms
+ ✓ src/lib/sanitize/text.test.ts (5 tests) 2ms
+ ✓ src/lib/api/base/routes.test.ts (4 tests) 2ms
+ ✓ src/App.test.tsx (3 tests) 74ms
+
+ Test Files  4 passed (4)
+      Tests  15 passed (15)
+   Start at  10:05:37
+   Duration  712ms (transform 56ms, setup 337ms, collect 301ms, tests 79ms, environment 689ms, prepare 136ms)
+

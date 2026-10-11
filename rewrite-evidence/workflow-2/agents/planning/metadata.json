@@ -1,0 +1,50 @@
+{
+  "start_utc": "2026-10-11T01:54:27.509Z",
+  "branch": "rewrite/wf2-planning-shopping",
+  "token_usage": {
+    "input_tokens": 1984397,
+    "cached_input_tokens": 1943808,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 11270,
+    "reasoning_output_tokens": 427,
+    "total_tokens": 1995667
+  },
+  "token_note": "Unavailable in subagent runtime",
+  "end_utc": "2026-10-11T01:57:51.366Z",
+  "start_note": "First timestamp captured after initial implementation; observed duration is lower bound. Exact dispatch timestamp unavailable.",
+  "worktree": "/Users/eva/Documents/Assignments/COMPX574/mealie-wf2-planning",
+  "observed_seconds": 203.857,
+  "acceptance": {
+    "unit": {
+      "passed": 8,
+      "total": 8
+    },
+    "owned_strict_routes": {
+      "passed": 6,
+      "total": 6
+    },
+    "flows": {
+      "passed": 3,
+      "total": 3
+    },
+    "build": true,
+    "lint": true
+  },
+  "integration_repairs": 0,
+  "merge_conflicts": 0,
+  "user_interventions": 0,
+  "local_rework": 2,
+  "telemetry_recovered": true,
+  "authoritative_start_utc": "2026-10-11T01:53:09.426Z",
+  "authoritative_end_utc": "2026-10-11T01:58:08.880Z",
+  "active_windows": [
+    {
+      "start": "2026-10-11T01:53:09.426Z",
+      "end": "2026-10-11T01:58:08.880Z",
+      "seconds": 299.454
+    }
+  ],
+  "active_seconds": 299.454,
+  "model": "gpt-6.1-sol",
+  "telemetry_note": "Recovered from this agent local platform rollout; original observed timestamps and missing-data notes retained as historical record, superseded by these authoritative fields."
+}

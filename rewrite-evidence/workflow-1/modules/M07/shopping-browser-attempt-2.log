@@ -1,0 +1,30 @@
+[WebServer] WARNING  2026-10-10T06:31:44 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-10T06:31:46 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-10T06:31:46 - Incorrect username or password from 127.0.0.1
+
+Running 15 tests using 2 workers
+
+(node:37997) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37998) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [flows] › tests/flows/auth.spec.ts:8:7 › auth › [flow] log in with valid credentials and land on the recipe list (796ms)
+  ✓   2 [routes] › tests/routes.spec.ts:37:9 › admin › [route] shopping-lists/index.vue (912ms)
+[WebServer] ERROR    2026-10-10T06:31:50 - Incorrect username or password from 127.0.0.1
+  ✓   3 [flows] › tests/flows/auth.spec.ts:16:7 › auth › [flow] a wrong password is rejected (434ms)
+  ✓   4 [routes] › tests/routes.spec.ts:37:9 › admin › [route] shopping-lists/[id].vue (673ms)
+(node:38015) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [flows] › tests/flows/auth.spec.ts:27:7 › auth › [flow] log out ends the session (614ms)
+  ✓   6 [flows] › tests/flows/mealplan.spec.ts:12:7 › meal plan › [flow] add a note to tomorrow's meal plan (513ms)
+  ✓   7 [flows] › tests/flows/auth.spec.ts:39:7 › auth › [flow] a regular member is not offered admin pages (614ms)
+  ✓   8 [flows] › tests/flows/organize.spec.ts:5:7 › organizing › [flow] create a tag in data management (633ms)
+  ✓   9 [flows] › tests/flows/auth.spec.ts:50:7 › auth › [flow] an admin is offered admin pages (873ms)
+  ✓  10 [flows] › tests/flows/recipes.spec.ts:6:7 › recipes › [flow] open a recipe from the recipe list (304ms)
+  ✓  11 [flows] › tests/flows/recipes.spec.ts:15:7 › recipes › [flow] search narrows the recipe list (341ms)
+  ✓  13 [flows] › tests/flows/recipes.spec.ts:24:7 › recipes › [flow] create a recipe by name (351ms)
+  ✓  12 [flows] › tests/flows/shopping.spec.ts:6:7 › shopping lists › [flow] create a shopping list (736ms)
+  ✓  14 [flows] › tests/flows/recipes.spec.ts:36:7 › recipes › [flow] comment on a recipe and see it after reload (333ms)
+  ✓  15 [flows] › tests/flows/shopping.spec.ts:19:7 › shopping lists › [flow] add an item and check it off (996ms)
+
+  15 passed (10.5s)

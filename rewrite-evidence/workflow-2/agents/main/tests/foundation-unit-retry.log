@@ -1,0 +1,26 @@
+$ vitest run
+
+ RUN  v3.2.7 /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/shared/api.test.ts [ src/shared/api.test.ts ]
+ FAIL  src/shared/i18n.test.ts [ src/shared/i18n.test.ts ]
+ReferenceError: afterEach is not defined
+ ❯ src/shared/test-setup.ts:3:1
+      1| import '@testing-library/jest-dom/vitest';
+      2| import {cleanup} from '@testing-library/react';
+      3| afterEach(cleanup);
+       | ^
+      4| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  no tests
+   Start at  14:52:19
+   Duration  629ms (transform 16ms, setup 0ms, collect 0ms, tests 0ms, environment 573ms, prepare 76ms)
+
+[ELIFECYCLE] Test failed. See above for more details.

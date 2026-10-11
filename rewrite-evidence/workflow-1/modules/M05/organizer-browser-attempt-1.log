@@ -1,0 +1,74 @@
+[WebServer] WARNING  2026-10-10T06:26:40 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-10T06:26:42 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-10T06:26:43 - Incorrect username or password from 127.0.0.1
+
+Running 19 tests using 2 workers
+
+(node:36339) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:36338) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [flows] › tests/flows/auth.spec.ts:8:7 › auth › [flow] log in with valid credentials and land on the recipe list (654ms)
+  ✓   2 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/cookbooks/index.vue (855ms)
+[WebServer] ERROR    2026-10-10T06:26:46 - Incorrect username or password from 127.0.0.1
+  ✓   3 [flows] › tests/flows/auth.spec.ts:16:7 › auth › [flow] a wrong password is rejected (416ms)
+  ✓   4 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/cookbooks/[slug].vue (665ms)
+  ✓   5 [flows] › tests/flows/auth.spec.ts:27:7 › auth › [flow] log out ends the session (503ms)
+  ✓   7 [flows] › tests/flows/auth.spec.ts:39:7 › auth › [flow] a regular member is not offered admin pages (482ms)
+  ✓   6 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/categories/index.vue (652ms)
+  ✓   9 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/tags/index.vue (647ms)
+  ✓   8 [flows] › tests/flows/auth.spec.ts:50:7 › auth › [flow] an admin is offered admin pages (768ms)
+  ✓  11 [flows] › tests/flows/organize.spec.ts:5:7 › organizing › [flow] create a tag in data management (763ms)
+  ✓  10 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/tools/index.vue (806ms)
+  ✓  12 [flows] › tests/flows/recipes.spec.ts:6:7 › recipes › [flow] open a recipe from the recipe list (285ms)
+  ✓  14 [flows] › tests/flows/recipes.spec.ts:15:7 › recipes › [flow] search narrows the recipe list (213ms)
+  ✓  13 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/finder/index.vue (650ms)
+  ✓  15 [flows] › tests/flows/recipes.spec.ts:24:7 › recipes › [flow] create a recipe by name (342ms)
+  ✓  17 [flows] › tests/flows/recipes.spec.ts:36:7 › recipes › [flow] comment on a recipe and see it after reload (294ms)
+  ✓  16 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/timeline.vue (665ms)
+  ✓  18 [routes] › tests/routes.spec.ts:37:9 › admin › [route] group/data/tags.vue (654ms)
+  ✘  19 [routes] › tests/routes.spec.ts:37:9 › admin › [route] group/data/recipes.vue (10.1s)
+
+
+  1) [routes] › tests/routes.spec.ts:37:9 › admin › [route] group/data/recipes.vue ─────────────────
+
+    Error: visible text "Recipe Data"
+
+    expect(locator).toBeVisible() failed
+
+    Locator: getByText('Recipe Data').visible().first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - visible text "Recipe Data" getByText('Recipe Data').visible().first() with timeout 10000ms
+      - waiting for getByText('Recipe Data').visible().first()
+
+
+      43 |       if (routeCheck === "strict") {
+      44 |         for (const text of route.texts(f)) {
+    > 45 |           await expect(page.getByText(text, { exact: false }).filter({ visible: true }).first(), `visible text "${text}"`).toBeVisible();
+         |                                                                                                                            ^
+      46 |         }
+      47 |         for (const value of route.values?.(f) ?? []) {
+      48 |           await expectFieldValue(page, value);
+        at /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-e2e/tests/routes.spec.ts:45:124
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/routes-admin-route-group-data-recipes-vue-routes/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/routes-admin-route-group-data-recipes-vue-routes/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/routes-admin-route-group-data-recipes-vue-routes/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/routes-admin-route-group-data-recipes-vue-routes/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [routes] › tests/routes.spec.ts:37:9 › admin › [route] group/data/recipes.vue ──────────────────
+  18 passed (21.0s)

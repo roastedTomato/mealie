@@ -1,0 +1,100 @@
+{
+  "snapshot_utc": "2026-10-11T02:11:00.985780+00:00",
+  "scope": "WF2 implementation from completion authorization plus exactly two implementation agents; earlier preparation excluded",
+  "agents": {
+    "main": {
+      "session_id": "01a128a3-12ca-7d33-8cb0-723b3ef29d02",
+      "model": "gpt-6.1-sol",
+      "active_windows": [
+        {
+          "start": "2026-10-11T01:49:33.388Z",
+          "end": "2026-10-11T02:11:00.985780+00:00",
+          "seconds": 1287.59778,
+          "open_at_snapshot": true
+        }
+      ],
+      "active_seconds": 1287.59778,
+      "token_checkpoint": "2026-10-11T02:08:36.366Z",
+      "tokens": {
+        "input_tokens": 11080917,
+        "cached_input_tokens": 10931584,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 46545,
+        "reasoning_output_tokens": 9873,
+        "total_tokens": 11127462
+      },
+      "pre_scope_token_baseline": {
+        "input_tokens": 916746,
+        "cached_input_tokens": 874368,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3209,
+        "reasoning_output_tokens": 106,
+        "total_tokens": 919955
+      }
+    },
+    "recipes": {
+      "session_id": "01a128a9-cfc6-7761-9b3b-b9d0095e15cc",
+      "model": "gpt-6.1-sol",
+      "active_windows": [
+        {
+          "start": "2026-10-11T01:52:59.874Z",
+          "end": "2026-10-11T01:59:10.622Z",
+          "seconds": 370.748
+        },
+        {
+          "start": "2026-10-11T01:59:20.036Z",
+          "end": "2026-10-11T02:01:58.860Z",
+          "seconds": 158.824
+        }
+      ],
+      "active_seconds": 529.572,
+      "token_checkpoint": "2026-10-11T02:01:58.854Z",
+      "tokens": {
+        "input_tokens": 4287129,
+        "cached_input_tokens": 4212608,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 18324,
+        "reasoning_output_tokens": 854,
+        "total_tokens": 4305453
+      },
+      "pre_scope_token_baseline": {}
+    },
+    "planning": {
+      "session_id": "01a128a9-f51b-7572-b7a0-e6076727e6a7",
+      "model": "gpt-6.1-sol",
+      "active_windows": [
+        {
+          "start": "2026-10-11T01:53:09.426Z",
+          "end": "2026-10-11T01:58:08.880Z",
+          "seconds": 299.454
+        }
+      ],
+      "active_seconds": 299.454,
+      "token_checkpoint": "2026-10-11T01:58:08.875Z",
+      "tokens": {
+        "input_tokens": 1984397,
+        "cached_input_tokens": 1943808,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 11270,
+        "reasoning_output_tokens": 427,
+        "total_tokens": 1995667
+      },
+      "pre_scope_token_baseline": {}
+    }
+  },
+  "note": "Input counts include repeated cached context. cached_input_tokens is a subset of input_tokens; reasoning_output_tokens is a subset of output_tokens. Counts exclude work after each token telemetry checkpoint and final user reply.",
+  "total_active_seconds": 2116.6237800000004,
+  "aggregate_tokens": {
+    "input_tokens": 17352443,
+    "cached_input_tokens": 17088000,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 76139,
+    "reasoning_output_tokens": 11154,
+    "total_tokens": 17428582
+  },
+  "aggregate_uncached_input_plus_output": 340582,
+  "workflow_start_utc": "2026-10-11T01:49:33.388Z",
+  "implementation_start_utc": "2026-10-11T01:49:33.388Z",
+  "workflow_elapsed_seconds": 1287.59778,
+  "implementation_elapsed_seconds": 1287.59778
+}

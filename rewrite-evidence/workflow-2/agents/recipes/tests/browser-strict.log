@@ -1,0 +1,34 @@
+[WebServer] WARNING  2026-10-11T01:56:21 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-11T01:56:22 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-11T01:56:23 - Incorrect username or password from 127.0.0.1
+
+Running 24 tests using 1 worker
+
+(node:83402) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [routes] › tests/routes.spec.ts:37:9 › anonymous › [route] g/[groupSlug]/shared/r/[id].vue (894ms)
+  ✓   2 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/index.vue (671ms)
+  ✓   3 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/[slug]/index.vue (705ms)
+  ✓   4 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/cookbooks/index.vue (657ms)
+  ✓   5 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/cookbooks/[slug].vue (670ms)
+  ✓   6 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create.vue (642ms)
+  ✓   7 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/index.vue (644ms)
+  ✓   8 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/ai.vue (644ms)
+  ✓   9 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/bulk.vue (646ms)
+  ✓  10 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/debug.vue (662ms)
+  ✓  11 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/html.vue (662ms)
+  ✓  12 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/image.vue (685ms)
+  ✓  13 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/new.vue (648ms)
+  ✓  14 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/url.vue (643ms)
+  ✓  15 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/zip.vue (647ms)
+  ✓  16 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/categories/index.vue (652ms)
+  ✓  17 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/tags/index.vue (664ms)
+  ✓  18 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/tools/index.vue (665ms)
+  ✓  19 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/finder/index.vue (633ms)
+  ✓  20 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/timeline.vue (806ms)
+  ✓  21 [routes] › tests/routes.spec.ts:37:9 › admin › [route] group/data/categories.vue (724ms)
+  ✓  22 [routes] › tests/routes.spec.ts:37:9 › admin › [route] group/data/tags.vue (670ms)
+  ✓  23 [routes] › tests/routes.spec.ts:37:9 › admin › [route] group/data/tools.vue (661ms)
+  ✓  24 [routes] › tests/routes.spec.ts:37:9 › admin › [route] user/[id]/favorites.vue (684ms)
+
+  24 passed (21.7s)

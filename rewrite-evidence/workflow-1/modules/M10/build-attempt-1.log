@@ -1,0 +1,37 @@
+$ tsc --noEmit && vite build
+src/auth/AuthProvider.tsx(1,22): error TS2307: Cannot find module './i18n' or its corresponding type declarations.
+src/pages/MealplanPages.tsx(107,10): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(111,12): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(114,18): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(122,12): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(131,12): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(145,53): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(157,20): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(186,24): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(199,24): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(216,57): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(217,56): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(221,24): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(233,26): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(246,51): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(251,24): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(259,54): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+src/pages/MealplanPages.tsx(261,16): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+[ELIFECYCLE] Command failed with exit code 2.

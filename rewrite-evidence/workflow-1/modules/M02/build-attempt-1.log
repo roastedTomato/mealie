@@ -1,0 +1,29 @@
+$ tsc --noEmit && vite build
+vite v6.4.4 building for production...
+transforming...
+✓ 949 modules transformed.
+✗ Build failed in 933ms
+error during build:
+[vite:esbuild-transpile] Transform failed with 1 error:
+assets/index-!~{001}~.js:34730:0: ERROR: Top-level await is not available in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14" + 2 overrides)
+file: assets/index-!~{001}~.js:34730:0
+
+Top-level await is not available in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14" + 2 overrides)
+34728|  }
+34729|  
+34730|  await i18nReady;
+   |  ^
+34731|  const root = document.getElementById("root");
+34732|  if (!root) throw new Error("Missing application root");
+
+    at failureErrorWithLog (/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:1467:15)
+    at /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:736:50
+    at responseCallbacks.<computed> (/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:603:9)
+    at handleIncomingPacket (/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:658:12)
+    at Socket.readFromStdout (/Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react/node_modules/.pnpm/esbuild@0.25.12/node_modules/esbuild/lib/main.js:581:7)
+    at Socket.emit (node:events:508:28)
+    at addChunk (node:internal/streams/readable:563:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+    at Readable.push (node:internal/streams/readable:394:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[ELIFECYCLE] Command failed with exit code 1.

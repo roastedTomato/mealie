@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react
+
+
+ Test Files  3 passed (3)
+      Tests  12 passed (12)
+   Start at  10:02:38
+   Duration  620ms (transform 45ms, setup 0ms, import 67ms, tests 5ms, environment 1.54s)
+

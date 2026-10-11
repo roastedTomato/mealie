@@ -1,0 +1,631 @@
+
+ RUN  v3.2.7 /Users/eva/Documents/Assignments/COMPX574/mealie-wf2-recipes/frontend-react
+
+stderr | src/features/recipes/recipes.test.tsx > recipe module backend interactions > comment persists backend recipe ID and reloads comments
+TypeError: Cannot read properties of undefined (reading 'some')
+    at FavoriteButton (/Users/eva/Documents/Assignments/COMPX574/mealie-wf2-recipes/frontend-react/src/features/recipes/routes.tsx:16:293)
+    at Object.react_stack_bottom_frame (/Users/eva/Documents/Assignments/COMPX574/wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:28571:20)
+    at renderWithHooks (/Users/eva/Documents/Assignments/COMPX574/wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:8030:22)
+    at updateFunctionComponent (/Users/eva/Documents/Assignments/COMPX574/wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:10569:19)
+    at beginWork (/Users/eva/Documents/Assignments/COMPX574/wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:12205:18)
+    at runWithFiberInDEV (/Users/eva/Documents/Assignments/COMPX574/wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:1048:13)
+    at performUnitOfWork (/Users/eva/Documents/Assignments/COMPX574/wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:19176:22)
+    at workLoopSync (/Users/eva/Documents/Assignments/COMPX574/wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:19004:41)
+    at renderRootSync (/Users/eva/Documents/Assignments/COMPX574/wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:18985:11)
+    at performWorkOnRoot (/Users/eva/Documents/Assignments/COMPX574/wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:18094:35)
+An error occurred in the <FavoriteButton> component.
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
+
+
+ ❯ src/features/recipes/recipes.test.tsx (6 tests | 2 failed) 2062ms
+   ✓ recipe module backend interactions > search sends query and replaces results 109ms
+   × recipe module backend interactions > comment persists backend recipe ID and reloads comments 40ms
+     → Unable to find an accessible element with the role "button" and name "Submit"
+
+There are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div />[39m
+[36m</body>[39m
+   ✓ recipe module backend interactions > organizer create uses actual API and reloads table 294ms
+   ✓ favorites and cookbook mutations > favorite toggle adds then removes with authenticated user and slug 37ms
+   × favorites and cookbook mutations > cookbook create errors keep entered data and show backend error 1224ms
+     → Unable to find role="alert"
+
+Ignored nodes: comments, script, style
+[36m<body[39m
+  [33mstyle[39m=[32m"padding-right: 1024px; overflow: hidden;"[39m
+[36m>[39m
+  [36m<div[39m
+    [33maria-hidden[39m=[32m"true"[39m
+  [36m>[39m
+    [36m<h1[39m
+      [33mclass[39m=[32m"MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1it4a80-MuiTypography-root"[39m
+    [36m>[39m
+      [0mCookbooks[0m
+    [36m</h1>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorError MuiAlert-standardError MuiAlert-standard css-3lhuho-MuiPaper-root-MuiAlert-root"[39m
+      [33mrole[39m=[32m"alert"[39m
+      [33mstyle[39m=[32m"--Paper-shadow: none;"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiAlert-icon css-vab54s-MuiAlert-icon"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33maria-hidden[39m=[32m"true"[39m
+          [33mclass[39m=[32m"MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1ckov0h-MuiSvgIcon-root"[39m
+          [33mdata-testid[39m=[32m"ErrorOutlineIcon"[39m
+          [33mfocusable[39m=[32m"false"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiAlert-message css-zioonp-MuiAlert-message"[39m
+      [36m>[39m
+        [0mCookbook name already exists[0m
+      [36m</div>[39m
+    [36m</div>[39m
+    [36m<button[39m
+      [33mclass[39m=[32m"MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1uent87-MuiButtonBase-root-MuiButton-root"[39m
+      [33mtabindex[39m=[32m"0"[39m
+      [33mtype[39m=[32m"button"[39m
+    [36m>[39m
+      [0mCreate[0m
+      [36m<span[39m
+        [33mclass[39m=[32m"MuiTouchRipple-root css-r3djoj-MuiTouchRipple-root"[39m
+      [36m/>[39m
+    [36m</button>[39m
+    [36m<ul[39m
+      [33mclass[39m=[32m"MuiList-root MuiList-padding css-b7dj7n-MuiList-root"[39m
+    [36m/>[39m
+  [36m</div>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m"MuiDialog-root MuiModal-root css-1424xw8-MuiModal-root-MuiDialog-root"[39m
+    [33mrole[39m=[32m"presentation"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33maria-hidden[39m=[32m"true"[39m
+      [33mclass[39m=[32m"MuiBackdrop-root MuiModal-backdrop MuiDialog-backdrop css-1cennmq-MuiBackdrop-root-MuiDialog-backdrop"[39m
+      [33mstyle[39m=[32m"opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mdata-testid[39m=[32m"sentinelStart"[39m
+      [33mtabindex[39m=[32m"0"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiDialog-container MuiDialog-scrollPaper css-19do60a-MuiDialog-container"[39m
+      [33mrole[39m=[32m"presentation"[39m
+      [33mstyle[39m=[32m"opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"[39m
+      [33mtabindex[39m=[32m"-1"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33maria-labelledby[39m=[32m"_r_i_"[39m
+        [33maria-modal[39m=[32m"true"[39m
+        [33mclass[39m=[32m"MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm css-10d30g3-MuiPaper-root-MuiDialog-paper"[39m
+        [33mdata-mui-focusable[39m=[32m""[39m
+        [33mrole[39m=[32m"dialog"[39m
+        [33mstyle[39m=[32m"--Paper-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);"[39m
+        [33mtabindex[39m=[32m"-1"[39m
+      [36m>[39m
+        [36m<h2[39m
+          [33mclass[39m=[32m"MuiTypography-root MuiTypography-h6 MuiDialogTitle-root css-rvoa5x-MuiTypography-root-MuiDialogTitle-root"[39m
+          [33mid[39m=[32m"_r_i_"[39m
+        [36m>[39m
+          [0mCreate Cookbook[0m
+        [36m</h2>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiDialogContent-root css-kw13he-MuiDialogContent-root"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"MuiStack-root css-epoa6f-MuiStack-root"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"[39m
+                [33mdata-shrink[39m=[32m"true"[39m
+                [33mfor[39m=[32m"_r_j_"[39m
+                [33mid[39m=[32m"_r_j_-label"[39m
+              [36m>[39m
+                [0mName[0m
+              [36m</label>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33maria-invalid[39m=[32m"false"[39m
+                  [33mclass[39m=[32m"MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"[39m
+                  [33mid[39m=[32m"_r_j_"[39m
+                  [33mtype[39m=[32m"text"[39m
+                  [33mvalue[39m=[32m"Family"[39m
+                [36m/>[39m
+                [36m<fieldset[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"[39m
+                [36m>[39m
+                  [36m<legend[39m
+                    [33mclass[39m=[32m"css-ex8a5f-MuiNotchedOutlined-root"[39m
+                  [36m>[39m
+                    [36m<span>[39m
+                      [0mName[0m
+                    [36m</span>[39m
+                  [36m</legend>[39m
+                [36m</fieldset>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-an...
+
+Ignored nodes: comments, script, style
+[36m<body[39m
+  [33mstyle[39m=[32m"padding-right: 1024px; overflow: hidden;"[39m
+[36m>[39m
+  [36m<div[39m
+    [33maria-hidden[39m=[32m"true"[39m
+  [36m>[39m
+    [36m<h1[39m
+      [33mclass[39m=[32m"MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1it4a80-MuiTypography-root"[39m
+    [36m>[39m
+      [0mCookbooks[0m
+    [36m</h1>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorError MuiAlert-standardError MuiAlert-standard css-3lhuho-MuiPaper-root-MuiAlert-root"[39m
+      [33mrole[39m=[32m"alert"[39m
+      [33mstyle[39m=[32m"--Paper-shadow: none;"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiAlert-icon css-vab54s-MuiAlert-icon"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33maria-hidden[39m=[32m"true"[39m
+          [33mclass[39m=[32m"MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1ckov0h-MuiSvgIcon-root"[39m
+          [33mdata-testid[39m=[32m"ErrorOutlineIcon"[39m
+          [33mfocusable[39m=[32m"false"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiAlert-message css-zioonp-MuiAlert-message"[39m
+      [36m>[39m
+        [0mCookbook name already exists[0m
+      [36m</div>[39m
+    [36m</div>[39m
+    [36m<button[39m
+      [33mclass[39m=[32m"MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1uent87-MuiButtonBase-root-MuiButton-root"[39m
+      [33mtabindex[39m=[32m"0"[39m
+      [33mtype[39m=[32m"button"[39m
+    [36m>[39m
+      [0mCreate[0m
+      [36m<span[39m
+        [33mclass[39m=[32m"MuiTouchRipple-root css-r3djoj-MuiTouchRipple-root"[39m
+      [36m/>[39m
+    [36m</button>[39m
+    [36m<ul[39m
+      [33mclass[39m=[32m"MuiList-root MuiList-padding css-b7dj7n-MuiList-root"[39m
+    [36m/>[39m
+  [36m</div>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m"MuiDialog-root MuiModal-root css-1424xw8-MuiModal-root-MuiDialog-root"[39m
+    [33mrole[39m=[32m"presentation"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33maria-hidden[39m=[32m"true"[39m
+      [33mclass[39m=[32m"MuiBackdrop-root MuiModal-backdrop MuiDialog-backdrop css-1cennmq-MuiBackdrop-root-MuiDialog-backdrop"[39m
+      [33mstyle[39m=[32m"opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mdata-testid[39m=[32m"sentinelStart"[39m
+      [33mtabindex[39m=[32m"0"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiDialog-container MuiDialog-scrollPaper css-19do60a-MuiDialog-container"[39m
+      [33mrole[39m=[32m"presentation"[39m
+      [33mstyle[39m=[32m"opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"[39m
+      [33mtabindex[39m=[32m"-1"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33maria-labelledby[39m=[32m"_r_i_"[39m
+        [33maria-modal[39m=[32m"true"[39m
+        [33mclass[39m=[32m"MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm css-10d30g3-MuiPaper-root-MuiDialog-paper"[39m
+        [33mdata-mui-focusable[39m=[32m""[39m
+        [33mrole[39m=[32m"dialog"[39m
+        [33mstyle[39m=[32m"--Paper-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);"[39m
+        [33mtabindex[39m=[32m"-1"[39m
+      [36m>[39m
+        [36m<h2[39m
+          [33mclass[39m=[32m"MuiTypography-root MuiTypography-h6 MuiDialogTitle-root css-rvoa5x-MuiTypography-root-MuiDialogTitle-root"[39m
+          [33mid[39m=[32m"_r_i_"[39m
+        [36m>[39m
+          [0mCreate Cookbook[0m
+        [36m</h2>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiDialogContent-root css-kw13he-MuiDialogContent-root"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"MuiStack-root css-epoa6f-MuiStack-root"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"[39m
+                [33mdata-shrink[39m=[32m"true"[39m
+                [33mfor[39m=[32m"_r_j_"[39m
+                [33mid[39m=[32m"_r_j_-label"[39m
+              [36m>[39m
+                [0mName[0m
+              [36m</label>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33maria-invalid[39m=[32m"false"[39m
+                  [33mclass[39m=[32m"MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"[39m
+                  [33mid[39m=[32m"_r_j_"[39m
+                  [33mtype[39m=[32m"text"[39m
+                  [33mvalue[39m=[32m"Family"[39m
+                [36m/>[39m
+                [36m<fieldset[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"[39m
+                [36m>[39m
+                  [36m<legend[39m
+                    [33mclass[39m=[32m"css-ex8a5f-MuiNotchedOutlined-root"[39m
+                  [36m>[39m
+                    [36m<span>[39m
+                      [0mName[0m
+                    [36m</span>[39m
+                  [36m</legend>[39m
+                [36m</fieldset>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-an...
+   ✓ favorites and cookbook mutations > cookbook edit and delete use item IDs and reload persistent data  357ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/features/recipes/recipes.test.tsx > recipe module backend interactions > comment persists backend recipe ID and reloads comments
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Submit"
+
+There are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div />[39m
+[36m</body>[39m
+ ❯ Object.getElementError ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/features/recipes/recipes.test.tsx:12:818
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/features/recipes/recipes.test.tsx > favorites and cookbook mutations > cookbook create errors keep entered data and show backend error
+TestingLibraryElementError: Unable to find role="alert"
+
+Ignored nodes: comments, script, style
+[36m<body[39m
+  [33mstyle[39m=[32m"padding-right: 1024px; overflow: hidden;"[39m
+[36m>[39m
+  [36m<div[39m
+    [33maria-hidden[39m=[32m"true"[39m
+  [36m>[39m
+    [36m<h1[39m
+      [33mclass[39m=[32m"MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1it4a80-MuiTypography-root"[39m
+    [36m>[39m
+      [0mCookbooks[0m
+    [36m</h1>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorError MuiAlert-standardError MuiAlert-standard css-3lhuho-MuiPaper-root-MuiAlert-root"[39m
+      [33mrole[39m=[32m"alert"[39m
+      [33mstyle[39m=[32m"--Paper-shadow: none;"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiAlert-icon css-vab54s-MuiAlert-icon"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33maria-hidden[39m=[32m"true"[39m
+          [33mclass[39m=[32m"MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1ckov0h-MuiSvgIcon-root"[39m
+          [33mdata-testid[39m=[32m"ErrorOutlineIcon"[39m
+          [33mfocusable[39m=[32m"false"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiAlert-message css-zioonp-MuiAlert-message"[39m
+      [36m>[39m
+        [0mCookbook name already exists[0m
+      [36m</div>[39m
+    [36m</div>[39m
+    [36m<button[39m
+      [33mclass[39m=[32m"MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1uent87-MuiButtonBase-root-MuiButton-root"[39m
+      [33mtabindex[39m=[32m"0"[39m
+      [33mtype[39m=[32m"button"[39m
+    [36m>[39m
+      [0mCreate[0m
+      [36m<span[39m
+        [33mclass[39m=[32m"MuiTouchRipple-root css-r3djoj-MuiTouchRipple-root"[39m
+      [36m/>[39m
+    [36m</button>[39m
+    [36m<ul[39m
+      [33mclass[39m=[32m"MuiList-root MuiList-padding css-b7dj7n-MuiList-root"[39m
+    [36m/>[39m
+  [36m</div>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m"MuiDialog-root MuiModal-root css-1424xw8-MuiModal-root-MuiDialog-root"[39m
+    [33mrole[39m=[32m"presentation"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33maria-hidden[39m=[32m"true"[39m
+      [33mclass[39m=[32m"MuiBackdrop-root MuiModal-backdrop MuiDialog-backdrop css-1cennmq-MuiBackdrop-root-MuiDialog-backdrop"[39m
+      [33mstyle[39m=[32m"opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mdata-testid[39m=[32m"sentinelStart"[39m
+      [33mtabindex[39m=[32m"0"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiDialog-container MuiDialog-scrollPaper css-19do60a-MuiDialog-container"[39m
+      [33mrole[39m=[32m"presentation"[39m
+      [33mstyle[39m=[32m"opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"[39m
+      [33mtabindex[39m=[32m"-1"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33maria-labelledby[39m=[32m"_r_i_"[39m
+        [33maria-modal[39m=[32m"true"[39m
+        [33mclass[39m=[32m"MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm css-10d30g3-MuiPaper-root-MuiDialog-paper"[39m
+        [33mdata-mui-focusable[39m=[32m""[39m
+        [33mrole[39m=[32m"dialog"[39m
+        [33mstyle[39m=[32m"--Paper-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);"[39m
+        [33mtabindex[39m=[32m"-1"[39m
+      [36m>[39m
+        [36m<h2[39m
+          [33mclass[39m=[32m"MuiTypography-root MuiTypography-h6 MuiDialogTitle-root css-rvoa5x-MuiTypography-root-MuiDialogTitle-root"[39m
+          [33mid[39m=[32m"_r_i_"[39m
+        [36m>[39m
+          [0mCreate Cookbook[0m
+        [36m</h2>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiDialogContent-root css-kw13he-MuiDialogContent-root"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"MuiStack-root css-epoa6f-MuiStack-root"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"[39m
+                [33mdata-shrink[39m=[32m"true"[39m
+                [33mfor[39m=[32m"_r_j_"[39m
+                [33mid[39m=[32m"_r_j_-label"[39m
+              [36m>[39m
+                [0mName[0m
+              [36m</label>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33maria-invalid[39m=[32m"false"[39m
+                  [33mclass[39m=[32m"MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"[39m
+                  [33mid[39m=[32m"_r_j_"[39m
+                  [33mtype[39m=[32m"text"[39m
+                  [33mvalue[39m=[32m"Family"[39m
+                [36m/>[39m
+                [36m<fieldset[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"[39m
+                [36m>[39m
+                  [36m<legend[39m
+                    [33mclass[39m=[32m"css-ex8a5f-MuiNotchedOutlined-root"[39m
+                  [36m>[39m
+                    [36m<span>[39m
+                      [0mName[0m
+                    [36m</span>[39m
+                  [36m</legend>[39m
+                [36m</fieldset>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-an...
+
+Ignored nodes: comments, script, style
+[36m<body[39m
+  [33mstyle[39m=[32m"padding-right: 1024px; overflow: hidden;"[39m
+[36m>[39m
+  [36m<div[39m
+    [33maria-hidden[39m=[32m"true"[39m
+  [36m>[39m
+    [36m<h1[39m
+      [33mclass[39m=[32m"MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom css-1it4a80-MuiTypography-root"[39m
+    [36m>[39m
+      [0mCookbooks[0m
+    [36m</h1>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorError MuiAlert-standardError MuiAlert-standard css-3lhuho-MuiPaper-root-MuiAlert-root"[39m
+      [33mrole[39m=[32m"alert"[39m
+      [33mstyle[39m=[32m"--Paper-shadow: none;"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiAlert-icon css-vab54s-MuiAlert-icon"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33maria-hidden[39m=[32m"true"[39m
+          [33mclass[39m=[32m"MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1ckov0h-MuiSvgIcon-root"[39m
+          [33mdata-testid[39m=[32m"ErrorOutlineIcon"[39m
+          [33mfocusable[39m=[32m"false"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiAlert-message css-zioonp-MuiAlert-message"[39m
+      [36m>[39m
+        [0mCookbook name already exists[0m
+      [36m</div>[39m
+    [36m</div>[39m
+    [36m<button[39m
+      [33mclass[39m=[32m"MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1uent87-MuiButtonBase-root-MuiButton-root"[39m
+      [33mtabindex[39m=[32m"0"[39m
+      [33mtype[39m=[32m"button"[39m
+    [36m>[39m
+      [0mCreate[0m
+      [36m<span[39m
+        [33mclass[39m=[32m"MuiTouchRipple-root css-r3djoj-MuiTouchRipple-root"[39m
+      [36m/>[39m
+    [36m</button>[39m
+    [36m<ul[39m
+      [33mclass[39m=[32m"MuiList-root MuiList-padding css-b7dj7n-MuiList-root"[39m
+    [36m/>[39m
+  [36m</div>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m"MuiDialog-root MuiModal-root css-1424xw8-MuiModal-root-MuiDialog-root"[39m
+    [33mrole[39m=[32m"presentation"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33maria-hidden[39m=[32m"true"[39m
+      [33mclass[39m=[32m"MuiBackdrop-root MuiModal-backdrop MuiDialog-backdrop css-1cennmq-MuiBackdrop-root-MuiDialog-backdrop"[39m
+      [33mstyle[39m=[32m"opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mdata-testid[39m=[32m"sentinelStart"[39m
+      [33mtabindex[39m=[32m"0"[39m
+    [36m/>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiDialog-container MuiDialog-scrollPaper css-19do60a-MuiDialog-container"[39m
+      [33mrole[39m=[32m"presentation"[39m
+      [33mstyle[39m=[32m"opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"[39m
+      [33mtabindex[39m=[32m"-1"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33maria-labelledby[39m=[32m"_r_i_"[39m
+        [33maria-modal[39m=[32m"true"[39m
+        [33mclass[39m=[32m"MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm css-10d30g3-MuiPaper-root-MuiDialog-paper"[39m
+        [33mdata-mui-focusable[39m=[32m""[39m
+        [33mrole[39m=[32m"dialog"[39m
+        [33mstyle[39m=[32m"--Paper-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);"[39m
+        [33mtabindex[39m=[32m"-1"[39m
+      [36m>[39m
+        [36m<h2[39m
+          [33mclass[39m=[32m"MuiTypography-root MuiTypography-h6 MuiDialogTitle-root css-rvoa5x-MuiTypography-root-MuiDialogTitle-root"[39m
+          [33mid[39m=[32m"_r_i_"[39m
+        [36m>[39m
+          [0mCreate Cookbook[0m
+        [36m</h2>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiDialogContent-root css-kw13he-MuiDialogContent-root"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"MuiStack-root css-epoa6f-MuiStack-root"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"[39m
+                [33mdata-shrink[39m=[32m"true"[39m
+                [33mfor[39m=[32m"_r_j_"[39m
+                [33mid[39m=[32m"_r_j_-label"[39m
+              [36m>[39m
+                [0mName[0m
+              [36m</label>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"[39m
+              [36m>[39m
+                [36m<input[39m
+                  [33maria-invalid[39m=[32m"false"[39m
+                  [33mclass[39m=[32m"MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"[39m
+                  [33mid[39m=[32m"_r_j_"[39m
+                  [33mtype[39m=[32m"text"[39m
+                  [33mvalue[39m=[32m"Family"[39m
+                [36m/>[39m
+                [36m<fieldset[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"[39m
+                [36m>[39m
+                  [36m<legend[39m
+                    [33mclass[39m=[32m"css-ex8a5f-MuiNotchedOutlined-root"[39m
+                  [36m>[39m
+                    [36m<span>[39m
+                      [0mName[0m
+                    [36m</span>[39m
+                  [36m</legend>[39m
+                [36m</fieldset>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-an...
+ ❯ waitForWrapper ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ src/features/recipes/recipes.test.tsx:18:628
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯ Uncaught Exception ⎯⎯⎯⎯⎯
+TypeError: Cannot read properties of undefined (reading 'some')
+ ❯ FavoriteButton src/features/recipes/routes.tsx:16:293
+
+ ❯ Object.react_stack_bottom_frame ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:28571:20
+ ❯ renderWithHooks ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:8030:22
+ ❯ updateFunctionComponent ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:10569:19
+ ❯ beginWork ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:12205:18
+ ❯ runWithFiberInDEV ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:1048:13
+ ❯ performUnitOfWork ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:19176:22
+ ❯ workLoopSync ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:19004:41
+ ❯ renderRootSync ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:18985:11
+ ❯ performWorkOnRoot ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/cjs/react-dom-client.development.js:18094:35
+
+This error originated in "src/features/recipes/recipes.test.tsx" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.
+The latest test that might've caused the error is "comment persists backend recipe ID and reloads comments". It might mean one of the following:
+- The error was thrown, while Vitest was running this test.
+- If the error occurred after the test had been completed, this was the last documented test before it was thrown.
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 4 passed (6)
+     Errors  1 error
+   Start at  15:00:19
+   Duration  2.70s (transform 55ms, setup 58ms, collect 266ms, tests 2.06s, environment 130ms, prepare 29ms)
+

@@ -1,0 +1,630 @@
+$ vitest run
+
+ RUN  v3.2.7 /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react
+
+ ✓ src/shared/api.test.ts (4 tests) 6ms
+ ✓ src/shared/i18n.test.ts (1 test) 3ms
+ ❯ src/features/account/account.test.tsx (2 tests | 2 failed) 76ms
+   × submits credentials as form data and surfaces server rejection 51ms
+     → Unable to find a label with the text of: Email or Username
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<form[39m
+      [33mclass[39m=[32m"MuiStack-root css-num6u3-MuiStack-root"[39m
+    [36m>[39m
+      [36m<h1[39m
+        [33mclass[39m=[32m"MuiTypography-root MuiTypography-h4 css-11pxkfa-MuiTypography-root"[39m
+      [36m>[39m
+        [0mSign in[0m
+      [36m</h1>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+      [36m>[39m
+        [36m<label[39m
+          [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"[39m
+          [33mdata-shrink[39m=[32m"false"[39m
+          [33mfor[39m=[32m"_r_0_"[39m
+          [33mid[39m=[32m"_r_0_-label"[39m
+        [36m>[39m
+          [0mEmail or Username[0m
+          [36m<span[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"[39m
+          [36m>[39m
+            [0m [0m
+            [0m*[0m
+          [36m</span>[39m
+        [36m</label>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"[39m
+        [36m>[39m
+          [36m<input[39m
+            [33maria-invalid[39m=[32m"false"[39m
+            [33mautocomplete[39m=[32m"username"[39m
+            [33mclass[39m=[32m"MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"[39m
+            [33mid[39m=[32m"_r_0_"[39m
+            [33mrequired[39m=[32m""[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m""[39m
+          [36m/>[39m
+          [36m<fieldset[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"[39m
+          [36m>[39m
+            [36m<legend[39m
+              [33mclass[39m=[32m"css-1n64csd-MuiNotchedOutlined-root"[39m
+            [36m>[39m
+              [36m<span>[39m
+                [0mEmail or Username[0m
+                [0m [0m
+                [0m*[0m
+              [36m</span>[39m
+            [36m</legend>[39m
+          [36m</fieldset>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+      [36m>[39m
+        [36m<label[39m
+          [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"[39m
+          [33mdata-shrink[39m=[32m"false"[39m
+          [33mfor[39m=[32m"_r_1_"[39m
+          [33mid[39m=[32m"_r_1_-label"[39m
+        [36m>[39m
+          [0mPassword[0m
+          [36m<span[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"[39m
+          [36m>[39m
+            [0m [0m
+            [0m*[0m
+          [36m</span>[39m
+        [36m</label>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"[39m
+        [36m>[39m
+          [36m<input[39m
+            [33maria-invalid[39m=[32m"false"[39m
+            [33mautocomplete[39m=[32m"current-password"[39m
+            [33mclass[39m=[32m"MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"[39m
+            [33mid[39m=[32m"_r_1_"[39m
+            [33mrequired[39m=[32m""[39m
+            [33mrole[39m=[32m"textbox"[39m
+            [33mtype[39m=[32m"password"[39m
+            [33mvalue[39m=[32m""[39m
+          [36m/>[39m
+          [36m<fieldset[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"[39m
+          [36m>[39m
+            [36m<legend[39m
+              [33mclass[39m=[32m"css-1n64csd-MuiNotchedOutlined-root"[39m
+            [36m>[39m
+              [36m<span>[39m
+                [0mPassword[0m
+                [0m [0m
+                [0m*[0m
+              [36m</span>[39m
+            [36m</legend>[39m
+          [36m</fieldset>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<label[39m
+        [33mclass[39m=[32m"MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"[39m
+      [36m>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m"MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"[39m
+        [36m>[39m
+          [36m<input[39m
+            [33mchecked[39m=[32m""[39m
+            [33mclass[39m=[32m"PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"[39m
+            [33mdata-indeterminate[39m=[32m"false"[39m
+            [33mtype[39m=[32m"checkbox"[39m
+          [36m/>[39m
+          [36m<svg[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"[39m
+            [33mdata-testid[39m=[32m"CheckBoxIcon"[39m
+            [33mfocusable[39m=[32m"false"[39m
+            [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"[39m
+            [36m/>[39m
+          [36m</svg>[39m
+        [36m</span>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m"MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"[39m
+        [36m>[39m
+          [0mRemember Me[0m
+        [36m</span>[39m
+      [36m</label>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"[39m
+        [33mtabindex[39m=[32m"0"[39m
+        [33mtype[39m=[32m"submit"[39m
+      [36m>[39m
+        [0mLogin[0m
+      [36m</button>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1uent87-MuiButtonBase-root-MuiButton-root"[39m
+        [33mdata-discover[39m=[32m"true"[39m
+        [33mhref[39m=[32m"/forgot-password"[39m
+        [33mtabindex[39m=[32m"0"[39m
+      [36m>[39m
+        [0mForgot Password[0m
+      [36m</a>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1uent87-MuiButtonBase-root-MuiButton-root"[39m
+        [33mdata-discover[39m=[32m"true"[39m
+        [33mhref[39m=[32m"/register"[39m
+        [33mtabindex[39m=[32m"0"[39m
+      [36m>[39m
+        [0mUser Registration[0m
+      [36m</a>[39m
+    [36m</form>[39m
+  [36m</div>[39m
+[36m</body>[39m
+   × prevents mismatched registration passwords from reaching API 24ms
+     → Unable to find a label with the text of: Password
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<form[39m
+      [33mclass[39m=[32m"MuiStack-root css-19qv1u1-MuiStack-root"[39m
+    [36m>[39m
+      [36m<h1[39m
+        [33mclass[39m=[32m"MuiTypography-root MuiTypography-h4 css-11pxkfa-MuiTypography-root"[39m
+      [36m>[39m
+        [0mUser Registration[0m
+      [36m</h1>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1qb8o-MuiToggleButtonGroup-root"[39m
+        [33mrole[39m=[32m"group"[39m
+      [36m>[39m
+        [36m<button[39m
+          [33maria-pressed[39m=[32m"true"[39m
+          [33mclass[39m=[32m"MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-gn0oko-MuiButtonBase-root-MuiToggleButton-root"[39m
+          [33mtabindex[39m=[32m"0"[39m
+          [33mtype[39m=[32m"button"[39m
+          [33mvalue[39m=[32m"join"[39m
+        [36m>[39m
+          [0mJoin a Group[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33maria-pressed[39m=[32m"false"[39m
+          [33mclass[39m=[32m"MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-gn0oko-MuiButtonBase-root-MuiToggleButton-root"[39m
+          [33mtabindex[39m=[32m"0"[39m
+          [33mtype[39m=[32m"button"[39m
+          [33mvalue[39m=[32m"create"[39m
+        [36m>[39m
+          [0mCreate a New Group[0m
+        [36m</button>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+      [36m>[39m
+        [36m<label[39m
+          [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"[39m
+          [33mdata-shrink[39m=[32m"false"[39m
+          [33mfor[39m=[32m"_r_5_"[39m
+          [33mid[39m=[32m"_r_5_-label"[39m
+        [36m>[39m
+          [0mEmail[0m
+          [36m<span[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"[39m
+          [36m>[39m
+            [0m [0m
+            [0m*[0m
+          [36m</span>[39m
+        [36m</label>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"[39m
+        [36m>[39m
+          [36m<input[39m
+            [33maria-invalid[39m=[32m"false"[39m
+            [33mclass[39m=[32m"MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"[39m
+            [33mid[39m=[32m"_r_5_"[39m
+            [33mrequired[39m=[32m""[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m""[39m
+          [36m/>[39m
+          [36m<fieldset[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"[39m
+          [36m>[39m
+            [36m<legend[39m
+              [33mclass[39m=[32m"css-1n64csd-MuiNotchedOutlined-root"[39m
+            [36m>[39m
+              [36m<span>[39m
+                [0mEmail[0m
+                [0m [0m
+                [0m*[0m
+              [36m</span>[39m
+            [36m</legend>[39m
+          [36m</fieldset>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+      [36m>[39m
+        [36m<label[39m
+          [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"[39m
+          [33mdata-shrink[39m=[32m"false"[39m
+          [33mfor[39m=[32m"_r_6_"[39m
+          [33mid[39m=[32m"_r_6_-label"[39m
+        [36m>[39m
+          [0mUser Name[0m
+          [36m<span[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"[39m
+          [36m>[39m
+            [0m [0m
+            [0m*[0m
+          [36m</span>[39m
+        [36m</label>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"[39m
+        [36m>[39m
+          [36m<input[39m
+            [33maria-invalid[39m=[32m"false"[39m
+            [33mclass[39m=[32m"MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"[39m
+            [33mid[39m=[32m"_r_6_"[39m
+            [33mrequired[39m=[32m""[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m""[39m
+          [36m/>[39m
+          [36m<fieldset[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"[39m
+          [36m>[39m
+            [36m<legend[39m
+              [33mclass[39m=[32m"css-1n64csd-MuiNotchedOutlined-root"[39m
+            [36m>[39m
+              [36m<span>[39m
+                [0mUser Name[0m
+                [0m [0m
+                [0m*[0m
+              [36m</span>[39m
+            [36m</legend>[39m
+          [36m</fieldset>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+      [36m>[39m
+        [36m<label[39m
+          [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"[39m
+          [33mdata-shrink[39m=[32m"false"[39m
+  ...
+ ✓ src/features/admin/admin.test.tsx (3 tests) 92ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/features/account/account.test.tsx > submits credentials as form data and surfaces server rejection
+TestingLibraryElementError: Unable to find a label with the text of: Email or Username
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<form[39m
+      [33mclass[39m=[32m"MuiStack-root css-num6u3-MuiStack-root"[39m
+    [36m>[39m
+      [36m<h1[39m
+        [33mclass[39m=[32m"MuiTypography-root MuiTypography-h4 css-11pxkfa-MuiTypography-root"[39m
+      [36m>[39m
+        [0mSign in[0m
+      [36m</h1>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+      [36m>[39m
+        [36m<label[39m
+          [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"[39m
+          [33mdata-shrink[39m=[32m"false"[39m
+          [33mfor[39m=[32m"_r_0_"[39m
+          [33mid[39m=[32m"_r_0_-label"[39m
+        [36m>[39m
+          [0mEmail or Username[0m
+          [36m<span[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"[39m
+          [36m>[39m
+            [0m [0m
+            [0m*[0m
+          [36m</span>[39m
+        [36m</label>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"[39m
+        [36m>[39m
+          [36m<input[39m
+            [33maria-invalid[39m=[32m"false"[39m
+            [33mautocomplete[39m=[32m"username"[39m
+            [33mclass[39m=[32m"MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"[39m
+            [33mid[39m=[32m"_r_0_"[39m
+            [33mrequired[39m=[32m""[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m""[39m
+          [36m/>[39m
+          [36m<fieldset[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"[39m
+          [36m>[39m
+            [36m<legend[39m
+              [33mclass[39m=[32m"css-1n64csd-MuiNotchedOutlined-root"[39m
+            [36m>[39m
+              [36m<span>[39m
+                [0mEmail or Username[0m
+                [0m [0m
+                [0m*[0m
+              [36m</span>[39m
+            [36m</legend>[39m
+          [36m</fieldset>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+      [36m>[39m
+        [36m<label[39m
+          [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"[39m
+          [33mdata-shrink[39m=[32m"false"[39m
+          [33mfor[39m=[32m"_r_1_"[39m
+          [33mid[39m=[32m"_r_1_-label"[39m
+        [36m>[39m
+          [0mPassword[0m
+          [36m<span[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"[39m
+          [36m>[39m
+            [0m [0m
+            [0m*[0m
+          [36m</span>[39m
+        [36m</label>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"[39m
+        [36m>[39m
+          [36m<input[39m
+            [33maria-invalid[39m=[32m"false"[39m
+            [33mautocomplete[39m=[32m"current-password"[39m
+            [33mclass[39m=[32m"MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"[39m
+            [33mid[39m=[32m"_r_1_"[39m
+            [33mrequired[39m=[32m""[39m
+            [33mrole[39m=[32m"textbox"[39m
+            [33mtype[39m=[32m"password"[39m
+            [33mvalue[39m=[32m""[39m
+          [36m/>[39m
+          [36m<fieldset[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"[39m
+          [36m>[39m
+            [36m<legend[39m
+              [33mclass[39m=[32m"css-1n64csd-MuiNotchedOutlined-root"[39m
+            [36m>[39m
+              [36m<span>[39m
+                [0mPassword[0m
+                [0m [0m
+                [0m*[0m
+              [36m</span>[39m
+            [36m</legend>[39m
+          [36m</fieldset>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<label[39m
+        [33mclass[39m=[32m"MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"[39m
+      [36m>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m"MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"[39m
+        [36m>[39m
+          [36m<input[39m
+            [33mchecked[39m=[32m""[39m
+            [33mclass[39m=[32m"PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"[39m
+            [33mdata-indeterminate[39m=[32m"false"[39m
+            [33mtype[39m=[32m"checkbox"[39m
+          [36m/>[39m
+          [36m<svg[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"[39m
+            [33mdata-testid[39m=[32m"CheckBoxIcon"[39m
+            [33mfocusable[39m=[32m"false"[39m
+            [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [36m>[39m
+            [36m<path[39m
+              [33md[39m=[32m"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"[39m
+            [36m/>[39m
+          [36m</svg>[39m
+        [36m</span>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m"MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"[39m
+        [36m>[39m
+          [0mRemember Me[0m
+        [36m</span>[39m
+      [36m</label>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"[39m
+        [33mtabindex[39m=[32m"0"[39m
+        [33mtype[39m=[32m"submit"[39m
+      [36m>[39m
+        [0mLogin[0m
+      [36m</button>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1uent87-MuiButtonBase-root-MuiButton-root"[39m
+        [33mdata-discover[39m=[32m"true"[39m
+        [33mhref[39m=[32m"/forgot-password"[39m
+        [33mtabindex[39m=[32m"0"[39m
+      [36m>[39m
+        [0mForgot Password[0m
+      [36m</a>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1uent87-MuiButtonBase-root-MuiButton-root"[39m
+        [33mdata-discover[39m=[32m"true"[39m
+        [33mhref[39m=[32m"/register"[39m
+        [33mtabindex[39m=[32m"0"[39m
+      [36m>[39m
+        [0mUser Registration[0m
+      [36m</a>[39m
+    [36m</form>[39m
+  [36m</div>[39m
+[36m</body>[39m
+ ❯ Object.getElementError ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ getAllByLabelText ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ ❯ ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/features/account/account.test.tsx:9:315
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/features/account/account.test.tsx > prevents mismatched registration passwords from reaching API
+TestingLibraryElementError: Unable to find a label with the text of: Password
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<form[39m
+      [33mclass[39m=[32m"MuiStack-root css-19qv1u1-MuiStack-root"[39m
+    [36m>[39m
+      [36m<h1[39m
+        [33mclass[39m=[32m"MuiTypography-root MuiTypography-h4 css-11pxkfa-MuiTypography-root"[39m
+      [36m>[39m
+        [0mUser Registration[0m
+      [36m</h1>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1qb8o-MuiToggleButtonGroup-root"[39m
+        [33mrole[39m=[32m"group"[39m
+      [36m>[39m
+        [36m<button[39m
+          [33maria-pressed[39m=[32m"true"[39m
+          [33mclass[39m=[32m"MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-gn0oko-MuiButtonBase-root-MuiToggleButton-root"[39m
+          [33mtabindex[39m=[32m"0"[39m
+          [33mtype[39m=[32m"button"[39m
+          [33mvalue[39m=[32m"join"[39m
+        [36m>[39m
+          [0mJoin a Group[0m
+        [36m</button>[39m
+        [36m<button[39m
+          [33maria-pressed[39m=[32m"false"[39m
+          [33mclass[39m=[32m"MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-gn0oko-MuiButtonBase-root-MuiToggleButton-root"[39m
+          [33mtabindex[39m=[32m"0"[39m
+          [33mtype[39m=[32m"button"[39m
+          [33mvalue[39m=[32m"create"[39m
+        [36m>[39m
+          [0mCreate a New Group[0m
+        [36m</button>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+      [36m>[39m
+        [36m<label[39m
+          [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"[39m
+          [33mdata-shrink[39m=[32m"false"[39m
+          [33mfor[39m=[32m"_r_5_"[39m
+          [33mid[39m=[32m"_r_5_-label"[39m
+        [36m>[39m
+          [0mEmail[0m
+          [36m<span[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"[39m
+          [36m>[39m
+            [0m [0m
+            [0m*[0m
+          [36m</span>[39m
+        [36m</label>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"[39m
+        [36m>[39m
+          [36m<input[39m
+            [33maria-invalid[39m=[32m"false"[39m
+            [33mclass[39m=[32m"MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"[39m
+            [33mid[39m=[32m"_r_5_"[39m
+            [33mrequired[39m=[32m""[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m""[39m
+          [36m/>[39m
+          [36m<fieldset[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"[39m
+          [36m>[39m
+            [36m<legend[39m
+              [33mclass[39m=[32m"css-1n64csd-MuiNotchedOutlined-root"[39m
+            [36m>[39m
+              [36m<span>[39m
+                [0mEmail[0m
+                [0m [0m
+                [0m*[0m
+              [36m</span>[39m
+            [36m</legend>[39m
+          [36m</fieldset>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+      [36m>[39m
+        [36m<label[39m
+          [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"[39m
+          [33mdata-shrink[39m=[32m"false"[39m
+          [33mfor[39m=[32m"_r_6_"[39m
+          [33mid[39m=[32m"_r_6_-label"[39m
+        [36m>[39m
+          [0mUser Name[0m
+          [36m<span[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"[39m
+          [36m>[39m
+            [0m [0m
+            [0m*[0m
+          [36m</span>[39m
+        [36m</label>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"[39m
+        [36m>[39m
+          [36m<input[39m
+            [33maria-invalid[39m=[32m"false"[39m
+            [33mclass[39m=[32m"MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"[39m
+            [33mid[39m=[32m"_r_6_"[39m
+            [33mrequired[39m=[32m""[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m""[39m
+          [36m/>[39m
+          [36m<fieldset[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"[39m
+          [36m>[39m
+            [36m<legend[39m
+              [33mclass[39m=[32m"css-1n64csd-MuiNotchedOutlined-root"[39m
+            [36m>[39m
+              [36m<span>[39m
+                [0mUser Name[0m
+                [0m [0m
+                [0m*[0m
+              [36m</span>[39m
+            [36m</legend>[39m
+          [36m</fieldset>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"[39m
+      [36m>[39m
+        [36m<label[39m
+          [33mclass[39m=[32m"MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"[39m
+          [33mdata-shrink[39m=[32m"false"[39m
+  ...
+ ❯ Object.getElementError ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ getAllByLabelText ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ ❯ ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ ../../wf1-react-local-artifacts-47a176ed1/node_modules/.pnpm/@testing-library+dom@10.4.2/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/features/account/account.test.tsx:10:207
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  2 failed | 8 passed (10)
+   Start at  14:57:14
+   Duration  814ms (transform 80ms, setup 328ms, collect 677ms, tests 177ms, environment 655ms, prepare 125ms)
+
+[ELIFECYCLE] Test failed. See above for more details.

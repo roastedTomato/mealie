@@ -1,0 +1,17 @@
+[WebServer] WARNING  2026-10-11T01:55:50 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-11T01:55:51 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-11T01:55:52 - Incorrect username or password from 127.0.0.1
+
+Running 5 tests using 2 workers
+
+(node:82988) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:82987) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [flows] › tests/flows/recipes.spec.ts:6:7 › recipes › [flow] open a recipe from the recipe list (377ms)
+  ✓  3 [flows] › tests/flows/recipes.spec.ts:15:7 › recipes › [flow] search narrows the recipe list (217ms)
+  ✓  2 [flows] › tests/flows/organize.spec.ts:5:7 › organizing › [flow] create a tag in data management (708ms)
+  ✓  4 [flows] › tests/flows/recipes.spec.ts:24:7 › recipes › [flow] create a recipe by name (333ms)
+  ✓  5 [flows] › tests/flows/recipes.spec.ts:36:7 › recipes › [flow] comment on a recipe and see it after reload (316ms)
+
+  5 passed (6.4s)

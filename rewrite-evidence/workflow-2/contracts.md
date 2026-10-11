@@ -1,0 +1,13 @@
+# Shared interfaces (main-owned)
+
+Target Vite + React 19 + TypeScript strict/noUncheckedIndexedAccess + react-router SPA + MUI + react-i18next.
+- `src/shared/api.ts`: api<T>(absolutePath, RequestInit?), get<T>(path), post<T>(path, body), put<T>, patch<T>, remove<T>. Returns parsed body directly. Cookie/bearer auth, refresh/retry on 401, ApiError(status,message). `Page<T>` items/total. `useResource<T>(path|null)` => data:T|null, setData, loading, error:string, reload(). errorMessage(unknown).
+- `src/shared/types.ts`: generated UserOut/Recipe/RecipeSummary read-only reexports. Import other generated interfaces via `../../../../frontend/app/lib/api/types/<domain>` from feature directory; do not modify generated types.
+- `src/auth/AuthProvider.tsx`: useAuth() => user:UserOut|null, loading,error, login(username,password,remember),logout(),refresh(). RequireAuth guards registered by main.
+- `src/shared/ui.tsx`: PageTitle children; Section title children; ResourceStatus loading error; NavLinks links:Array<[label,to]>.
+- `src/shared/i18n.ts`: initialized default i18n, ready, languages, changeLanguage. Existing `translation` namespace maps Vue English keys; interpolation converted. Feature files may initialize feature namespaces with `i18n.addResourceBundle('en-US','recipes'|'planning',strings)` and useTranslation(namespace). No non-English files edited. English defaultValue allowed for new strings.
+- Workers export `recipeRoutes: RouteObject[]` and `recipePublicRoutes: RouteObject[]` from `features/recipes/routes.tsx`; planning exports `planningRoutes: RouteObject[]`. All authenticated routes will live below RequireAuth in main. Paths preserve Vue SPA URLs. Recipe public shared route goes outside guard. Worker tests import their own pages directly with MemoryRouter/providers. Route registration and shared App/layout changes only main.
+- MUI 7 uses TextField, Stack etc. Grid legacy props are incompatible; use CSS grid/Stack instead.
+- No direct import across features. Recipe IDs passed via backend; use public API.
+- Foundation must pass unit/type/lint/build before dispatch. Workers run own units/type/lint/build in worktree, plus real browser flows/routes restricted to owned modules; main runs integration regression after each patch.
+- Test yardstick is read-only. E2E runs in each worktree: `E2E_STATIC_DIR=../frontend-react/dist E2E_PORT=9092|9093 E2E_DATA_DIR=<worktree>/frontend-e2e/.data` and own .auth/report paths. Backend uses main .venv via UV_PROJECT_ENVIRONMENT if needed; dependencies may be symlinked. Workers can create a private temporary harness App solely to run their module browser tests, but must not include it in integration patch. Main-owned files in deliverable must remain identical to foundation.

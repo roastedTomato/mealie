@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /Users/eva/Documents/Assignments/COMPX574/mealie-wf2-recipes/frontend-react
+
+ ✓ src/features/recipes/recipes.test.tsx (3 tests) 502ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  14:54:58
+   Duration  1.36s (transform 51ms, setup 112ms, collect 353ms, tests 502ms, environment 214ms, prepare 39ms)
+

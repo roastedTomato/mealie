@@ -1,0 +1,15 @@
+[WebServer] WARNING  2026-10-11T01:55:57 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-11T01:55:58 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-11T01:56:00 - Incorrect username or password from 127.0.0.1
+
+Running 3 tests using 2 workers
+
+(node:83024) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:83025) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [flows] › tests/flows/mealplan.spec.ts:12:7 › meal plan › [flow] add a note to tomorrow's meal plan (481ms)
+  ✓  1 [flows] › tests/flows/shopping.spec.ts:6:7 › shopping lists › [flow] create a shopping list (666ms)
+  ✓  3 [flows] › tests/flows/shopping.spec.ts:19:7 › shopping lists › [flow] add an item and check it off (951ms)
+
+  3 passed (6.7s)

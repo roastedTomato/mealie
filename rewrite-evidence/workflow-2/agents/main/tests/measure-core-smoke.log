@@ -1,0 +1,41 @@
+[measure 15:04:27] install: pnpm install --frozen-lockfile
+[measure 15:04:27] install: exit=0 (0s)
+[measure 15:04:27] build: pnpm build
+[measure 15:04:30] build: exit=0 (3s)
+[measure 15:04:30] unit: pnpm exec vitest run --maxWorkers=4 --reporter=json --outputFile=/Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/runs/20261011T020427Z-frontend-react-WF2-final-core-smoke/vitest.json
+[measure 15:04:33] unit: exit=0 (3s)
+[measure 15:04:33] lint: pnpm exec eslint . --format json --output-file /Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/runs/20261011T020427Z-frontend-react-WF2-final-core-smoke/eslint.json
+[measure 15:04:34] lint: exit=0 (1s)
+[measure 15:04:34] types: pnpm exec tsc --noEmit --pretty false
+[measure 15:04:35] types: exit=0 (1s)
+[measure 15:04:35] e2e: playwright against /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react/dist
+[measure 15:05:04] e2e: exit=0 (29s)
+
+  timestamp_utc = 2026-10-11T02:05:04Z
+  label = WF2-final-core-smoke
+  app = frontend-react
+  branch = rewrite/wf2-parallel-migration
+  commit = 7f8c36b73
+  dirty = 1
+  route_scope = core
+  route_check = smoke
+  routes_passed = 34
+  routes_total = 34
+  flows_passed = 15
+  flows_total = 15
+  tsc_errors = 0
+  lint_errors = 0
+  lint_warnings = 0
+  unit_passed = 20
+  unit_failed = 0
+  unit_skipped = 0
+  build_ok = 1
+  build_seconds = 3
+  any_count =        0
+  todo_count =        0
+  expect_count =       50
+  test_files =        6
+  duration_seconds = 37
+  run_id = 20261011T020427Z-frontend-react-WF2-final-core-smoke
+  notes = 
+  -> appended to /Users/eva/Documents/Assignments/COMPX574/mealie/rewrite-evidence/metrics.csv

@@ -1,0 +1,24 @@
+import { spawn } from 'node:child_process';
+import { mkdirSync, appendFileSync, createWriteStream, existsSync, cpSync } from 'node:fs';
+import { resolve, dirname } from 'node:path';
+const [moduleId, step, cwd, ...command] = process.argv.slice(2);
+if (!moduleId || !step || !cwd || !command.length) throw new Error('module step cwd command... required');
+const evidence = resolve(import.meta.dirname, '..');
+const folder = resolve(evidence, 'modules', moduleId);
+mkdirSync(folder, { recursive: true });
+const log = resolve(folder, `${step}.log`);
+const started = new Date().toISOString();
+const stream = createWriteStream(log);
+const child = spawn(command[0], command.slice(1), { cwd: resolve(cwd), env: process.env, stdio: ['ignore', 'pipe', 'pipe'] });
+child.stdout.on('data', chunk => { stream.write(chunk); process.stdout.write(chunk); });
+child.stderr.on('data', chunk => { stream.write(chunk); process.stderr.write(chunk); });
+child.on('error', error => stream.write(String(error)));
+child.on('close', code => {
+  stream.end();
+  if (resolve(cwd).endsWith('/frontend-e2e') && existsSync(resolve(cwd, 'test-results/results.json'))) cpSync(resolve(cwd, 'test-results'), resolve(folder, `${step}-artifacts`), { recursive: true });
+  const ended = new Date().toISOString();
+  const record = { module: moduleId, step, prompt: 'prompt.md', session_log: '../../session-logs/session-002.md', started_at_utc: started, ended_at_utc: ended, duration_seconds: (Date.parse(ended)-Date.parse(started))/1000, tokens: null, token_status: 'NA: not exposed', cwd: resolve(cwd), command, exit_code: code, output: log };
+  appendFileSync(resolve(folder, 'steps.jsonl'), JSON.stringify(record)+'\n');
+  appendFileSync(resolve(evidence, 'session-logs/session-002.md'), `\n${moduleId} / ${step}: ${started} → ${ended}; exit ${code}.\nCommand: ${command.join(' ')}\nOutput: ${log}\nTokens: NA.\n`);
+  process.exitCode = code ?? 1;
+});

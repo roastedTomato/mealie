@@ -1,0 +1,41 @@
+[WebServer] WARNING  2026-10-11T02:01:08 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-11T02:01:10 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-11T02:01:11 - Incorrect username or password from 127.0.0.1
+
+Running 29 tests using 2 workers
+
+(node:86090) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:86089) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [flows] › tests/flows/organize.spec.ts:5:7 › organizing › [flow] create a tag in data management (699ms)
+  ✓   2 [routes] › tests/routes.spec.ts:37:9 › anonymous › [route] g/[groupSlug]/shared/r/[id].vue (735ms)
+  ✓   3 [flows] › tests/flows/recipes.spec.ts:6:7 › recipes › [flow] open a recipe from the recipe list (319ms)
+  ✓   5 [flows] › tests/flows/recipes.spec.ts:15:7 › recipes › [flow] search narrows the recipe list (219ms)
+  ✓   4 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/index.vue (661ms)
+  ✓   6 [flows] › tests/flows/recipes.spec.ts:24:7 › recipes › [flow] create a recipe by name (371ms)
+  ✓   8 [flows] › tests/flows/recipes.spec.ts:36:7 › recipes › [flow] comment on a recipe and see it after reload (464ms)
+  ✓   7 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/[slug]/index.vue (726ms)
+  ✓   9 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/cookbooks/index.vue (659ms)
+  ✓  10 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/cookbooks/[slug].vue (680ms)
+  ✓  11 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create.vue (658ms)
+  ✓  12 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/index.vue (654ms)
+  ✓  13 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/ai.vue (652ms)
+  ✓  14 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/bulk.vue (668ms)
+  ✓  15 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/debug.vue (656ms)
+  ✓  16 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/html.vue (659ms)
+  ✓  17 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/image.vue (658ms)
+  ✓  18 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/new.vue (638ms)
+  ✓  19 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/url.vue (650ms)
+  ✓  20 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/r/create/zip.vue (659ms)
+  ✓  21 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/categories/index.vue (671ms)
+  ✓  22 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/tags/index.vue (652ms)
+  ✓  23 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/tools/index.vue (668ms)
+  ✓  24 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/finder/index.vue (649ms)
+  ✓  25 [routes] › tests/routes.spec.ts:37:9 › admin › [route] g/[groupSlug]/recipes/timeline.vue (683ms)
+  ✓  26 [routes] › tests/routes.spec.ts:37:9 › admin › [route] group/data/categories.vue (670ms)
+  ✓  27 [routes] › tests/routes.spec.ts:37:9 › admin › [route] group/data/tags.vue (666ms)
+  ✓  28 [routes] › tests/routes.spec.ts:37:9 › admin › [route] group/data/tools.vue (674ms)
+  ✓  29 [routes] › tests/routes.spec.ts:37:9 › admin › [route] user/[id]/favorites.vue (680ms)
+
+  29 passed (21.3s)

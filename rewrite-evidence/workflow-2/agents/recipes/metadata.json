@@ -1,0 +1,39 @@
+{
+  "agent": "recipes",
+  "branch": "rewrite/wf2-recipes",
+  "worktree": "/Users/eva/Documents/Assignments/COMPX574/mealie-wf2-recipes",
+  "start_utc": null,
+  "first_owned_file_utc": "2026-10-11T01:54:20Z",
+  "end_utc": "2026-10-11T02:01:50.680835+00:00",
+  "tokens": null,
+  "timestamp_note": "Exact dispatch unavailable. First owned file timestamp is a lower-bound active duration anchor, not exact task start.",
+  "first_delivery_end_utc": "2026-10-11T01:58:50.403348+00:00",
+  "followup_start_utc": null,
+  "followup_timestamp_note": "Exact follow-up dispatch unavailable; expanded test session timestamps preserved.",
+  "telemetry_recovered": true,
+  "authoritative_start_utc": "2026-10-11T01:52:59.874Z",
+  "authoritative_end_utc": "2026-10-11T02:01:58.860Z",
+  "active_windows": [
+    {
+      "start": "2026-10-11T01:52:59.874Z",
+      "end": "2026-10-11T01:59:10.622Z",
+      "seconds": 370.748
+    },
+    {
+      "start": "2026-10-11T01:59:20.036Z",
+      "end": "2026-10-11T02:01:58.860Z",
+      "seconds": 158.824
+    }
+  ],
+  "active_seconds": 529.572,
+  "token_usage": {
+    "input_tokens": 4287129,
+    "cached_input_tokens": 4212608,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 18324,
+    "reasoning_output_tokens": 854,
+    "total_tokens": 4305453
+  },
+  "model": "gpt-6.1-sol",
+  "telemetry_note": "Recovered from this agent local platform rollout; original observed timestamps and missing-data notes retained as historical record, superseded by these authoritative fields."
+}

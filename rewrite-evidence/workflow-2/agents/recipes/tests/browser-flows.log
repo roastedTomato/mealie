@@ -1,0 +1,4 @@
+[WebServer] error: Failed to initialize cache at `/Users/eva/.cache/uv`
+[WebServer]   Caused by: failed to open file `/Users/eva/.cache/uv/sdists-v9/.git`: Operation not permitted (os error 1)
+Error: Process from config.webServer was not able to start. Exit code: 2
+

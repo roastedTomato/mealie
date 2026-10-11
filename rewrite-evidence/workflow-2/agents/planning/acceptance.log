@@ -1,0 +1,21 @@
+[WebServer] WARNING  2026-10-11T01:56:35 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-11T01:56:37 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-11T01:56:38 - Incorrect username or password from 127.0.0.1
+
+Running 9 tests using 2 workers
+
+(node:83786) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:83787) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [flows] › tests/flows/mealplan.spec.ts:12:7 › meal plan › [flow] add a note to tomorrow's meal plan (537ms)
+  ✓  2 [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/settings.vue (749ms)
+  ✓  3 [flows] › tests/flows/shopping.spec.ts:6:7 › shopping lists › [flow] create a shopping list (644ms)
+  ✓  4 [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/planner.vue (692ms)
+  ✓  6 [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/planner/view.vue (673ms)
+  ✓  5 [flows] › tests/flows/shopping.spec.ts:19:7 › shopping lists › [flow] add an item and check it off (939ms)
+  ✓  7 [routes] › tests/routes.spec.ts:37:9 › admin › [route] household/mealplan/planner/edit.vue (692ms)
+  ✓  8 [routes] › tests/routes.spec.ts:37:9 › admin › [route] shopping-lists/index.vue (664ms)
+  ✓  9 [routes] › tests/routes.spec.ts:37:9 › admin › [route] shopping-lists/[id].vue (676ms)
+
+  9 passed (9.5s)

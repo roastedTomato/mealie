@@ -1,0 +1,17 @@
+$ vitest run --maxWorkers=4
+
+ RUN  v3.2.7 /Users/eva/Documents/Assignments/COMPX574/mealie/frontend-react
+
+ ✓ src/lib/sanitize/text.test.ts (5 tests) 2ms
+ ✓ src/auth/token.test.ts (14 tests) 7ms
+ ✓ src/lib/api/http.test.ts (6 tests) 11ms
+ ✓ src/lib/validators/redirect.test.ts (5 tests) 1ms
+ ✓ src/lib/recipe/recipe-finder.test.ts (3 tests) 1ms
+ ✓ src/lib/api/base/routes.test.ts (4 tests) 2ms
+ ✓ src/App.test.tsx (3 tests) 142ms
+
+ Test Files  7 passed (7)
+      Tests  40 passed (40)
+   Start at  19:20:11
+   Duration  881ms (transform 89ms, setup 556ms, collect 422ms, tests 166ms, environment 1.19s, prepare 227ms)
+

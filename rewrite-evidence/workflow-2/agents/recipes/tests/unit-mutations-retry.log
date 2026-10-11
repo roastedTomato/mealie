@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/eva/Documents/Assignments/COMPX574/mealie-wf2-recipes/frontend-react
+
+ ✓ src/features/recipes/recipes.test.tsx (6 tests) 1088ms
+   ✓ favorites and cookbook mutations > cookbook edit and delete use item IDs and reload persistent data  335ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  15:00:50
+   Duration  1.76s (transform 58ms, setup 62ms, collect 285ms, tests 1.09s, environment 135ms, prepare 31ms)
+

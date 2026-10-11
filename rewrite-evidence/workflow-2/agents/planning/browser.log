@@ -1,0 +1,5 @@
+[WebServer] WARNING  2026-10-11T01:55:09 - Secrets directory '/run/secrets' does not exist
+[WebServer] WARNING  2026-10-11T01:55:11 - Secrets directory '/run/secrets' does not exist
+[WebServer] ERROR    2026-10-11T01:55:11 - [Errno 1] error while attempting to bind on address ('127.0.0.1', 9093): operation not permitted
+Error: Process from config.webServer was not able to start. Exit code: 3
+

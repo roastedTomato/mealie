@@ -1,0 +1,12 @@
+$ tsc --noEmit && vite build
+src/features/admin/Management.tsx(11,455): error TS2322: Type 'Record<string, unknown> | Page<Record<string, unknown>>' is not assignable to type 'Record<string, unknown>'.
+  Type 'Page<Record<string, unknown>>' is not assignable to type 'Record<string, unknown>'.
+    Index signature for type 'string' is missing in type 'Page<Record<string, unknown>>'.
+src/features/admin/Management.tsx(11,800): error TS2339: Property 'preferences' does not exist on type 'Record<string, unknown> | Page<Record<string, unknown>>'.
+  Property 'preferences' does not exist on type 'Page<Record<string, unknown>>'.
+src/features/admin/Management.tsx(11,825): error TS2339: Property 'preferences' does not exist on type 'Record<string, unknown> | Page<Record<string, unknown>>'.
+  Property 'preferences' does not exist on type 'Page<Record<string, unknown>>'.
+src/features/admin/Management.tsx(11,919): error TS2339: Property 'preferences' does not exist on type 'Record<string, unknown> | Page<Record<string, unknown>>'.
+  Property 'preferences' does not exist on type 'Page<Record<string, unknown>>'.
+src/features/admin/Management.tsx(14,810): error TS2322: Type 'unknown' is not assignable to type 'ReactNode'.
+[ELIFECYCLE] Command failed with exit code 2.

@@ -1,0 +1,10 @@
+{"type":"start_checkpoint","time":"2026-10-11T01:54:27.509Z","note":"First timestamp captured after initial implementation; observed duration is lower bound. Exact dispatch timestamp unavailable."}
+{"type":"inspect","note":"Read AGENTS.md, contracts, generated household/meal-plan types, Vue API clients, unchanged yardstick flows/routes."}
+{"type":"implement","note":"Created independent shopping/mealplan feature and meaningful unit payload/date tests."}
+{"type":"failure","output":"browser.log","exit":1,"reason":"Sandbox cannot bind local port; escalated test accepted."}
+{"type":"failure","output":"browser-retry.log","exit":1,"reason":"Checkbox checked state delayed; optimistic state update fixes."}
+{"type":"retest","output":"browser-fixed.log","exit":0,"passed":3,"total":3}
+{"type":"strict_acceptance","output":"acceptance-final.log","exit":0,"passed":9,"total":9}
+{"type":"verification","outputs":["build-final.log","lint-final.log","unit-final.log"],"exit":0}
+{"type":"freeze","time":"2026-10-11T01:57:51.366Z","note":"Private harness removed and shared App restored. Scope files only."}
+{"type":"artifact_preservation","note":"Final browser JSON gzip and scoped untracked-file patch saved; event time intentionally omitted because original action times unavailable."}

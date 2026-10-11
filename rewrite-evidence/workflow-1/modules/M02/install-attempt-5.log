@@ -1,0 +1,37 @@
+✓ Lockfile passes supply-chain policies (verified 52s ago)
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +322
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Packages are cloned from the content-addressable store to the virtual store.
+  Content-addressable store is at: /Users/eva/Library/pnpm/store/v11
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 322, reused 322, downloaded 0, added 309
+Progress: resolved 322, reused 322, downloaded 0, added 322, done
+
+dependencies:
++ @emotion/react 11.14.0
++ @emotion/styled 11.14.1
++ @mui/material 7.3.11
++ i18next 24.2.3
++ react 19.3.0
++ react-dom 19.3.0
++ react-i18next 15.7.4
++ react-router 7.18.4
+
+devDependencies:
++ @eslint/js 9.39.5
++ @testing-library/jest-dom 6.10.0
++ @testing-library/react 16.3.3
++ @testing-library/user-event 14.6.7
++ @types/react 19.3.0
++ @types/react-dom 19.3.0
++ @vitejs/plugin-react 4.7.0
++ eslint 9.39.5
++ jsdom 26.1.0
++ typescript 5.9.3
++ typescript-eslint 8.71.1
++ vite 6.4.4
++ vitest 3.2.7
+
+Done in 1.6s using pnpm v11.25.0

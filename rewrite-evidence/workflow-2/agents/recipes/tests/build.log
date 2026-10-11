@@ -1,0 +1,3 @@
+$ tsc --noEmit && vite build
+src/features/account/ProfilePages.tsx(10,615): error TS2339: Property 'token' does not exist on type 'LongLiveTokenOut'.
+[ELIFECYCLE] Command failed with exit code 2.

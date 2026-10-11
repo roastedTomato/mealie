@@ -1,0 +1,44 @@
+src/App.test.tsx 36ms
+src/App.tsx 13ms
+src/auth/AuthProvider.tsx 15ms
+src/auth/token.test.ts 6ms
+src/auth/token.ts 5ms
+src/components/DomainEntityTable.tsx 11ms
+src/components/DomainRecordEditor.tsx 7ms
+src/components/Layout/AppLayout.tsx 4ms
+src/hooks/useApi.ts 2ms
+src/i18n.test.ts 1ms
+src/i18n.ts 4ms
+src/lib/api/base/index.ts 1ms (unchanged)
+src/lib/api/base/route.ts 1ms
+src/lib/api/base/routes.test.ts 1ms (unchanged)
+src/lib/api/http.test.ts 3ms
+src/lib/api/http.ts 5ms
+src/lib/api/import-stream.test.ts 2ms
+src/lib/api/import-stream.ts 4ms
+src/lib/mealplan/dates.test.ts 1ms
+src/lib/mealplan/dates.ts 1ms
+src/lib/recipe/recipe-finder.test.ts 1ms (unchanged)
+src/lib/recipe/recipe-finder.ts 0ms
+src/lib/sanitize/text.test.ts 1ms (unchanged)
+src/lib/sanitize/text.ts 1ms (unchanged)
+src/lib/validators/redirect.test.ts 1ms (unchanged)
+src/lib/validators/redirect.ts 1ms
+src/main.tsx 1ms
+src/pages/AdminToolsPages.tsx 6ms
+src/pages/AuthPages.tsx 10ms
+src/pages/DataPages.tsx 8ms
+src/pages/ManagementPages.tsx 7ms
+src/pages/MealplanPages.tsx 11ms
+src/pages/OrganizerPages.tsx 7ms
+src/pages/ProfilePages.tsx 7ms
+src/pages/RecipeCreatePage.tsx 5ms
+src/pages/RecipeDetailPage.tsx 8ms
+src/pages/RecipeListPage.tsx 1ms
+src/pages/ShoppingPages.tsx 7ms
+src/pages/SiteSettingsPage.tsx 2ms
+src/tests/setup.ts 0ms
+vite.config.ts 1ms
+eslint.config.js 10ms
+tsconfig.json 1ms (unchanged)
+package.json 1ms (unchanged)

@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/eva/Documents/Assignments/COMPX574/mealie-wf2-recipes/frontend-react
+
+ ✓ src/features/recipes/recipes.test.tsx (3 tests) 537ms
+   ✓ recipe module backend interactions > organizer create uses actual API and reloads table  312ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  14:56:39
+   Duration  1.59s (transform 54ms, setup 153ms, collect 457ms, tests 537ms, environment 240ms, prepare 40ms)
+

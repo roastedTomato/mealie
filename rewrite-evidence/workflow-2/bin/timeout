@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+// Minimal portable timeout for the seconds/command subset used by measure.sh.
+const {spawn}=require('node:child_process');
+const [seconds,command,...args]=process.argv.slice(2);
+if(!command||!Number.isFinite(Number(seconds))){console.error('usage: timeout SECONDS COMMAND [ARG...]');process.exit(2);}
+const child=spawn(command,args,{stdio:'inherit',detached:true});
+let expired=false;
+const timer=setTimeout(()=>{expired=true;try{process.kill(-child.pid,'SIGTERM');}catch{};setTimeout(()=>{try{process.kill(-child.pid,'SIGKILL');}catch{}},1000).unref();},Number(seconds)*1000);
+child.on('error',e=>{clearTimeout(timer);console.error(e.message);process.exitCode=127;});
+child.on('close',(code,signal)=>{clearTimeout(timer);process.exitCode=expired?124:(code??(signal?1:0));});
