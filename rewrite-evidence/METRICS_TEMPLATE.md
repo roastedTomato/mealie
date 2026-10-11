@@ -23,13 +23,15 @@ Branch: rewrite/frontend-react-migration. HEAD: 7f8c36b73. Dirty=1 in every meas
 
 The incremental process met each module's declared acceptance before progressing and passed the final measurement matrix. This supports this yardstick's routing and business-flow acceptance, not full production or visual parity: advanced reference interactions remain incomplete, external services are unverified, and no Docker image build was possible without a daemon. Tokens and exact human review time remain NA rather than invented measurements. No final commit was created during the measured WF1 experiment.
 
-## WF2 — Parallel migration with multiple agents
+## WF4 — Parallel migration with multiple agents
+
+实验编号更名：本实验现统一称为 **WF4**（此前称 WF2）。更名发生在验收之后；原始 prompt、session log、测试输出、测量 run ID、worker 分支/worktree 和已验收源码哈希保留执行时的标识。名称变更不改变测试结果、时间或 token 统计。
 
 | Field | Measured result |
 |---|---|
-| Branch / base | `rewrite/wf2-parallel-migration` / `7f8c36b73`; uncommitted final source pinned by hash + patch |
+| Branch / base | `rewrite/wf4-parallel-migration` / `7f8c36b73`; measured source pinned by hash + patch; implementation commit `8b746c0cc` |
 | Tool / model | Codex / gpt-6.1-sol (local turn metadata) |
-| Workflow wall time to final acceptance | 19.05 min; from WF2 completion authorization; migration experiment only |
+| Workflow wall time to final acceptance | 19.05 min; from WF4 completion authorization; migration experiment only |
 | Implementation wall time after completion authorization | 19.05 min |
 | All-agent cumulative active task time | 32.87 min; includes overlapping worker/tool/test time, excludes idle gaps |
 | Final measurement time | 149 s (included above) |
@@ -46,7 +48,7 @@ The incremental process met each module's declared acceptance before progressing
 | Every final run | build pass; units 20/0/0; type errors 0; lint 0/0; any/todo 0/0 |
 | Test pass rate | 100% per final route/flow/unit suite; not code coverage |
 | Acceptance | selected migration yardstick accepted; feature parity partial; Docker/hosted CI not exercised |
-| Evidence | [WF2 report](workflow-2/REPORT.md), [machine results](workflow-2/final/measurements.json), [telemetry](workflow-2/final/telemetry.json) |
+| Evidence | [WF4 report](workflow-4/REPORT.md), [machine results](workflow-4/final/measurements.json), [telemetry](workflow-4/final/telemetry.json) |
 
 | Scope / check | Routes | Flows | Unit pass/fail/skip | Type errors | Lint errors/warnings | Build seconds | Run seconds | Evidence |
 |---|---:|---:|---|---:|---|---:|---:|---|
@@ -58,7 +60,7 @@ The incremental process met each module's declared acceptance before progressing
 
 ### Comparison with WF1
 
-| Measure | WF1 incremental | WF2 parallel |
+| Measure | WF1 incremental | WF4 parallel |
 |---|---|---|
 | User wall time to acceptance | NA in comparable form | 19.05 min |
 | Implementation wall time | NA in comparable form | 19.05 min |
@@ -75,4 +77,4 @@ The incremental process met each module's declared acceptance before progressing
 | Merge conflicts | sequential workflow, no parallel merge | 0 actual |
 | Human code interventions | 0 observed | 0 |
 
-WF1 and WF2 have different unit counts and timing/token instrumentation. Passing both yardsticks does not prove equal coverage, full feature parity, or workflow superiority. WF2 reuses only dependency lock/cache and comparison evidence. No baseline rerun or baseline commit.
+WF1 and WF4 have different unit counts and timing/token instrumentation. Passing both yardsticks does not prove equal coverage, full feature parity, or workflow superiority. WF4 reuses only dependency lock/cache and comparison evidence. No baseline rerun or baseline commit.

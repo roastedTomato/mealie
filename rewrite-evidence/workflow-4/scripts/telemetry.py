@@ -16,7 +16,7 @@ root_turn_ids={r['payload'].get('turn_id') for r in rows['main'] if r['type']=='
 now='2026-10-11T02:11:00.985780+00:00'
 scope_start='2026-10-11T01:49:33.388Z'
 implementation_turn='01a128a6-a947-7553-870d-d9d985723aad'
-summary={'snapshot_utc':now,'scope':'WF2 implementation from completion authorization plus exactly two implementation agents; earlier preparation excluded','agents':{},'note':'Input counts include repeated cached context. cached_input_tokens is a subset of input_tokens; reasoning_output_tokens is a subset of output_tokens. Counts exclude work after each token telemetry checkpoint and final user reply.'}
+summary={'snapshot_utc':now,'scope':'WF4 implementation from completion authorization plus exactly two implementation agents; earlier preparation excluded','agents':{},'note':'Input counts include repeated cached context. cached_input_tokens is a subset of input_tokens; reasoning_output_tokens is a subset of output_tokens. Counts exclude work after each token telemetry checkpoint and final user reply.'}
 for owner,events in rows.items():
  out=[];usage=[];pending={};windows=[];model=None;baseline={}
  for r in events:

@@ -1,6 +1,6 @@
-# WF2 approved plan
+# WF4 approved plan
 
-User requested parallel migration with one main agent and two implementation agents, independent worktrees, module tests and regression, failure repair until acceptance, integration records, wall and cumulative agent time, tokens, prompts, logs, file lists, final core/extended × smoke/strict measurements and METRICS_TEMPLATE.md update. User approved saving/pushing WF1 and creating a separate WF2 branch, then requested completion of WF2. WF1 saved at 47a176ed1 and pushed; WF2 starts at 7f8c36b73. Existing WF1 code is not a migration input.
+User requested parallel migration with one main agent and two implementation agents, independent worktrees, module tests and regression, failure repair until acceptance, integration records, wall and cumulative agent time, tokens, prompts, logs, file lists, final core/extended × smoke/strict measurements and METRICS_TEMPLATE.md update. User approved saving/pushing WF1 and creating a separate WF4 branch, then requested completion of WF4. WF1 saved at 47a176ed1 and pushed; WF4 starts at 7f8c36b73. Existing WF1 code is not a migration input.
 
 Main: Vite/React/strict TS, API/auth, MUI UI and theme, i18n, routes, account, all admin/group/household management, deployment, integration and measurements.
 Agent recipes: food recipe CRUD/import/comments/sharing/favorites, organizers, cookbooks, finder/timeline. Only src/features/recipes/** plus own evidence.

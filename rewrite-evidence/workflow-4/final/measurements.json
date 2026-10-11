@@ -1,9 +1,9 @@
 {
-  "workflow": "WF2",
+  "workflow": "WF4",
   "status": "accepted-with-documented-scope",
-  "branch": "rewrite/wf2-parallel-migration",
+  "branch": "rewrite/wf4-parallel-migration",
   "base": "7f8c36b73",
-  "final_commit": null,
+  "final_commit": "8b746c0cc",
   "baseline_rerun": false,
   "workflow_start_utc": "2026-10-11T01:49:33.388Z",
   "implementation_start_utc": "2026-10-11T01:49:33.388Z",
@@ -159,5 +159,7 @@
     }
   ],
   "yardstick_modified": false,
-  "generated_types_modified": false
+  "generated_types_modified": false,
+  "original_workflow_label": "WF2",
+  "rename_note": "Post-acceptance naming change only; original measured rows and evidence identifiers retained."
 }

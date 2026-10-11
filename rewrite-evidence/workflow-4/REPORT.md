@@ -1,11 +1,13 @@
-# WF2 — Parallel migration with two implementation agents
+# WF4 — Parallel migration with two implementation agents
 
-WF2 已完成约定的迁移范围和测试验收。分支 `rewrite/wf2-parallel-migration` 从 `7f8c36b73` 独立实施。实现、测试、报告和补丁保留在工作区，未创建 WF2 最终提交。没有重跑 baseline，也没有创建 baseline commit。
+实验编号更名：本实验现统一称为 **WF4**（此前称 WF2）。更名发生在验收之后；原始 prompt、session log、测试输出、测量 run ID、worker 分支/worktree 和已验收源码哈希保留执行时的标识。名称变更不改变测试结果、时间或 token 统计。
+
+WF4 已完成约定的迁移范围和测试验收。分支 `rewrite/wf4-parallel-migration` 从 `7f8c36b73` 独立实施。实现、测试、报告和补丁保留在工作区，最终实现已提交于 `8b746c0cc`；本次更名为后续文档调整。没有重跑 baseline，也没有创建 baseline commit。
 
 ## 结果
 
-- 实际经过时间（授权完成 WF2 开始至最终验收，仅计迁移实验）：**19.05 min**。
-- 获准完成 WF2 后的实现经过时间：**19.05 min**。
+- 实际经过时间（授权完成 WF4 开始至最终验收，仅计迁移实验）：**19.05 min**。
+- 获准完成 WF4 后的实现经过时间：**19.05 min**。
 - 所有 agent 累计活跃任务时间：**32.87 min**，并行重叠时间累加；包括工具/测试等待，排除用户暂停与 worker 两次任务之间的空档，不是 CPU 时间。
 - 四次测量用时总和：**149 s**；这是 elapsed 的子集，不重复相加。
 - 并行实现模块：**2**（食谱/组织/cookbook/收藏；购物/膳食计划）。主 agent 同期完成公共基础、账户与管理模块。
@@ -29,7 +31,7 @@ UTC 开始 `2026-10-11T01:49:33.388Z`，最终验收 `2026-10-11T02:08:36.355Z`�
 
 | Agent | Branch / worktree | Active windows | Cumulative active time | Input tokens | Cached input subset | Output tokens |
 |---|---|---|---:|---:|---:|---:|
-| main | `rewrite/wf2-parallel-migration` / `/Users/eva/Documents/Assignments/COMPX574/mealie` | 01:49:33.388 → 02:08:36.355 UTC | 19.05 min | 11,080,917 | 10,931,584 | 46,545 |
+| main | `rewrite/wf4-parallel-migration` / `/Users/eva/Documents/Assignments/COMPX574/mealie` | 01:49:33.388 → 02:08:36.355 UTC | 19.05 min | 11,080,917 | 10,931,584 | 46,545 |
 | recipes | `rewrite/wf2-recipes` / `/Users/eva/Documents/Assignments/COMPX574/mealie-wf2-recipes` | 01:52:59.874 → 01:59:10.622; 01:59:20.036 → 02:01:58.860 UTC | 8.83 min | 4,287,129 | 4,212,608 | 18,324 |
 | planning | `rewrite/wf2-planning-shopping` / `/Users/eva/Documents/Assignments/COMPX574/mealie-wf2-planning` | 01:53:09.426 → 01:58:08.880 UTC | 4.99 min | 1,984,397 | 1,943,808 | 11,270 |
 
@@ -69,7 +71,7 @@ UTC 开始 `2026-10-11T01:49:33.388Z`，最终验收 `2026-10-11T02:08:36.355Z`�
 从仓库根目录运行，macOS 下使用提供的 timeout 子集实现（超时退出 124 已验证）：
 
 ```sh
-export PATH="$PWD/rewrite-evidence/workflow-2/bin:$PATH"
+export PATH="$PWD/rewrite-evidence/workflow-4/bin:$PATH"
 export pnpm_config_store_dir=/Users/eva/Library/pnpm/store
 export UV_CACHE_DIR=/tmp/wf2-uv-cache
 export UV_PROJECT_ENVIRONMENT="$PWD/.venv"
@@ -85,7 +87,7 @@ pnpm store、venv、cache 是本机位置；换机器应先安装锁定依赖和
 
 ## 与 WF1 比较及边界
 
-[WF1 报告](../workflow-1/REPORT.md) 和测量证据从已保存的提交恢复用于比较，没有用其实现作为 WF2 页面输入。WF1 记录模块窗口 32.00 min、最终测量 162 s；缺少相同口径的原始用户等待时间和 token。WF2 更完整的 active window 和缓存 token 口径不能直接当作 WF1 的对应测量值，因此不据此宣称并行更快或更省 token。两者路由/流程均通过，但单元测试数量和实现细节不同，测试通过率相同也不代表覆盖率相同。
+[WF1 报告](../workflow-1/REPORT.md) 和测量证据从已保存的提交恢复用于比较，没有用其实现作为 WF4 页面输入。WF1 记录模块窗口 32.00 min、最终测量 162 s；缺少相同口径的原始用户等待时间和 token。WF4 更完整的 active window 和缓存 token 口径不能直接当作 WF1 的对应测量值，因此不据此宣称并行更快或更省 token。两者路由/流程均通过，但单元测试数量和实现细节不同，测试通过率相同也不代表覆盖率相同。
 
 选定范围包含真实 API CRUD 与表单，但**不代表完整 Vue 功能等价或可直接生产替换**：高级食谱 editor/Markdown、营养/资产/缩放/烹饪模式、rating UI、timeline 编辑、finder 高级筛选、购物拖动排序与高级标签/计划默认值尚不等价；部分新标签/动态文本 fallback 英文；Vue plural/link 格式转换未全面复现。主管理界面使用通用 scalar 表单，复杂嵌套数据/批量管理及所有管理 mutation 未穷尽测试。OIDC 登录尚无 React 流程；SMTP 密码/注册、外部抓取/AI、真实 ZIP、邀请/备份恢复等外部或破坏性流程没有被这些 seeded E2E 全面覆盖。
 

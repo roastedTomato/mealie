@@ -2,7 +2,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 from zoneinfo import ZoneInfo
 import csv,json,hashlib,subprocess,gzip
-root=Path(__file__).resolve().parents[3];e=root/'rewrite-evidence/workflow-2'
+root=Path(__file__).resolve().parents[3];e=root/'rewrite-evidence/workflow-4'
 def dt(s):return datetime.fromisoformat(s.replace('Z','+00:00'))
 def mins(s):return f'{s/60:.2f} min'
 rows=[r for r in csv.DictReader((root/'rewrite-evidence/metrics.csv').open()) if r['label'].startswith('WF2-final-')]
@@ -26,7 +26,7 @@ for owner,a in tele['agents'].items():
  active_at_acceptance[owner]=total
 elapsed=(dt(accepted)-dt(tele['workflow_start_utc'])).total_seconds()
 implementation=(dt(accepted)-dt(tele['implementation_start_utc'])).total_seconds()
-summary={'workflow':'WF2','status':'accepted-with-documented-scope','branch':'rewrite/wf2-parallel-migration','base':'7f8c36b73','final_commit':None,'baseline_rerun':False,'workflow_start_utc':tele['workflow_start_utc'],'implementation_start_utc':tele['implementation_start_utc'],'acceptance_end_utc':accepted,'wall_seconds':elapsed,'implementation_wall_seconds':implementation,'cumulative_active_seconds':sum(active_at_acceptance.values()),'active_seconds_by_agent':active_at_acceptance,'parallel_modules':2,'worker_initial_prompts':2,'worker_followup_prompts':1,'human_prompts':2,'human_code_interventions':0,'human_approval_interventions':0,'integration_source_fix_cycles':1,'integration_validation_fix_cycles':1,'integration_fix_cycles':2,'merge_conflicts':0,'runtime_route_conflicts':0,'preintegration_route_boundary_requests':1,'tokens':tele['aggregate_tokens'],'uncached_input_plus_output':tele['aggregate_uncached_input_plus_output'],'token_snapshot_utc':tele['snapshot_utc'],'token_note':tele['note'],'measure_seconds':sum(int(r['duration_seconds']) for r in rows),'rows':rows,'yardstick_modified':False,'generated_types_modified':False}
+summary={'workflow':'WF4','status':'accepted-with-documented-scope','branch':'rewrite/wf4-parallel-migration','base':'7f8c36b73','final_commit':'8b746c0cc','baseline_rerun':False,'workflow_start_utc':tele['workflow_start_utc'],'implementation_start_utc':tele['implementation_start_utc'],'acceptance_end_utc':accepted,'wall_seconds':elapsed,'implementation_wall_seconds':implementation,'cumulative_active_seconds':sum(active_at_acceptance.values()),'active_seconds_by_agent':active_at_acceptance,'parallel_modules':2,'worker_initial_prompts':2,'worker_followup_prompts':1,'human_prompts':2,'human_code_interventions':0,'human_approval_interventions':0,'integration_source_fix_cycles':1,'integration_validation_fix_cycles':1,'integration_fix_cycles':2,'merge_conflicts':0,'runtime_route_conflicts':0,'preintegration_route_boundary_requests':1,'tokens':tele['aggregate_tokens'],'uncached_input_plus_output':tele['aggregate_uncached_input_plus_output'],'token_snapshot_utc':tele['snapshot_utc'],'token_note':tele['note'],'measure_seconds':sum(int(r['duration_seconds']) for r in rows),'rows':rows,'yardstick_modified':False,'generated_types_modified':False}
 (e/'final/measurements.json').write_text(json.dumps(summary,indent=2)+'\n')
 # Full source hash and patch identify the dirty=1 measured checkout without requiring a commit.
 files=[p for p in (root/'frontend-react').rglob('*') if p.is_file() and not any(x in ('node_modules','dist','.vite') for x in p.relative_to(root/'frontend-react').parts)]
@@ -46,18 +46,20 @@ mt='| Scope / check | Routes | Flows | Unit pass/fail/skip | Type errors | Lint 
 for r in rows:mt+=f"| {r['route_scope']} {r['route_check']} | {r['routes_passed']}/{r['routes_total']} | {r['flows_passed']}/{r['flows_total']} | {r['unit_passed']}/{r['unit_failed']}/{r['unit_skipped']} | {r['tsc_errors']} | {r['lint_errors']}/{r['lint_warnings']} | {r['build_seconds']} | {r['duration_seconds']} | [raw](../runs/{r['run_id']}/) |\n"
 at='| Agent | Branch / worktree | Active windows | Cumulative active time | Input tokens | Cached input subset | Output tokens |\n|---|---|---|---:|---:|---:|---:|\n'
 for owner,a in tele['agents'].items():
- branch={'main':'rewrite/wf2-parallel-migration','recipes':'rewrite/wf2-recipes','planning':'rewrite/wf2-planning-shopping'}[owner]
+ branch={'main':'rewrite/wf4-parallel-migration','recipes':'rewrite/wf2-recipes','planning':'rewrite/wf2-planning-shopping'}[owner]
  intervals='; '.join(w['start'][11:23]+' → '+(accepted if owner=='main' and w.get('open_at_snapshot') else w['end'])[11:23] for w in a['active_windows'])
  tokens=a['tokens'];at+=f"| {owner} | `{branch}` / `{root if owner=='main' else root.parent/('mealie-wf2-'+owner)}` | {intervals} UTC | {mins(active_at_acceptance[owner])} | {tokens['input_tokens']:,} | {tokens['cached_input_tokens']:,} | {tokens['output_tokens']:,} |\n"
 localstart=dt(tele['workflow_start_utc']).astimezone(ZoneInfo('Pacific/Auckland')).isoformat();localend=dt(accepted).astimezone(ZoneInfo('Pacific/Auckland')).isoformat()
-report=f'''# WF2 — Parallel migration with two implementation agents
+report=f'''# WF4 — Parallel migration with two implementation agents
 
-WF2 已完成约定的迁移范围和测试验收。分支 `rewrite/wf2-parallel-migration` 从 `7f8c36b73` 独立实施。实现、测试、报告和补丁保留在工作区，未创建 WF2 最终提交。没有重跑 baseline，也没有创建 baseline commit。
+实验编号更名：本实验现统一称为 **WF4**（此前称 WF2）。更名发生在验收之后；原始 prompt、session log、测试输出、测量 run ID、worker 分支/worktree 和已验收源码哈希保留执行时的标识。名称变更不改变测试结果、时间或 token 统计。
+
+WF4 已完成约定的迁移范围和测试验收。分支 `rewrite/wf4-parallel-migration` 从 `7f8c36b73` 独立实施。实现、测试、报告和补丁保留在工作区，最终实现已提交于 `8b746c0cc`；本次更名为后续文档调整。没有重跑 baseline，也没有创建 baseline commit。
 
 ## 结果
 
-- 实际经过时间（授权完成 WF2 开始至最终验收，仅计迁移实验）：**{mins(elapsed)}**。
-- 获准完成 WF2 后的实现经过时间：**{mins(implementation)}**。
+- 实际经过时间（授权完成 WF4 开始至最终验收，仅计迁移实验）：**{mins(elapsed)}**。
+- 获准完成 WF4 后的实现经过时间：**{mins(implementation)}**。
 - 所有 agent 累计活跃任务时间：**{mins(sum(active_at_acceptance.values()))}**，并行重叠时间累加；包括工具/测试等待，排除用户暂停与 worker 两次任务之间的空档，不是 CPU 时间。
 - 四次测量用时总和：**{summary['measure_seconds']} s**；这是 elapsed 的子集，不重复相加。
 - 并行实现模块：**2**（食谱/组织/cookbook/收藏；购物/膳食计划）。主 agent 同期完成公共基础、账户与管理模块。
@@ -110,7 +112,7 @@ UTC 开始 `{tele['workflow_start_utc']}`，最终验收 `{accepted}`。Pacific/
 从仓库根目录运行，macOS 下使用提供的 timeout 子集实现（超时退出 124 已验证）：
 
 ```sh
-export PATH="$PWD/rewrite-evidence/workflow-2/bin:$PATH"
+export PATH="$PWD/rewrite-evidence/workflow-4/bin:$PATH"
 export pnpm_config_store_dir=/Users/eva/Library/pnpm/store
 export UV_CACHE_DIR=/tmp/wf2-uv-cache
 export UV_PROJECT_ENVIRONMENT="$PWD/.venv"
@@ -126,7 +128,7 @@ pnpm store、venv、cache 是本机位置；换机器应先安装锁定依赖和
 
 ## 与 WF1 比较及边界
 
-[WF1 报告](../workflow-1/REPORT.md) 和测量证据从已保存的提交恢复用于比较，没有用其实现作为 WF2 页面输入。WF1 记录模块窗口 32.00 min、最终测量 162 s；缺少相同口径的原始用户等待时间和 token。WF2 更完整的 active window 和缓存 token 口径不能直接当作 WF1 的对应测量值，因此不据此宣称并行更快或更省 token。两者路由/流程均通过，但单元测试数量和实现细节不同，测试通过率相同也不代表覆盖率相同。
+[WF1 报告](../workflow-1/REPORT.md) 和测量证据从已保存的提交恢复用于比较，没有用其实现作为 WF4 页面输入。WF1 记录模块窗口 32.00 min、最终测量 162 s；缺少相同口径的原始用户等待时间和 token。WF4 更完整的 active window 和缓存 token 口径不能直接当作 WF1 的对应测量值，因此不据此宣称并行更快或更省 token。两者路由/流程均通过，但单元测试数量和实现细节不同，测试通过率相同也不代表覆盖率相同。
 
 选定范围包含真实 API CRUD 与表单，但**不代表完整 Vue 功能等价或可直接生产替换**：高级食谱 editor/Markdown、营养/资产/缩放/烹饪模式、rating UI、timeline 编辑、finder 高级筛选、购物拖动排序与高级标签/计划默认值尚不等价；部分新标签/动态文本 fallback 英文；Vue plural/link 格式转换未全面复现。主管理界面使用通用 scalar 表单，复杂嵌套数据/批量管理及所有管理 mutation 未穷尽测试。OIDC 登录尚无 React 流程；SMTP 密码/注册、外部抓取/AI、真实 ZIP、邀请/备份恢复等外部或破坏性流程没有被这些 seeded E2E 全面覆盖。
 
@@ -137,14 +139,16 @@ Vite 主 bundle 约 744.84 kB（gzip 230.84 kB），保留 chunk size 警告；�
 [原始用户请求](original-prompt.md)、[任务划分](plan.md)、[接口约定](contracts.md)、[foundation manifest](foundation-manifest.json)、[集成事件](integration/events.jsonl)、[机器结果](final/measurements.json)、[指标表](../METRICS_TEMPLATE.md)。各 `agents/main|recipes|planning` 下保存 prompt、session 操作记录、platform 任务/token 事件、metadata、changed files、测试命令/stdout/验收与返工。worker patch 和 worktree 保留；最终整合 patch 与哈希可在不提交的情况下审阅/恢复。
 '''
 (e/'REPORT.md').write_text(report)
-metric=root/'rewrite-evidence/METRICS_TEMPLATE.md';base=metric.read_text().split('\n## WF2 —')[0].replace('No final commit or push has been created.', 'No final commit was created during the measured WF1 experiment.')
-compare=f'''\n## WF2 — Parallel migration with multiple agents
+metric=root/'rewrite-evidence/METRICS_TEMPLATE.md';base=metric.read_text().split('\n## WF4 —')[0].replace('No final commit or push has been created.', 'No final commit was created during the measured WF1 experiment.')
+compare=f'''\n## WF4 — Parallel migration with multiple agents
+
+实验编号更名：本实验现统一称为 **WF4**（此前称 WF2）。更名发生在验收之后；原始 prompt、session log、测试输出、测量 run ID、worker 分支/worktree 和已验收源码哈希保留执行时的标识。名称变更不改变测试结果、时间或 token 统计。
 
 | Field | Measured result |
 |---|---|
-| Branch / base | `rewrite/wf2-parallel-migration` / `7f8c36b73`; uncommitted final source pinned by hash + patch |
+| Branch / base | `rewrite/wf4-parallel-migration` / `7f8c36b73`; measured source pinned by hash + patch; implementation commit `8b746c0cc` |
 | Tool / model | Codex / gpt-6.1-sol (local turn metadata) |
-| Workflow wall time to final acceptance | {mins(elapsed)}; from WF2 completion authorization; migration experiment only |
+| Workflow wall time to final acceptance | {mins(elapsed)}; from WF4 completion authorization; migration experiment only |
 | Implementation wall time after completion authorization | {mins(implementation)} |
 | All-agent cumulative active task time | {mins(sum(active_at_acceptance.values()))}; includes overlapping worker/tool/test time, excludes idle gaps |
 | Final measurement time | {summary['measure_seconds']} s (included above) |
@@ -161,13 +165,13 @@ compare=f'''\n## WF2 — Parallel migration with multiple agents
 | Every final run | build pass; units 20/0/0; type errors 0; lint 0/0; any/todo 0/0 |
 | Test pass rate | 100% per final route/flow/unit suite; not code coverage |
 | Acceptance | selected migration yardstick accepted; feature parity partial; Docker/hosted CI not exercised |
-| Evidence | [WF2 report](workflow-2/REPORT.md), [machine results](workflow-2/final/measurements.json), [telemetry](workflow-2/final/telemetry.json) |
+| Evidence | [WF4 report](workflow-4/REPORT.md), [machine results](workflow-4/final/measurements.json), [telemetry](workflow-4/final/telemetry.json) |
 
 {mt.replace('(../runs/','(runs/')}
 
 ### Comparison with WF1
 
-| Measure | WF1 incremental | WF2 parallel |
+| Measure | WF1 incremental | WF4 parallel |
 |---|---|---|
 | User wall time to acceptance | NA in comparable form | {mins(elapsed)} |
 | Implementation wall time | NA in comparable form | {mins(implementation)} |
@@ -184,7 +188,7 @@ compare=f'''\n## WF2 — Parallel migration with multiple agents
 | Merge conflicts | sequential workflow, no parallel merge | 0 actual |
 | Human code interventions | 0 observed | 0 |
 
-WF1 and WF2 have different unit counts and timing/token instrumentation. Passing both yardsticks does not prove equal coverage, full feature parity, or workflow superiority. WF2 reuses only dependency lock/cache and comparison evidence. No baseline rerun or baseline commit.
+WF1 and WF4 have different unit counts and timing/token instrumentation. Passing both yardsticks does not prove equal coverage, full feature parity, or workflow superiority. WF4 reuses only dependency lock/cache and comparison evidence. No baseline rerun or baseline commit.
 '''
 metric.write_text(base+compare)
 print(json.dumps({'status':summary['status'],'wall_minutes':elapsed/60,'implementation_minutes':implementation/60,'cumulative_minutes':sum(active_at_acceptance.values())/60,'measurement_seconds':summary['measure_seconds'],'total_tokens_snapshot':summary['tokens']['total_tokens'],'uncached_input_plus_output':summary['uncached_input_plus_output'],'all_four_pass':True,'report':str(e/'REPORT.md')},indent=2))

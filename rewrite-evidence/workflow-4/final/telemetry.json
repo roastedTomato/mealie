@@ -1,6 +1,6 @@
 {
   "snapshot_utc": "2026-10-11T02:11:00.985780+00:00",
-  "scope": "WF2 implementation from completion authorization plus exactly two implementation agents; earlier preparation excluded",
+  "scope": "WF4 implementation from completion authorization plus exactly two implementation agents; earlier preparation excluded",
   "agents": {
     "main": {
       "session_id": "01a128a3-12ca-7d33-8cb0-723b3ef29d02",
