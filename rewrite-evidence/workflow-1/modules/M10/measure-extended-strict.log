@@ -14,7 +14,7 @@
   timestamp_utc = 2026-10-10T06:52:05Z
   label = WF1-final-extended-strict
   app = frontend-react
-  branch = rewrite/frontend-react-migration
+  branch = rewrite/wf1-incremental-migration
   commit = 7f8c36b73
   dirty = 1
   route_scope = extended

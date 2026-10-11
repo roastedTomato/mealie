@@ -66,7 +66,7 @@ fs.writeFileSync(path.join(workflow, 'final-measurements.json'), JSON.stringify(
 fs.writeFileSync(path.join(workflow, 'REPORT.md'), `# Workflow 1 — Incremental conversion with test acceptance
 
 Status: declared module and final yardstick acceptance completed. Complete Vue feature/visual parity is not established.
-Branch: rewrite/frontend-react-migration; starting and final HEAD: 7f8c36b73; measured dirty=1.
+Branch: rewrite/wf1-incremental-migration; starting and final HEAD: 7f8c36b73; measured dirty=1.
 No Vue baseline was rerun, no baseline/module/final commit was created, and nothing was pushed.
 
 ## Inspection, boundaries and sequence
@@ -111,6 +111,10 @@ The final implementation is frontend-react/ (toolchain/lockfile, providers, type
 
 [Original human prompt](prompts/user-001.md), [continuation](prompts/user-002.md), [session 1](session-logs/session-001.md), [session 2](session-logs/session-002.md). Derived module prompts preserve the scope and acceptance. Test steps refer to their module prompt and exact command; editing stages are bounded by module timestamps rather than individually sampled tool-call timestamps. Failed attempts are retained, including M05's premature M09 route and M07/M10 repair cycles. Source Vue tests were neither removed nor edited; no failing assertion was removed to obtain acceptance.
 
+## Branch label normalization
+
+After the WF1 branch rename, branch labels in prompts, logs, reports, CSV and JSON evidence were normalized to \`rewrite/wf1-incremental-migration\`. These labels are a documentation update to historical output; no tests were rerun and no measurement values, timestamps or commit IDs were changed.
+
 ## Limits and interpretation
 
 - Passing these routes and fifteen flows demonstrates the declared incremental acceptance scope, not complete Mealie feature or pixel parity. The MUI interface is simplified. Rich Markdown/editor behavior, advanced ingredient linking/substitution, image crop/edit, drag-and-drop planning, wake-lock, PWA and offline behavior are not fully recreated. External OIDC, SMTP and scraper/AI services and every administrative mutation are not comprehensively exercised.
@@ -138,7 +142,7 @@ ${matrix.replaceAll('../runs/', 'runs/')}
 
 All four builds pass, with 0 explicit any markers, 0 TODO markers, 74 textual expect calls and 10 React test files. The separate complete strict browser regression passed 82 checks. The source Vue tree and its 49 test files remain unchanged; complete equivalent unit coverage is not established.
 
-Branch: rewrite/frontend-react-migration. HEAD: 7f8c36b73. Dirty=1 in every measurement, because changes remain uncommitted as requested. No baseline was rerun. The original measure.sh and independent E2E suite were used unchanged; a tested macOS timeout shim was added to PATH. [Raw CSV](metrics.csv) records timestamps and run IDs. [Full workflow report](workflow-1/REPORT.md) explains all ten modules, repairs, changed files, commands and evidence limitations. [Machine summary](workflow-1/final-measurements.json) links final command records.
+Branch: rewrite/wf1-incremental-migration. HEAD: 7f8c36b73. Dirty=1 in every measurement, because changes remain uncommitted as requested. No baseline was rerun. The original measure.sh and independent E2E suite were used unchanged; a tested macOS timeout shim was added to PATH. [Raw CSV](metrics.csv) records timestamps and run IDs. [Full workflow report](workflow-1/REPORT.md) explains all ten modules, repairs, changed files, commands and evidence limitations. [Machine summary](workflow-1/final-measurements.json) links final command records.
 
 The incremental process met each module's declared acceptance before progressing and passed the final measurement matrix. This supports this yardstick's routing and business-flow acceptance, not full production or visual parity: advanced reference interactions remain incomplete, external services are unverified, and no Docker image build was possible without a daemon. Tokens and exact human review time remain NA rather than invented measurements. No final commit or push has been created.
 `);

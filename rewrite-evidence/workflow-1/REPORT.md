@@ -1,7 +1,7 @@
 # Workflow 1 — Incremental conversion with test acceptance
 
 Status: declared module and final yardstick acceptance completed. Complete Vue feature/visual parity is not established.
-Branch: rewrite/frontend-react-migration; starting and final HEAD: 7f8c36b73; measured dirty=1.
+Branch: rewrite/wf1-incremental-migration; starting and final HEAD: 7f8c36b73; measured dirty=1.
 No Vue baseline was rerun, no baseline/module/final commit was created, and nothing was pushed.
 
 ## Inspection, boundaries and sequence
@@ -127,3 +127,7 @@ The final implementation is frontend-react/ (toolchain/lockfile, providers, type
 - React has 48 tests in 10 files with 74 textual expect calls. The retained Vue tree has 49 test files. Selective portable assertions and new behavior tests were migrated; equivalent coverage for all Vue-specific unit suites is not established. Coverage percentage was not measured.
 - Token usage is NA at every module/command because platform telemetry is unavailable; no estimates are presented as counts. Session logs are action records, not verbatim platform exports. Initial inspection and M01/M02 individual-command timestamps were not fully captured; M01 end time was reconstructed from test output. Exact per-edit file deltas and human review time are unavailable. These gaps prevent a fully instrumented token/time study, despite preserved executable test evidence.
 - No baseline comparison or migration-strategy superiority claim can be derived from these runs. The results support acceptance for this branch against this yardstick. Full production replacement still requires review of the documented remaining behavior and deployment checks.
+
+## Branch label normalization
+
+After the WF1 branch rename, branch labels in prompts, logs, reports, CSV and JSON evidence were normalized to `rewrite/wf1-incremental-migration`. These labels are a documentation update to historical output; no tests were rerun and no measurement values, timestamps or commit IDs were changed.

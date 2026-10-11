@@ -4,7 +4,7 @@ Vite + React 19 + TypeScript strict + React Router（SPA）+ MUI + react-i18next
 
 当前分支：
 
-rewrite/frontend-react-migration
+rewrite/wf1-incremental-migration
 
 这是 Workflow 1：
 
@@ -38,3 +38,5 @@ Incremental conversion with test acceptance
 模块识别 → 模块迁移 → 模块测试 → 失败修复 → 重新测试 → 记录 acceptance 结果 → 进入下一个模块
 
 开始时先不要直接大范围修改代码。先检查当前分支和项目结构，列出建议的模块划分、迁移顺序、每个模块的验收测试，以及需要创建或更新的日志文件，然后再开始第一个模块。
+
+Documentation note: the branch label above was normalized after the WF1 branch rename; the remaining prompt wording is preserved.

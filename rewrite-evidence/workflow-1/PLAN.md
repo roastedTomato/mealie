@@ -1,6 +1,6 @@
 # Workflow 1 — Incremental conversion with test acceptance
 
-Repository: mealie. Branch: rewrite/frontend-react-migration. Starting HEAD: 7f8c36b73.
+Repository: mealie. Branch: rewrite/wf1-incremental-migration. Starting HEAD: 7f8c36b73.
 No baseline run or baseline commit. No module commits. Final commit decision deferred.
 
 ## Inspection
